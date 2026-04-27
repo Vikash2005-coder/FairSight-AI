@@ -41,5 +41,5 @@ reports/
 *.log
 logs/
 
-# Jupyter
-.ipynb_checkpoints/
+# Generated Maps
+frontend/atlas_map_*.html
