@@ -1,0 +1,46 @@
+
+# Core API & Server
+fastapi==0.111.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+python-dotenv==1.0.1
+
+# Google Gemini AI
+google-generativeai==0.7.2
+
+# Data Processing
+pandas==2.2.2
+numpy==1.26.4
+openpyxl==3.1.2
+scipy==1.13.0
+
+# Machine Learning
+scikit-learn==1.4.2
+joblib==1.4.2
+
+# Bias Detection (IBM + Microsoft)
+aif360==0.6.1
+fairlearn==0.10.0
+
+# Explainability
+shap==0.45.1
+
+# NLP / Text Bias Detection
+transformers==4.40.2
+torch==2.3.0
+
+# Visualization
+plotly==5.22.0
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# Map Visualization
+folium==0.16.0
+
+# PDF Report Generation
+reportlab==4.2.0
+fpdf2==2.7.9
+
+# Utilities
+Pillow==10.3.0
+requests==2.31.0
