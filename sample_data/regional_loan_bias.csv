@@ -1,0 +1,16 @@
+applicant_id,gender,income,loan_amount,credit_score,region_pincode,region_type,loan_approved
+1,Female,45000,200000,710,800001,Rural_Bihar,0
+2,Male,85000,500000,740,400001,Urban_Mumbai,1
+3,Female,90000,500000,760,400051,Urban_Mumbai,1
+4,Male,42000,200000,690,800005,Rural_Bihar,1
+5,Female,50000,250000,720,226001,Rural_UP,0
+6,Male,95000,600000,780,560001,Urban_Bengaluru,1
+7,Female,92000,600000,775,560010,Urban_Bengaluru,1
+8,Male,48000,220000,705,302001,Rural_Rajasthan,1
+9,Female,46000,210000,715,302005,Rural_Rajasthan,0
+10,Male,47000,215000,700,800010,Rural_Bihar,1
+11,Female,85000,450000,750,400020,Urban_Mumbai,1
+12,Male,49000,240000,730,226010,Rural_UP,1
+13,Female,41000,190000,680,800015,Rural_Bihar,0
+14,Male,88000,480000,755,560015,Urban_Bengaluru,1
+15,Female,51000,245000,725,226020,Rural_UP,0

@@ -1,0 +1,501 @@
+user_id,region,device_type,prime_membership,past_purchase_count,surge_pricing_applied
+U7000,Lucknow,iPhone,0,15,0
+U7001,Patna,High-end Android,1,3,0
+U7002,Bangalore,High-end Android,0,34,0
+U7003,Delhi-NCR,Budget Android,0,1,1
+U7004,Delhi-NCR,Budget Android,0,18,1
+U7005,Delhi-NCR,PC,0,25,1
+U7006,Delhi-NCR,PC,1,20,0
+U7007,Mumbai,High-end Android,0,25,1
+U7008,Mumbai,PC,0,46,1
+U7009,Delhi-NCR,High-end Android,0,32,1
+U7010,Delhi-NCR,High-end Android,1,27,0
+U7011,Delhi-NCR,Budget Android,0,24,1
+U7012,Bangalore,Budget Android,0,43,0
+U7013,Delhi-NCR,PC,0,26,1
+U7014,Bangalore,Budget Android,0,37,0
+U7015,Bangalore,iPhone,0,1,0
+U7016,Delhi-NCR,Budget Android,1,40,0
+U7017,Bangalore,High-end Android,1,9,0
+U7018,Bangalore,iPhone,0,18,0
+U7019,Delhi-NCR,Budget Android,0,5,1
+U7020,Bangalore,Budget Android,1,47,0
+U7021,Delhi-NCR,PC,0,21,1
+U7022,Delhi-NCR,High-end Android,0,38,1
+U7023,Delhi-NCR,Budget Android,1,24,0
+U7024,Lucknow,Budget Android,1,25,0
+U7025,Bangalore,Budget Android,0,38,0
+U7026,Lucknow,Budget Android,1,8,0
+U7027,Patna,High-end Android,1,36,0
+U7028,Delhi-NCR,High-end Android,0,44,1
+U7029,Lucknow,Budget Android,0,32,0
+U7030,Mumbai,Budget Android,1,30,0
+U7031,Mumbai,Budget Android,1,30,0
+U7032,Lucknow,High-end Android,0,22,0
+U7033,Delhi-NCR,iPhone,0,12,1
+U7034,Delhi-NCR,Budget Android,0,45,1
+U7035,Delhi-NCR,iPhone,0,27,1
+U7036,Bangalore,High-end Android,0,13,0
+U7037,Mumbai,Budget Android,1,47,0
+U7038,Mumbai,Budget Android,1,12,0
+U7039,Bangalore,Budget Android,0,13,0
+U7040,Delhi-NCR,High-end Android,1,4,0
+U7041,Delhi-NCR,Budget Android,0,25,1
+U7042,Delhi-NCR,Budget Android,1,22,0
+U7043,Delhi-NCR,High-end Android,0,1,1
+U7044,Delhi-NCR,iPhone,0,49,1
+U7045,Bangalore,iPhone,0,17,0
+U7046,Lucknow,Budget Android,1,13,0
+U7047,Delhi-NCR,Budget Android,0,10,1
+U7048,Mumbai,High-end Android,0,12,1
+U7049,Mumbai,Budget Android,0,45,1
+U7050,Bangalore,Budget Android,1,30,0
+U7051,Delhi-NCR,iPhone,0,13,1
+U7052,Bangalore,Budget Android,1,22,0
+U7053,Bangalore,High-end Android,1,38,0
+U7054,Delhi-NCR,iPhone,0,7,1
+U7055,Patna,iPhone,1,8,0
+U7056,Mumbai,High-end Android,1,46,0
+U7057,Delhi-NCR,Budget Android,0,39,1
+U7058,Delhi-NCR,High-end Android,1,27,0
+U7059,Mumbai,PC,0,33,1
+U7060,Patna,Budget Android,0,7,0
+U7061,Mumbai,Budget Android,1,44,0
+U7062,Lucknow,High-end Android,1,22,0
+U7063,Mumbai,Budget Android,1,49,0
+U7064,Mumbai,High-end Android,1,22,0
+U7065,Lucknow,Budget Android,0,26,0
+U7066,Bangalore,iPhone,1,12,0
+U7067,Patna,PC,1,12,0
+U7068,Mumbai,PC,0,24,1
+U7069,Delhi-NCR,Budget Android,1,27,0
+U7070,Bangalore,Budget Android,1,17,0
+U7071,Mumbai,iPhone,0,4,1
+U7072,Mumbai,High-end Android,0,24,1
+U7073,Lucknow,iPhone,0,46,0
+U7074,Mumbai,High-end Android,1,24,0
+U7075,Delhi-NCR,Budget Android,1,37,0
+U7076,Patna,High-end Android,0,3,0
+U7077,Bangalore,iPhone,0,13,0
+U7078,Bangalore,iPhone,0,40,0
+U7079,Patna,High-end Android,1,41,0
+U7080,Bangalore,Budget Android,0,22,0
+U7081,Delhi-NCR,iPhone,0,1,1
+U7082,Delhi-NCR,High-end Android,0,36,1
+U7083,Mumbai,Budget Android,1,45,0
+U7084,Bangalore,High-end Android,1,2,0
+U7085,Mumbai,Budget Android,0,8,1
+U7086,Mumbai,iPhone,1,29,1
+U7087,Patna,iPhone,0,17,0
+U7088,Delhi-NCR,High-end Android,0,26,1
+U7089,Patna,Budget Android,0,7,0
+U7090,Lucknow,Budget Android,1,17,0
+U7091,Delhi-NCR,Budget Android,0,46,1
+U7092,Mumbai,Budget Android,0,26,1
+U7093,Delhi-NCR,Budget Android,0,31,1
+U7094,Patna,High-end Android,0,8,0
+U7095,Delhi-NCR,PC,0,40,1
+U7096,Lucknow,Budget Android,0,16,0
+U7097,Bangalore,High-end Android,0,0,0
+U7098,Delhi-NCR,Budget Android,0,18,1
+U7099,Bangalore,High-end Android,0,47,0
+U7100,Mumbai,Budget Android,0,17,1
+U7101,Bangalore,Budget Android,0,9,0
+U7102,Mumbai,Budget Android,0,19,1
+U7103,Delhi-NCR,High-end Android,0,49,1
+U7104,Lucknow,Budget Android,0,22,0
+U7105,Delhi-NCR,Budget Android,1,34,0
+U7106,Patna,Budget Android,0,9,0
+U7107,Bangalore,iPhone,1,13,0
+U7108,Patna,iPhone,0,41,0
+U7109,Delhi-NCR,High-end Android,0,28,1
+U7110,Delhi-NCR,Budget Android,1,36,0
+U7111,Bangalore,iPhone,0,45,0
+U7112,Delhi-NCR,Budget Android,0,35,1
+U7113,Delhi-NCR,High-end Android,0,16,1
+U7114,Delhi-NCR,iPhone,0,31,1
+U7115,Bangalore,High-end Android,0,3,0
+U7116,Delhi-NCR,Budget Android,1,5,0
+U7117,Mumbai,Budget Android,0,21,1
+U7118,Delhi-NCR,Budget Android,1,12,0
+U7119,Delhi-NCR,iPhone,0,29,1
+U7120,Bangalore,Budget Android,0,18,0
+U7121,Delhi-NCR,High-end Android,1,20,0
+U7122,Mumbai,PC,0,7,1
+U7123,Delhi-NCR,High-end Android,0,46,1
+U7124,Mumbai,Budget Android,0,43,1
+U7125,Delhi-NCR,High-end Android,0,2,1
+U7126,Mumbai,Budget Android,1,47,0
+U7127,Bangalore,High-end Android,0,22,0
+U7128,Lucknow,iPhone,1,41,0
+U7129,Delhi-NCR,High-end Android,0,43,1
+U7130,Delhi-NCR,iPhone,0,26,1
+U7131,Delhi-NCR,iPhone,0,28,1
+U7132,Delhi-NCR,Budget Android,0,35,1
+U7133,Mumbai,High-end Android,1,36,0
+U7134,Bangalore,High-end Android,0,48,0
+U7135,Mumbai,Budget Android,0,46,1
+U7136,Mumbai,Budget Android,0,36,1
+U7137,Bangalore,PC,0,13,0
+U7138,Lucknow,Budget Android,0,23,0
+U7139,Bangalore,Budget Android,0,47,0
+U7140,Mumbai,High-end Android,0,48,1
+U7141,Bangalore,Budget Android,1,27,0
+U7142,Lucknow,High-end Android,0,0,0
+U7143,Lucknow,High-end Android,0,31,0
+U7144,Lucknow,High-end Android,1,35,0
+U7145,Bangalore,iPhone,0,36,0
+U7146,Mumbai,Budget Android,0,49,1
+U7147,Mumbai,Budget Android,0,34,1
+U7148,Patna,High-end Android,1,29,0
+U7149,Mumbai,PC,0,38,1
+U7150,Patna,High-end Android,0,45,0
+U7151,Lucknow,Budget Android,0,16,0
+U7152,Delhi-NCR,Budget Android,0,9,1
+U7153,Delhi-NCR,PC,0,28,1
+U7154,Delhi-NCR,iPhone,0,44,1
+U7155,Mumbai,Budget Android,0,16,1
+U7156,Delhi-NCR,PC,1,3,0
+U7157,Patna,PC,1,37,0
+U7158,Bangalore,Budget Android,0,41,0
+U7159,Delhi-NCR,High-end Android,0,21,1
+U7160,Bangalore,iPhone,0,16,0
+U7161,Lucknow,PC,1,6,0
+U7162,Mumbai,Budget Android,0,17,1
+U7163,Mumbai,High-end Android,1,28,0
+U7164,Mumbai,PC,0,35,1
+U7165,Lucknow,Budget Android,0,42,0
+U7166,Delhi-NCR,iPhone,0,1,1
+U7167,Lucknow,iPhone,1,44,0
+U7168,Patna,Budget Android,0,24,0
+U7169,Delhi-NCR,Budget Android,0,48,1
+U7170,Lucknow,Budget Android,0,1,0
+U7171,Mumbai,iPhone,0,1,1
+U7172,Lucknow,iPhone,1,3,0
+U7173,Delhi-NCR,High-end Android,0,19,1
+U7174,Mumbai,iPhone,0,29,1
+U7175,Mumbai,Budget Android,0,48,1
+U7176,Mumbai,High-end Android,0,10,1
+U7177,Mumbai,iPhone,0,24,1
+U7178,Bangalore,High-end Android,0,9,0
+U7179,Bangalore,High-end Android,1,19,0
+U7180,Bangalore,High-end Android,1,31,0
+U7181,Mumbai,Budget Android,0,13,1
+U7182,Mumbai,Budget Android,1,38,0
+U7183,Bangalore,PC,0,21,0
+U7184,Mumbai,Budget Android,0,37,1
+U7185,Delhi-NCR,High-end Android,1,38,0
+U7186,Bangalore,High-end Android,1,42,0
+U7187,Bangalore,High-end Android,0,10,0
+U7188,Lucknow,iPhone,0,34,0
+U7189,Mumbai,iPhone,0,32,1
+U7190,Bangalore,Budget Android,0,23,0
+U7191,Delhi-NCR,Budget Android,0,44,1
+U7192,Patna,Budget Android,0,25,0
+U7193,Delhi-NCR,High-end Android,0,47,1
+U7194,Delhi-NCR,Budget Android,0,38,1
+U7195,Bangalore,Budget Android,0,1,0
+U7196,Delhi-NCR,High-end Android,0,5,1
+U7197,Lucknow,Budget Android,0,0,0
+U7198,Mumbai,Budget Android,0,48,1
+U7199,Mumbai,Budget Android,0,1,1
+U7200,Patna,Budget Android,1,33,0
+U7201,Patna,iPhone,1,12,0
+U7202,Lucknow,Budget Android,0,32,0
+U7203,Delhi-NCR,High-end Android,0,6,1
+U7204,Mumbai,Budget Android,1,23,0
+U7205,Mumbai,Budget Android,0,22,1
+U7206,Delhi-NCR,Budget Android,0,30,1
+U7207,Delhi-NCR,Budget Android,0,14,1
+U7208,Delhi-NCR,High-end Android,1,49,0
+U7209,Bangalore,Budget Android,1,11,0
+U7210,Bangalore,High-end Android,0,20,0
+U7211,Delhi-NCR,Budget Android,0,20,1
+U7212,Lucknow,iPhone,1,4,0
+U7213,Mumbai,Budget Android,0,35,1
+U7214,Delhi-NCR,Budget Android,0,13,1
+U7215,Bangalore,iPhone,0,30,0
+U7216,Mumbai,Budget Android,1,6,0
+U7217,Patna,iPhone,0,7,0
+U7218,Delhi-NCR,High-end Android,0,18,1
+U7219,Bangalore,iPhone,0,19,0
+U7220,Lucknow,Budget Android,0,41,0
+U7221,Patna,Budget Android,0,3,0
+U7222,Lucknow,PC,0,27,0
+U7223,Mumbai,Budget Android,0,45,1
+U7224,Mumbai,Budget Android,1,21,0
+U7225,Delhi-NCR,Budget Android,0,1,1
+U7226,Mumbai,iPhone,0,34,1
+U7227,Delhi-NCR,Budget Android,0,36,1
+U7228,Lucknow,High-end Android,1,31,0
+U7229,Delhi-NCR,iPhone,0,46,1
+U7230,Delhi-NCR,iPhone,1,26,1
+U7231,Delhi-NCR,High-end Android,1,34,0
+U7232,Patna,Budget Android,0,42,0
+U7233,Bangalore,Budget Android,0,2,0
+U7234,Delhi-NCR,Budget Android,0,10,1
+U7235,Mumbai,High-end Android,0,11,1
+U7236,Delhi-NCR,High-end Android,0,29,1
+U7237,Mumbai,PC,1,12,0
+U7238,Mumbai,Budget Android,0,23,1
+U7239,Lucknow,Budget Android,0,3,0
+U7240,Delhi-NCR,High-end Android,0,47,1
+U7241,Delhi-NCR,High-end Android,0,18,1
+U7242,Delhi-NCR,Budget Android,0,42,1
+U7243,Mumbai,Budget Android,0,31,1
+U7244,Patna,iPhone,0,25,0
+U7245,Lucknow,Budget Android,0,49,0
+U7246,Bangalore,High-end Android,0,20,0
+U7247,Lucknow,PC,0,41,0
+U7248,Bangalore,PC,0,33,0
+U7249,Patna,High-end Android,0,12,0
+U7250,Mumbai,iPhone,1,38,1
+U7251,Bangalore,PC,0,44,0
+U7252,Mumbai,iPhone,1,23,1
+U7253,Bangalore,High-end Android,0,23,0
+U7254,Delhi-NCR,Budget Android,1,16,0
+U7255,Delhi-NCR,Budget Android,0,3,1
+U7256,Mumbai,Budget Android,0,38,1
+U7257,Bangalore,Budget Android,0,4,0
+U7258,Delhi-NCR,High-end Android,1,6,0
+U7259,Lucknow,Budget Android,0,41,0
+U7260,Mumbai,Budget Android,0,13,1
+U7261,Mumbai,High-end Android,1,19,0
+U7262,Mumbai,Budget Android,0,47,1
+U7263,Mumbai,High-end Android,1,27,0
+U7264,Lucknow,Budget Android,0,34,0
+U7265,Lucknow,High-end Android,0,41,0
+U7266,Bangalore,PC,0,29,0
+U7267,Lucknow,Budget Android,0,5,0
+U7268,Mumbai,iPhone,1,45,1
+U7269,Mumbai,High-end Android,1,48,0
+U7270,Delhi-NCR,Budget Android,0,16,1
+U7271,Mumbai,iPhone,0,9,1
+U7272,Lucknow,High-end Android,1,33,0
+U7273,Bangalore,Budget Android,0,37,0
+U7274,Delhi-NCR,Budget Android,1,17,0
+U7275,Lucknow,Budget Android,0,38,0
+U7276,Delhi-NCR,Budget Android,0,9,1
+U7277,Lucknow,Budget Android,0,27,0
+U7278,Mumbai,High-end Android,1,28,0
+U7279,Delhi-NCR,PC,0,2,1
+U7280,Lucknow,High-end Android,0,45,0
+U7281,Bangalore,PC,0,8,0
+U7282,Delhi-NCR,PC,1,9,0
+U7283,Delhi-NCR,Budget Android,0,4,1
+U7284,Bangalore,Budget Android,1,45,0
+U7285,Mumbai,iPhone,1,42,1
+U7286,Delhi-NCR,High-end Android,0,14,1
+U7287,Mumbai,Budget Android,0,39,1
+U7288,Bangalore,iPhone,1,38,0
+U7289,Bangalore,iPhone,0,36,0
+U7290,Mumbai,High-end Android,1,31,0
+U7291,Delhi-NCR,iPhone,1,4,1
+U7292,Lucknow,Budget Android,0,34,0
+U7293,Lucknow,High-end Android,1,35,0
+U7294,Patna,iPhone,0,24,0
+U7295,Patna,Budget Android,0,0,0
+U7296,Delhi-NCR,iPhone,0,17,1
+U7297,Delhi-NCR,Budget Android,0,0,1
+U7298,Patna,High-end Android,0,37,0
+U7299,Delhi-NCR,PC,0,11,1
+U7300,Mumbai,Budget Android,0,47,1
+U7301,Mumbai,High-end Android,1,15,0
+U7302,Lucknow,Budget Android,0,18,0
+U7303,Mumbai,iPhone,0,19,1
+U7304,Bangalore,Budget Android,0,48,0
+U7305,Delhi-NCR,High-end Android,0,10,1
+U7306,Delhi-NCR,iPhone,0,25,1
+U7307,Mumbai,High-end Android,0,33,1
+U7308,Mumbai,PC,0,26,1
+U7309,Mumbai,Budget Android,0,15,1
+U7310,Delhi-NCR,iPhone,0,26,1
+U7311,Patna,Budget Android,1,35,0
+U7312,Delhi-NCR,Budget Android,0,16,1
+U7313,Patna,Budget Android,0,8,0
+U7314,Lucknow,Budget Android,0,2,0
+U7315,Mumbai,High-end Android,1,26,0
+U7316,Patna,Budget Android,0,41,0
+U7317,Lucknow,Budget Android,0,49,0
+U7318,Mumbai,High-end Android,0,47,1
+U7319,Bangalore,Budget Android,1,15,0
+U7320,Delhi-NCR,High-end Android,1,0,0
+U7321,Delhi-NCR,High-end Android,1,21,0
+U7322,Mumbai,PC,0,36,1
+U7323,Patna,Budget Android,0,9,0
+U7324,Delhi-NCR,iPhone,0,17,1
+U7325,Delhi-NCR,Budget Android,1,10,0
+U7326,Delhi-NCR,iPhone,1,18,1
+U7327,Mumbai,Budget Android,0,48,1
+U7328,Delhi-NCR,iPhone,0,11,1
+U7329,Delhi-NCR,High-end Android,0,17,1
+U7330,Bangalore,High-end Android,1,37,0
+U7331,Delhi-NCR,Budget Android,0,29,1
+U7332,Delhi-NCR,High-end Android,1,41,0
+U7333,Delhi-NCR,iPhone,0,0,1
+U7334,Patna,iPhone,0,23,0
+U7335,Lucknow,iPhone,0,7,0
+U7336,Patna,High-end Android,0,3,0
+U7337,Mumbai,Budget Android,0,0,1
+U7338,Mumbai,PC,0,28,1
+U7339,Mumbai,High-end Android,1,49,0
+U7340,Mumbai,iPhone,0,33,1
+U7341,Mumbai,High-end Android,0,39,1
+U7342,Lucknow,Budget Android,0,23,0
+U7343,Lucknow,Budget Android,1,36,0
+U7344,Delhi-NCR,High-end Android,0,4,1
+U7345,Mumbai,High-end Android,0,22,1
+U7346,Mumbai,Budget Android,0,23,1
+U7347,Delhi-NCR,iPhone,0,47,1
+U7348,Delhi-NCR,PC,1,38,0
+U7349,Mumbai,Budget Android,0,26,1
+U7350,Delhi-NCR,High-end Android,0,12,1
+U7351,Bangalore,High-end Android,0,44,0
+U7352,Delhi-NCR,Budget Android,1,36,0
+U7353,Bangalore,Budget Android,0,3,0
+U7354,Mumbai,iPhone,0,0,1
+U7355,Mumbai,Budget Android,0,28,1
+U7356,Delhi-NCR,Budget Android,0,10,1
+U7357,Lucknow,Budget Android,0,28,0
+U7358,Delhi-NCR,High-end Android,0,21,1
+U7359,Mumbai,PC,0,30,1
+U7360,Bangalore,Budget Android,0,30,0
+U7361,Lucknow,iPhone,1,39,0
+U7362,Lucknow,iPhone,0,14,0
+U7363,Mumbai,High-end Android,0,36,1
+U7364,Patna,Budget Android,1,16,0
+U7365,Delhi-NCR,iPhone,0,37,1
+U7366,Patna,Budget Android,0,10,0
+U7367,Delhi-NCR,High-end Android,1,16,0
+U7368,Bangalore,iPhone,1,48,0
+U7369,Patna,Budget Android,1,10,0
+U7370,Bangalore,Budget Android,1,42,0
+U7371,Bangalore,iPhone,1,13,0
+U7372,Mumbai,Budget Android,0,5,1
+U7373,Delhi-NCR,Budget Android,1,43,0
+U7374,Bangalore,Budget Android,0,17,0
+U7375,Delhi-NCR,iPhone,1,46,1
+U7376,Mumbai,High-end Android,0,21,1
+U7377,Mumbai,High-end Android,0,46,1
+U7378,Lucknow,Budget Android,1,11,0
+U7379,Bangalore,Budget Android,0,26,0
+U7380,Lucknow,Budget Android,0,6,0
+U7381,Lucknow,Budget Android,1,49,0
+U7382,Lucknow,Budget Android,0,34,0
+U7383,Mumbai,High-end Android,1,2,0
+U7384,Mumbai,Budget Android,0,22,1
+U7385,Mumbai,Budget Android,0,7,1
+U7386,Delhi-NCR,iPhone,0,49,1
+U7387,Lucknow,PC,0,39,0
+U7388,Bangalore,High-end Android,1,33,0
+U7389,Mumbai,Budget Android,0,7,1
+U7390,Delhi-NCR,High-end Android,0,39,1
+U7391,Lucknow,iPhone,0,48,0
+U7392,Delhi-NCR,Budget Android,0,4,1
+U7393,Lucknow,Budget Android,0,29,0
+U7394,Patna,High-end Android,0,21,0
+U7395,Lucknow,iPhone,1,20,0
+U7396,Bangalore,High-end Android,1,16,0
+U7397,Delhi-NCR,Budget Android,1,4,0
+U7398,Delhi-NCR,High-end Android,0,6,1
+U7399,Bangalore,Budget Android,0,37,0
+U7400,Delhi-NCR,Budget Android,0,10,1
+U7401,Delhi-NCR,High-end Android,1,9,0
+U7402,Bangalore,iPhone,0,43,0
+U7403,Patna,High-end Android,0,28,0
+U7404,Bangalore,Budget Android,0,6,0
+U7405,Mumbai,Budget Android,0,35,1
+U7406,Lucknow,High-end Android,0,22,0
+U7407,Delhi-NCR,High-end Android,0,44,1
+U7408,Lucknow,High-end Android,0,0,0
+U7409,Lucknow,Budget Android,0,23,0
+U7410,Delhi-NCR,Budget Android,0,39,1
+U7411,Patna,High-end Android,0,8,0
+U7412,Delhi-NCR,PC,1,35,0
+U7413,Lucknow,Budget Android,0,34,0
+U7414,Delhi-NCR,Budget Android,1,39,0
+U7415,Mumbai,High-end Android,0,3,1
+U7416,Lucknow,Budget Android,0,36,0
+U7417,Lucknow,Budget Android,0,47,0
+U7418,Lucknow,iPhone,0,25,0
+U7419,Bangalore,iPhone,1,42,0
+U7420,Lucknow,Budget Android,1,47,0
+U7421,Delhi-NCR,Budget Android,0,18,1
+U7422,Lucknow,High-end Android,1,26,0
+U7423,Delhi-NCR,PC,0,25,1
+U7424,Delhi-NCR,iPhone,1,14,1
+U7425,Bangalore,High-end Android,0,10,0
+U7426,Bangalore,Budget Android,1,22,0
+U7427,Mumbai,High-end Android,0,30,1
+U7428,Bangalore,Budget Android,0,28,0
+U7429,Mumbai,PC,0,43,1
+U7430,Delhi-NCR,High-end Android,0,1,1
+U7431,Mumbai,Budget Android,0,1,1
+U7432,Delhi-NCR,High-end Android,0,7,1
+U7433,Delhi-NCR,High-end Android,0,39,1
+U7434,Patna,iPhone,0,0,0
+U7435,Delhi-NCR,Budget Android,0,44,1
+U7436,Lucknow,Budget Android,1,46,0
+U7437,Bangalore,High-end Android,0,43,0
+U7438,Delhi-NCR,High-end Android,1,20,0
+U7439,Patna,Budget Android,0,28,0
+U7440,Patna,High-end Android,0,37,0
+U7441,Bangalore,High-end Android,0,4,0
+U7442,Delhi-NCR,High-end Android,0,36,1
+U7443,Bangalore,iPhone,0,33,0
+U7444,Mumbai,High-end Android,0,13,1
+U7445,Lucknow,High-end Android,0,25,0
+U7446,Lucknow,Budget Android,0,40,0
+U7447,Delhi-NCR,High-end Android,0,39,1
+U7448,Mumbai,Budget Android,1,49,0
+U7449,Mumbai,iPhone,0,16,1
+U7450,Delhi-NCR,PC,0,17,1
+U7451,Delhi-NCR,PC,1,16,0
+U7452,Delhi-NCR,Budget Android,1,31,0
+U7453,Lucknow,Budget Android,0,37,0
+U7454,Patna,High-end Android,1,43,0
+U7455,Bangalore,High-end Android,0,45,0
+U7456,Mumbai,High-end Android,0,19,1
+U7457,Bangalore,Budget Android,0,3,0
+U7458,Bangalore,iPhone,1,1,0
+U7459,Delhi-NCR,iPhone,0,21,1
+U7460,Delhi-NCR,Budget Android,0,2,1
+U7461,Delhi-NCR,Budget Android,1,49,0
+U7462,Delhi-NCR,High-end Android,0,49,1
+U7463,Delhi-NCR,PC,0,30,1
+U7464,Delhi-NCR,High-end Android,1,32,0
+U7465,Bangalore,Budget Android,0,6,0
+U7466,Bangalore,Budget Android,0,4,0
+U7467,Mumbai,Budget Android,0,14,1
+U7468,Delhi-NCR,High-end Android,1,27,0
+U7469,Mumbai,Budget Android,1,20,0
+U7470,Bangalore,iPhone,0,40,0
+U7471,Mumbai,Budget Android,0,18,1
+U7472,Lucknow,High-end Android,0,3,0
+U7473,Mumbai,iPhone,0,42,1
+U7474,Delhi-NCR,PC,0,25,1
+U7475,Mumbai,High-end Android,0,33,1
+U7476,Bangalore,iPhone,0,12,0
+U7477,Mumbai,Budget Android,0,49,1
+U7478,Lucknow,PC,0,36,0
+U7479,Mumbai,Budget Android,1,31,0
+U7480,Mumbai,Budget Android,0,15,1
+U7481,Patna,High-end Android,1,35,0
+U7482,Delhi-NCR,Budget Android,0,36,1
+U7483,Delhi-NCR,High-end Android,0,30,1
+U7484,Delhi-NCR,iPhone,0,13,1
+U7485,Delhi-NCR,Budget Android,1,42,0
+U7486,Delhi-NCR,Budget Android,1,13,0
+U7487,Delhi-NCR,Budget Android,0,9,1
+U7488,Mumbai,Budget Android,1,24,0
+U7489,Delhi-NCR,iPhone,0,17,1
+U7490,Delhi-NCR,PC,0,9,1
+U7491,Patna,Budget Android,0,16,0
+U7492,Bangalore,iPhone,1,19,0
+U7493,Patna,Budget Android,0,44,0
+U7494,Lucknow,iPhone,0,39,0
+U7495,Bangalore,Budget Android,0,25,0
+U7496,Delhi-NCR,Budget Android,1,42,0
+U7497,Bangalore,Budget Android,1,28,0
+U7498,Mumbai,Budget Android,0,35,1
+U7499,Bangalore,High-end Android,0,35,0

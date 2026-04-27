@@ -1,0 +1,251 @@
+Application_ID,State,Gender,Income_INR,Credit_Score,Loan_Status
+FS-1000,Rajasthan,Female,92111,712,Rejected
+FS-1001,Delhi NCR,Male,141085,728,Approved
+FS-1002,Telangana,Male,51186,780,Approved
+FS-1003,Tamil Nadu,Female,121881,834,Approved
+FS-1004,Uttar Pradesh,Female,57647,688,Rejected
+FS-1005,Karnataka,Male,83156,781,Approved
+FS-1006,West Bengal,Male,129118,795,Approved
+FS-1007,Haryana,Female,25003,625,Rejected
+FS-1008,Bihar,Male,118101,529,Approved
+FS-1009,Assam,Male,129955,481,Rejected
+FS-1010,Punjab,Male,104971,692,Approved
+FS-1011,Uttar Pradesh,Male,47329,806,Approved
+FS-1012,West Bengal,Male,126983,690,Approved
+FS-1013,Delhi NCR,Male,59977,316,Rejected
+FS-1014,Telangana,Female,36687,342,Rejected
+FS-1015,Uttar Pradesh,Female,106870,718,Rejected
+FS-1016,Haryana,Male,99565,827,Approved
+FS-1017,Rajasthan,Male,65066,373,Approved
+FS-1018,Bihar,Male,105000,341,Approved
+FS-1019,Kerala,Male,84096,673,Approved
+FS-1020,Maharashtra,Male,147610,386,Rejected
+FS-1021,Karnataka,Male,135633,849,Approved
+FS-1022,Punjab,Male,71702,767,Approved
+FS-1023,Rajasthan,Female,139112,700,Rejected
+FS-1024,Madhya Pradesh,Male,119780,427,Rejected
+FS-1025,Telangana,Female,39574,305,Rejected
+FS-1026,Madhya Pradesh,Male,142572,489,Rejected
+FS-1027,Tamil Nadu,Male,97894,777,Approved
+FS-1028,West Bengal,Female,40404,773,Approved
+FS-1029,Punjab,Female,27764,517,Rejected
+FS-1030,Tamil Nadu,Female,102997,648,Rejected
+FS-1031,Madhya Pradesh,Female,39987,367,Rejected
+FS-1032,Assam,Female,112321,723,Approved
+FS-1033,Haryana,Female,140525,400,Rejected
+FS-1034,Bihar,Female,46213,353,Rejected
+FS-1035,Delhi NCR,Male,20732,379,Rejected
+FS-1036,Bihar,Male,131442,565,Approved
+FS-1037,Punjab,Male,128530,631,Approved
+FS-1038,Haryana,Male,41951,305,Rejected
+FS-1039,Punjab,Female,114144,574,Rejected
+FS-1040,Madhya Pradesh,Male,122482,317,Rejected
+FS-1041,Uttar Pradesh,Female,126344,627,Rejected
+FS-1042,Tamil Nadu,Female,100232,436,Rejected
+FS-1043,Bihar,Male,113640,645,Approved
+FS-1044,Gujarat,Male,22869,311,Rejected
+FS-1045,Tamil Nadu,Male,124490,588,Rejected
+FS-1046,Uttar Pradesh,Female,61514,321,Rejected
+FS-1047,Haryana,Female,63538,666,Rejected
+FS-1048,Haryana,Female,41304,692,Rejected
+FS-1049,Tamil Nadu,Female,80062,667,Rejected
+FS-1050,Haryana,Male,59212,553,Rejected
+FS-1051,Rajasthan,Female,41365,590,Rejected
+FS-1052,Madhya Pradesh,Female,94431,719,Approved
+FS-1053,West Bengal,Female,78731,479,Rejected
+FS-1054,Bihar,Female,115057,567,Rejected
+FS-1055,Tamil Nadu,Male,113911,575,Rejected
+FS-1056,Madhya Pradesh,Female,134046,308,Rejected
+FS-1057,Maharashtra,Female,147859,847,Approved
+FS-1058,Kerala,Male,88862,732,Approved
+FS-1059,West Bengal,Male,141402,509,Rejected
+FS-1060,Telangana,Female,101675,699,Rejected
+FS-1061,Kerala,Female,71335,418,Rejected
+FS-1062,Assam,Male,102149,332,Rejected
+FS-1063,Tamil Nadu,Male,138202,371,Rejected
+FS-1064,Assam,Male,105172,547,Rejected
+FS-1065,Gujarat,Female,99465,622,Rejected
+FS-1066,Haryana,Male,60698,567,Rejected
+FS-1067,Bihar,Male,125362,483,Approved
+FS-1068,Bihar,Female,57956,348,Rejected
+FS-1069,Haryana,Female,102838,733,Approved
+FS-1070,Uttar Pradesh,Female,131468,644,Rejected
+FS-1071,West Bengal,Male,99481,484,Rejected
+FS-1072,Kerala,Female,26163,683,Approved
+FS-1073,Delhi NCR,Male,98971,442,Rejected
+FS-1074,Maharashtra,Female,134729,711,Approved
+FS-1075,Delhi NCR,Male,127028,574,Rejected
+FS-1076,Tamil Nadu,Female,41194,628,Rejected
+FS-1077,Punjab,Female,142009,341,Rejected
+FS-1078,Assam,Male,44664,586,Rejected
+FS-1079,Tamil Nadu,Male,20948,727,Approved
+FS-1080,Madhya Pradesh,Female,101278,368,Rejected
+FS-1081,Gujarat,Male,123763,617,Rejected
+FS-1082,Karnataka,Female,135323,320,Rejected
+FS-1083,Uttar Pradesh,Female,109717,317,Rejected
+FS-1084,Karnataka,Female,46811,794,Approved
+FS-1085,Gujarat,Female,104953,629,Rejected
+FS-1086,Kerala,Female,126441,404,Rejected
+FS-1087,Assam,Male,148407,798,Approved
+FS-1088,Rajasthan,Male,84773,585,Approved
+FS-1089,Assam,Male,137825,807,Approved
+FS-1090,Bihar,Female,82835,754,Approved
+FS-1091,Maharashtra,Male,119950,807,Approved
+FS-1092,Telangana,Female,30547,547,Rejected
+FS-1093,Bihar,Male,92032,538,Approved
+FS-1094,Haryana,Male,128135,737,Approved
+FS-1095,Maharashtra,Female,112916,446,Rejected
+FS-1096,Uttar Pradesh,Male,25753,386,Rejected
+FS-1097,Uttar Pradesh,Male,29805,746,Approved
+FS-1098,Karnataka,Male,46331,484,Rejected
+FS-1099,Telangana,Female,59329,792,Approved
+FS-1100,Delhi NCR,Male,127744,799,Approved
+FS-1101,Bihar,Male,128763,528,Approved
+FS-1102,Rajasthan,Female,71305,550,Rejected
+FS-1103,Maharashtra,Female,39740,829,Approved
+FS-1104,Telangana,Female,134243,537,Rejected
+FS-1105,Maharashtra,Male,99293,391,Rejected
+FS-1106,Delhi NCR,Female,148286,591,Rejected
+FS-1107,Assam,Male,83450,729,Approved
+FS-1108,Gujarat,Male,123518,408,Rejected
+FS-1109,Maharashtra,Female,132715,447,Rejected
+FS-1110,Delhi NCR,Male,72041,571,Rejected
+FS-1111,Maharashtra,Female,60825,711,Approved
+FS-1112,Punjab,Female,86119,795,Approved
+FS-1113,Maharashtra,Male,127644,642,Rejected
+FS-1114,Punjab,Male,46815,356,Rejected
+FS-1115,Telangana,Male,86669,308,Rejected
+FS-1116,Haryana,Female,93169,737,Approved
+FS-1117,West Bengal,Male,123685,311,Rejected
+FS-1118,Maharashtra,Male,109329,403,Rejected
+FS-1119,Kerala,Female,42986,352,Rejected
+FS-1120,Telangana,Male,119044,659,Approved
+FS-1121,West Bengal,Female,145164,602,Rejected
+FS-1122,Telangana,Female,120721,469,Rejected
+FS-1123,Bihar,Female,142007,819,Approved
+FS-1124,Punjab,Female,81252,511,Rejected
+FS-1125,Kerala,Male,80075,661,Approved
+FS-1126,Delhi NCR,Female,27542,560,Rejected
+FS-1127,Delhi NCR,Female,69743,367,Rejected
+FS-1128,Madhya Pradesh,Male,144028,386,Rejected
+FS-1129,Uttar Pradesh,Female,95834,712,Rejected
+FS-1130,Delhi NCR,Female,140470,439,Rejected
+FS-1131,West Bengal,Female,52361,695,Rejected
+FS-1132,Kerala,Male,83347,770,Approved
+FS-1133,Haryana,Male,33725,578,Rejected
+FS-1134,Rajasthan,Male,71176,846,Approved
+FS-1135,Delhi NCR,Female,109721,654,Rejected
+FS-1136,Karnataka,Male,52720,351,Rejected
+FS-1137,Madhya Pradesh,Female,60049,655,Rejected
+FS-1138,Assam,Female,80668,591,Rejected
+FS-1139,West Bengal,Male,57581,539,Rejected
+FS-1140,Karnataka,Female,25575,340,Rejected
+FS-1141,Telangana,Female,70007,675,Rejected
+FS-1142,Bihar,Female,58628,411,Rejected
+FS-1143,Maharashtra,Male,79977,582,Rejected
+FS-1144,Karnataka,Female,145652,581,Rejected
+FS-1145,Assam,Male,72955,652,Approved
+FS-1146,Bihar,Male,48584,319,Approved
+FS-1147,Bihar,Female,65403,632,Rejected
+FS-1148,Karnataka,Female,120805,397,Rejected
+FS-1149,Delhi NCR,Male,32669,490,Rejected
+FS-1150,West Bengal,Male,143224,689,Approved
+FS-1151,Kerala,Female,55949,304,Rejected
+FS-1152,Telangana,Male,60714,314,Rejected
+FS-1153,Haryana,Female,48741,392,Rejected
+FS-1154,Bihar,Male,85522,492,Approved
+FS-1155,Kerala,Male,143613,384,Rejected
+FS-1156,West Bengal,Female,117838,314,Rejected
+FS-1157,Maharashtra,Male,96075,524,Rejected
+FS-1158,Punjab,Male,81662,649,Approved
+FS-1159,Delhi NCR,Male,96108,763,Approved
+FS-1160,Haryana,Male,137470,783,Approved
+FS-1161,Uttar Pradesh,Male,28675,349,Rejected
+FS-1162,Karnataka,Female,133395,575,Rejected
+FS-1163,West Bengal,Male,146686,312,Rejected
+FS-1164,Assam,Female,40495,400,Rejected
+FS-1165,Assam,Female,142220,433,Rejected
+FS-1166,Haryana,Female,130462,418,Rejected
+FS-1167,Delhi NCR,Female,127755,523,Rejected
+FS-1168,Rajasthan,Female,129478,829,Approved
+FS-1169,Kerala,Male,73500,683,Approved
+FS-1170,Madhya Pradesh,Male,86977,488,Rejected
+FS-1171,Madhya Pradesh,Male,116193,312,Rejected
+FS-1172,Kerala,Male,103217,694,Approved
+FS-1173,Assam,Female,119750,640,Rejected
+FS-1174,Kerala,Female,131842,753,Approved
+FS-1175,Maharashtra,Male,117780,736,Approved
+FS-1176,Haryana,Male,80039,330,Rejected
+FS-1177,Telangana,Female,117211,788,Approved
+FS-1178,Telangana,Female,132053,507,Rejected
+FS-1179,Bihar,Female,53833,710,Rejected
+FS-1180,Gujarat,Male,100997,542,Rejected
+FS-1181,Punjab,Female,25773,480,Rejected
+FS-1182,Punjab,Male,32914,336,Rejected
+FS-1183,Uttar Pradesh,Female,30827,372,Rejected
+FS-1184,Uttar Pradesh,Female,135092,508,Rejected
+FS-1185,Assam,Female,135208,698,Rejected
+FS-1186,Haryana,Male,26307,535,Rejected
+FS-1187,Maharashtra,Female,46377,836,Approved
+FS-1188,Tamil Nadu,Female,25317,304,Rejected
+FS-1189,Telangana,Male,100228,399,Rejected
+FS-1190,Karnataka,Male,140087,386,Rejected
+FS-1191,Punjab,Male,29025,669,Approved
+FS-1192,Telangana,Female,40696,559,Rejected
+FS-1193,Delhi NCR,Male,137561,394,Rejected
+FS-1194,Madhya Pradesh,Male,23076,328,Rejected
+FS-1195,Maharashtra,Male,123819,736,Approved
+FS-1196,Maharashtra,Female,103644,572,Rejected
+FS-1197,Delhi NCR,Male,91690,604,Rejected
+FS-1198,Maharashtra,Male,23517,452,Rejected
+FS-1199,Maharashtra,Male,119616,726,Approved
+FS-1200,Delhi NCR,Male,120360,555,Rejected
+FS-1201,Delhi NCR,Female,115574,512,Rejected
+FS-1202,Maharashtra,Male,139858,711,Approved
+FS-1203,Haryana,Male,31133,391,Rejected
+FS-1204,Delhi NCR,Male,36760,736,Approved
+FS-1205,Kerala,Male,59757,709,Approved
+FS-1206,Karnataka,Male,133089,850,Approved
+FS-1207,Uttar Pradesh,Female,43681,518,Rejected
+FS-1208,Haryana,Male,92419,759,Approved
+FS-1209,Kerala,Female,132587,351,Rejected
+FS-1210,Maharashtra,Female,147438,777,Approved
+FS-1211,Delhi NCR,Female,123312,599,Rejected
+FS-1212,Delhi NCR,Female,116537,641,Rejected
+FS-1213,Telangana,Female,89291,562,Rejected
+FS-1214,Assam,Male,101042,807,Approved
+FS-1215,Delhi NCR,Female,55678,411,Rejected
+FS-1216,Punjab,Female,84645,721,Approved
+FS-1217,Madhya Pradesh,Female,34843,500,Rejected
+FS-1218,Delhi NCR,Female,94415,482,Rejected
+FS-1219,Tamil Nadu,Male,108977,715,Approved
+FS-1220,Assam,Female,85835,499,Rejected
+FS-1221,Telangana,Female,97651,794,Approved
+FS-1222,Gujarat,Male,74338,508,Rejected
+FS-1223,Haryana,Male,31922,482,Rejected
+FS-1224,Telangana,Male,56531,376,Rejected
+FS-1225,Haryana,Male,37386,622,Approved
+FS-1226,Delhi NCR,Male,108203,702,Approved
+FS-1227,Gujarat,Female,104254,839,Approved
+FS-1228,Tamil Nadu,Female,86837,498,Rejected
+FS-1229,Tamil Nadu,Male,28145,596,Rejected
+FS-1230,Uttar Pradesh,Male,135233,617,Approved
+FS-1231,West Bengal,Male,58153,516,Rejected
+FS-1232,Tamil Nadu,Male,125568,512,Rejected
+FS-1233,Kerala,Male,89012,449,Rejected
+FS-1234,Bihar,Female,98755,523,Rejected
+FS-1235,Maharashtra,Female,65071,335,Rejected
+FS-1236,Uttar Pradesh,Female,128726,469,Rejected
+FS-1237,Madhya Pradesh,Female,107304,739,Approved
+FS-1238,Bihar,Female,45197,836,Rejected
+FS-1239,Haryana,Female,72211,731,Approved
+FS-1240,Karnataka,Female,118444,582,Rejected
+FS-1241,Maharashtra,Male,129407,678,Approved
+FS-1242,Telangana,Male,49477,815,Approved
+FS-1243,Bihar,Female,85956,330,Rejected
+FS-1244,Rajasthan,Female,56749,648,Rejected
+FS-1245,West Bengal,Female,142008,399,Rejected
+FS-1246,Tamil Nadu,Female,69210,790,Approved
+FS-1247,Delhi NCR,Female,32766,833,Approved
+FS-1248,Madhya Pradesh,Male,147528,355,Rejected
+FS-1249,Gujarat,Female,115839,701,Approved

@@ -1,0 +1,301 @@
+person_id,gender,age,socioeconomic_status,prior_offenses,education_level,risk_score,high_risk_predicted,actual_recidivism
+R4000,Male,22,High,2,Higher,6.0,1,0
+R4001,Male,19,High,1,Primary,5.4,1,1
+R4002,Male,35,Middle,2,Secondary,5.9,1,0
+R4003,Female,27,Middle,1,Higher,3.9,0,1
+R4004,Male,28,High,0,No Schooling,3.5,0,0
+R4005,Male,34,High,0,Secondary,3.3,0,0
+R4006,Male,18,Low,0,Primary,7.2,1,0
+R4007,Male,18,Middle,2,Secondary,8.2,1,0
+R4008,Male,24,Middle,2,Higher,7.5,1,0
+R4009,Male,18,Middle,0,Higher,6.9,1,0
+R4010,Male,22,Middle,0,Higher,5.6,1,0
+R4011,Male,23,High,1,Higher,5.8,1,0
+R4012,Male,29,High,1,Higher,4.0,0,1
+R4013,Female,26,Middle,0,Higher,4.0,0,1
+R4014,Male,18,Middle,0,Secondary,5.4,1,0
+R4015,Female,25,Low,0,No Schooling,6.0,1,0
+R4016,Male,25,Low,1,Primary,7.0,1,0
+R4017,Male,41,Middle,1,Primary,4.9,0,1
+R4018,Male,18,Middle,1,No Schooling,6.0,1,1
+R4019,Male,26,Low,6,Secondary,10.0,1,1
+R4020,Male,24,High,3,Secondary,8.3,1,1
+R4021,Female,28,Middle,0,Primary,4.1,0,0
+R4022,Female,37,Low,0,Secondary,5.8,1,1
+R4023,Male,35,High,0,Primary,3.2,0,0
+R4024,Female,24,Low,0,Primary,7.1,1,0
+R4025,Female,21,Low,2,Secondary,8.0,1,0
+R4026,Male,18,Low,1,Secondary,9.1,1,1
+R4027,Male,18,Middle,2,No Schooling,6.5,1,1
+R4028,Male,18,Middle,0,Secondary,5.8,1,0
+R4029,Female,26,Low,0,Secondary,5.6,1,0
+R4030,Male,38,High,1,Higher,4.7,0,1
+R4031,Male,18,Low,1,Higher,8.7,1,0
+R4032,Male,18,Low,0,No Schooling,7.7,1,1
+R4033,Female,30,Low,1,Primary,6.3,1,0
+R4034,Male,33,Middle,0,Primary,4.1,0,0
+R4035,Male,22,Middle,1,Secondary,6.5,1,1
+R4036,Male,24,Middle,0,Higher,5.6,1,1
+R4037,Male,41,High,0,No Schooling,4.9,0,0
+R4038,Male,35,Low,0,Secondary,5.2,1,0
+R4039,Female,38,Middle,0,Higher,4.0,0,0
+R4040,Male,27,High,0,Secondary,2.8,0,0
+R4041,Female,18,High,1,Secondary,6.0,1,1
+R4042,Male,21,Middle,0,Secondary,5.4,1,1
+R4043,Male,44,Low,1,Higher,6.2,1,1
+R4044,Male,38,Middle,1,Primary,5.6,1,0
+R4045,Male,31,Low,3,Higher,8.0,1,0
+R4046,Female,36,Low,0,Higher,5.4,1,1
+R4047,Female,37,Low,1,No Schooling,6.7,1,0
+R4048,Male,19,Low,0,Primary,7.9,1,0
+R4049,Male,34,Low,0,Higher,5.0,1,1
+R4050,Male,21,Middle,0,Higher,4.9,0,1
+R4051,Male,40,High,0,Higher,2.9,0,0
+R4052,Male,25,Low,0,Secondary,5.4,1,0
+R4053,Male,33,Low,1,Secondary,6.6,1,0
+R4054,Male,37,Middle,0,No Schooling,3.4,0,0
+R4055,Male,26,High,0,Secondary,4.7,0,0
+R4056,Male,32,Middle,0,Secondary,4.5,0,0
+R4057,Male,33,Low,0,Secondary,6.7,1,0
+R4058,Male,39,High,0,Secondary,2.7,0,0
+R4059,Male,29,High,0,Secondary,4.6,0,1
+R4060,Male,19,High,3,Primary,7.2,1,1
+R4061,Male,31,Low,1,Secondary,7.4,1,0
+R4062,Female,28,Middle,6,Primary,9.0,1,1
+R4063,Male,30,Low,4,Secondary,9.4,1,0
+R4064,Male,43,Middle,1,Higher,5.1,1,0
+R4065,Female,23,Low,0,Primary,6.6,1,0
+R4066,Male,43,Low,0,Secondary,5.6,1,0
+R4067,Female,40,Middle,3,Primary,5.9,1,0
+R4068,Male,18,Middle,0,No Schooling,6.0,1,0
+R4069,Male,23,Low,3,Secondary,9.4,1,0
+R4070,Male,27,Middle,0,Secondary,4.8,0,0
+R4071,Male,30,Middle,0,Primary,3.8,0,0
+R4072,Female,26,High,1,Primary,3.5,0,0
+R4073,Male,31,High,0,No Schooling,3.5,0,0
+R4074,Male,27,High,2,Secondary,5.0,1,0
+R4075,Male,23,High,1,Primary,6.0,1,1
+R4076,Male,30,Low,1,Primary,7.1,1,0
+R4077,Male,18,Middle,0,No Schooling,6.7,1,0
+R4078,Female,22,High,0,Primary,4.6,0,1
+R4079,Male,23,Middle,0,Higher,7.3,1,1
+R4080,Female,38,Middle,1,No Schooling,5.2,1,0
+R4081,Male,29,Middle,0,Higher,3.7,0,0
+R4082,Male,41,Low,0,Higher,5.9,1,0
+R4083,Female,21,Low,0,Primary,6.6,1,0
+R4084,Male,34,High,0,No Schooling,3.9,0,0
+R4085,Male,23,Low,1,Higher,8.4,1,0
+R4086,Male,37,Middle,0,Higher,4.4,0,0
+R4087,Female,29,High,0,Higher,2.2,0,1
+R4088,Female,18,Middle,1,Secondary,6.3,1,1
+R4089,Female,36,Low,3,Primary,9.6,1,1
+R4090,Female,29,Low,1,Secondary,5.6,1,0
+R4091,Female,38,Middle,0,Secondary,4.2,0,0
+R4092,Male,20,Middle,0,Secondary,5.0,1,0
+R4093,Male,38,High,3,Secondary,5.1,1,1
+R4094,Female,20,Low,0,Primary,7.6,1,1
+R4095,Female,42,High,1,Higher,4.0,0,0
+R4096,Male,29,Middle,2,Primary,5.7,1,0
+R4097,Male,24,Middle,2,Primary,7.3,1,1
+R4098,Male,28,Low,1,No Schooling,6.3,1,1
+R4099,Male,24,Middle,2,Secondary,7.4,1,1
+R4100,Male,26,High,2,Higher,5.1,1,0
+R4101,Male,39,High,1,Primary,4.8,0,0
+R4102,Female,28,High,1,No Schooling,3.8,0,0
+R4103,Male,18,Low,0,Primary,7.2,1,0
+R4104,Female,20,Middle,1,Higher,5.8,1,1
+R4105,Female,46,Low,0,Primary,5.7,1,0
+R4106,Male,32,Middle,0,Secondary,4.7,0,0
+R4107,Male,21,Middle,0,No Schooling,5.4,1,0
+R4108,Male,23,Middle,3,Higher,8.3,1,1
+R4109,Male,18,Middle,4,Primary,8.6,1,1
+R4110,Female,31,Low,0,Secondary,5.6,1,0
+R4111,Male,20,Middle,1,Secondary,6.8,1,0
+R4112,Male,26,High,1,Primary,4.3,0,1
+R4113,Male,26,Low,0,Higher,5.4,1,0
+R4114,Male,27,Middle,0,No Schooling,4.1,0,0
+R4115,Female,26,High,0,Secondary,2.7,0,0
+R4116,Female,18,Low,2,Higher,8.5,1,0
+R4117,Female,34,High,1,Secondary,4.4,0,1
+R4118,Male,18,High,1,Higher,5.7,1,1
+R4119,Male,30,Low,1,Higher,6.7,1,0
+R4120,Female,24,Low,0,Primary,7.4,1,0
+R4121,Female,27,Middle,0,Primary,3.4,0,0
+R4122,Male,38,Low,2,Secondary,8.1,1,0
+R4123,Male,18,High,1,Higher,5.3,1,0
+R4124,Male,25,High,0,No Schooling,3.2,0,0
+R4125,Male,20,Middle,0,Higher,5.3,1,1
+R4126,Female,32,Low,0,Secondary,6.0,1,0
+R4127,Female,38,Low,0,Higher,5.5,1,0
+R4128,Male,18,Middle,0,Secondary,5.9,1,0
+R4129,Female,19,Middle,0,Primary,5.3,1,1
+R4130,Male,27,High,1,No Schooling,3.9,0,1
+R4131,Male,30,Middle,3,Secondary,7.4,1,0
+R4132,Male,44,Low,1,Primary,7.3,1,1
+R4133,Male,30,Middle,1,No Schooling,5.2,1,0
+R4134,Male,33,Low,0,Higher,6.3,1,1
+R4135,Male,21,Low,0,Higher,7.9,1,0
+R4136,Male,23,High,1,Higher,5.7,1,0
+R4137,Female,33,Middle,2,Secondary,6.1,1,1
+R4138,Male,31,Low,0,Secondary,5.1,1,1
+R4139,Female,49,Low,0,Secondary,5.2,1,0
+R4140,Female,32,Low,5,Higher,8.8,1,1
+R4141,Male,33,Middle,3,Secondary,7.1,1,0
+R4142,Female,37,Low,0,No Schooling,5.9,1,0
+R4143,Male,22,High,1,Secondary,6.4,1,1
+R4144,Male,37,High,2,Higher,6.0,1,0
+R4145,Female,23,Middle,0,No Schooling,5.7,1,1
+R4146,Male,23,Low,1,Higher,9.1,1,0
+R4147,Male,18,Low,0,Secondary,7.3,1,0
+R4148,Male,23,Middle,0,Secondary,5.5,1,1
+R4149,Male,28,Low,1,Secondary,6.3,1,0
+R4150,Male,21,Middle,0,Secondary,5.7,1,0
+R4151,Female,23,Middle,0,Secondary,5.5,1,0
+R4152,Male,30,Middle,0,Secondary,4.8,0,0
+R4153,Male,38,Middle,0,Secondary,4.5,0,0
+R4154,Male,34,Middle,0,Secondary,4.7,0,0
+R4155,Female,28,Low,0,Secondary,5.1,1,0
+R4156,Male,32,High,0,Secondary,3.8,0,0
+R4157,Male,39,Low,4,Higher,9.4,1,0
+R4158,Female,39,Middle,2,Primary,5.1,1,1
+R4159,Male,22,Middle,2,Secondary,6.5,1,1
+R4160,Male,31,Middle,0,Primary,3.0,0,0
+R4161,Male,38,Low,0,Secondary,5.8,1,1
+R4162,Male,18,High,0,Higher,5.9,1,0
+R4163,Male,29,Middle,1,Secondary,5.2,1,0
+R4164,Male,33,Middle,1,Secondary,4.3,0,0
+R4165,Male,47,High,0,Primary,3.5,0,1
+R4166,Male,28,High,0,Primary,3.3,0,0
+R4167,Male,33,Low,2,Primary,8.3,1,0
+R4168,Male,21,Low,1,Secondary,8.0,1,0
+R4169,Male,43,Middle,1,Secondary,4.8,0,1
+R4170,Female,35,Low,0,Primary,6.1,1,0
+R4171,Male,32,Middle,0,Higher,4.9,0,1
+R4172,Female,22,Low,0,Secondary,6.7,1,1
+R4173,Female,25,High,0,Secondary,1.9,0,0
+R4174,Male,18,High,1,Secondary,5.8,1,0
+R4175,Male,32,High,1,Secondary,4.5,0,0
+R4176,Male,19,High,1,Higher,6.0,1,1
+R4177,Female,33,Low,0,No Schooling,6.1,1,0
+R4178,Male,19,Low,0,Higher,7.3,1,0
+R4179,Male,45,High,0,Primary,3.8,0,0
+R4180,Male,31,High,1,No Schooling,4.2,0,1
+R4181,Male,41,Middle,3,Secondary,6.0,1,0
+R4182,Female,24,Low,0,Secondary,6.7,1,1
+R4183,Male,20,Low,0,Higher,7.5,1,0
+R4184,Male,19,Low,1,No Schooling,8.1,1,0
+R4185,Male,25,High,0,Higher,3.5,0,0
+R4186,Male,18,Low,0,Higher,6.9,1,0
+R4187,Male,35,Middle,0,Higher,4.4,0,0
+R4188,Male,37,High,3,No Schooling,5.9,1,0
+R4189,Male,28,Middle,1,Secondary,4.2,0,0
+R4190,Male,31,Low,1,Secondary,6.7,1,0
+R4191,Male,30,Low,0,No Schooling,5.9,1,0
+R4192,Male,33,Middle,0,Secondary,4.3,0,0
+R4193,Female,29,Middle,2,Higher,4.7,0,0
+R4194,Male,22,High,3,Higher,6.2,1,1
+R4195,Female,26,Middle,1,Secondary,4.8,0,0
+R4196,Male,35,Middle,2,Secondary,6.2,1,1
+R4197,Male,39,High,0,Primary,3.2,0,1
+R4198,Male,28,Middle,0,No Schooling,4.5,0,0
+R4199,Male,33,High,1,Higher,4.4,0,0
+R4200,Male,27,High,0,No Schooling,3.0,0,1
+R4201,Male,18,Low,1,Primary,8.3,1,1
+R4202,Male,18,Middle,0,Higher,6.2,1,1
+R4203,Male,33,Low,0,Higher,6.5,1,0
+R4204,Male,21,Middle,0,Primary,6.0,1,1
+R4205,Male,18,Low,0,Higher,6.5,1,0
+R4206,Male,19,Middle,3,No Schooling,7.3,1,1
+R4207,Male,18,Middle,0,Secondary,5.1,1,0
+R4208,Male,18,Middle,0,Secondary,5.7,1,1
+R4209,Male,38,Low,0,Primary,6.0,1,1
+R4210,Female,20,High,0,Primary,5.1,1,0
+R4211,Female,32,Low,3,No Schooling,7.5,1,0
+R4212,Male,31,High,1,No Schooling,4.3,0,0
+R4213,Male,49,Low,1,Secondary,7.1,1,1
+R4214,Male,42,Low,1,Primary,7.1,1,0
+R4215,Female,22,Middle,4,Primary,8.7,1,0
+R4216,Male,22,Low,2,Primary,9.6,1,1
+R4217,Male,30,Middle,2,Higher,5.7,1,1
+R4218,Male,24,High,1,No Schooling,6.5,1,0
+R4219,Male,31,High,0,Primary,3.2,0,0
+R4220,Male,18,Middle,2,Primary,7.0,1,1
+R4221,Female,29,Low,0,Secondary,5.6,1,0
+R4222,Male,18,Middle,1,Secondary,6.8,1,0
+R4223,Male,18,Middle,0,Secondary,5.3,1,0
+R4224,Male,23,Middle,1,Primary,6.4,1,0
+R4225,Male,25,Middle,1,No Schooling,4.7,0,1
+R4226,Male,23,Middle,0,Primary,6.3,1,1
+R4227,Female,37,Middle,2,Primary,5.2,1,1
+R4228,Female,34,Low,0,Secondary,5.8,1,1
+R4229,Male,25,Low,0,No Schooling,6.0,1,0
+R4230,Male,32,Middle,0,Secondary,4.2,0,0
+R4231,Male,45,Low,1,Higher,6.3,1,0
+R4232,Male,18,Middle,0,Primary,5.7,1,0
+R4233,Male,27,Middle,0,Secondary,4.2,0,0
+R4234,Female,33,Low,1,Secondary,6.0,1,1
+R4235,Male,23,Middle,1,Primary,6.3,1,1
+R4236,Male,18,Low,0,Secondary,7.0,1,0
+R4237,Male,27,High,0,Secondary,3.6,0,0
+R4238,Male,31,High,1,Secondary,4.6,0,1
+R4239,Female,42,Middle,0,Higher,4.0,0,1
+R4240,Male,31,Low,0,Primary,5.8,1,0
+R4241,Male,32,Low,0,Secondary,6.8,1,0
+R4242,Male,27,Middle,0,Secondary,5.0,1,0
+R4243,Male,33,Middle,1,Higher,5.5,1,0
+R4244,Male,22,High,0,Primary,5.2,1,1
+R4245,Male,34,Middle,0,Secondary,4.3,0,0
+R4246,Male,28,High,0,Primary,3.4,0,0
+R4247,Female,32,Low,3,Secondary,7.7,1,0
+R4248,Male,23,Low,0,Higher,7.7,1,0
+R4249,Male,19,High,1,Secondary,5.9,1,0
+R4250,Female,30,Middle,1,Secondary,5.0,1,0
+R4251,Male,39,Middle,0,Higher,3.4,0,0
+R4252,Male,34,High,0,Higher,3.4,0,1
+R4253,Female,18,Middle,1,Higher,5.6,1,1
+R4254,Male,23,Middle,0,Primary,5.9,1,0
+R4255,Male,38,Middle,0,Secondary,4.2,0,1
+R4256,Male,18,High,1,No Schooling,5.2,1,1
+R4257,Female,28,Middle,1,Higher,4.4,0,0
+R4258,Male,31,Middle,0,Secondary,4.8,0,0
+R4259,Male,32,Middle,0,Secondary,4.2,0,0
+R4260,Female,21,High,0,Higher,4.8,0,1
+R4261,Male,18,Middle,3,Secondary,8.1,1,0
+R4262,Male,32,Middle,0,Secondary,4.5,0,0
+R4263,Male,42,Middle,1,Secondary,4.9,0,0
+R4264,Male,35,Low,0,Higher,6.2,1,1
+R4265,Female,32,Low,1,Higher,6.7,1,0
+R4266,Male,21,High,2,Higher,6.5,1,0
+R4267,Female,32,Middle,2,Higher,4.9,0,0
+R4268,Female,30,Middle,0,Secondary,4.3,0,0
+R4269,Male,32,High,0,Primary,3.6,0,1
+R4270,Male,19,Middle,0,Secondary,5.9,1,1
+R4271,Female,29,Low,0,Primary,5.1,1,0
+R4272,Male,21,Low,0,No Schooling,6.6,1,1
+R4273,Male,25,Middle,2,Secondary,5.8,1,0
+R4274,Female,18,Low,1,Higher,8.4,1,0
+R4275,Male,18,Middle,0,Primary,5.7,1,0
+R4276,Female,25,High,0,Primary,3.2,0,0
+R4277,Male,26,Middle,0,Secondary,4.0,0,0
+R4278,Male,26,Low,0,Secondary,6.5,1,0
+R4279,Male,36,Middle,1,Higher,4.8,0,0
+R4280,Male,30,Middle,0,Primary,4.3,0,0
+R4281,Female,21,Middle,0,Higher,4.6,0,1
+R4282,Male,22,Low,0,Higher,7.0,1,1
+R4283,Female,39,Low,0,Secondary,4.9,0,0
+R4284,Female,34,Middle,2,Secondary,6.0,1,0
+R4285,Female,27,Middle,1,Secondary,4.5,0,0
+R4286,Male,42,Low,1,No Schooling,7.1,1,1
+R4287,Male,39,High,2,Primary,4.5,0,0
+R4288,Male,33,Low,0,Secondary,6.3,1,0
+R4289,Male,30,Low,0,No Schooling,5.7,1,0
+R4290,Male,27,Low,0,Secondary,6.0,1,1
+R4291,Male,25,Low,0,Secondary,5.8,1,0
+R4292,Female,36,Low,0,Primary,5.1,1,1
+R4293,Female,39,Middle,0,No Schooling,3.9,0,0
+R4294,Male,42,High,1,Secondary,3.7,0,1
+R4295,Male,27,High,0,No Schooling,3.1,0,0
+R4296,Female,18,Middle,2,Secondary,6.5,1,1
+R4297,Female,31,Middle,0,Primary,3.5,0,0
+R4298,Male,28,Middle,0,Primary,5.4,1,0
+R4299,Female,18,High,1,No Schooling,5.2,1,0
