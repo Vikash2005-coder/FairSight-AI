@@ -1,0 +1,126 @@
+<div class="mitigation-studio">
+    <header class="dashboard-header">
+        <div class="header-left">
+            <h1>Mitigation <span class="accent">Lab</span></h1>
+            <p>Simulate, Stress-Test, and Certified Fairness.</p>
+        </div>
+        <div class="header-right">
+            <button class="btn btn-outline" onclick="switchView('audit')">
+                <i class="fas fa-arrow-left"></i> Back to Audit
+            </button>
+        </div>
+    </header>
+
+    <div class="mitigation-grid" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.5rem;">
+        
+        <!-- 1. Tradeoff Workspace -->
+        <div class="glass-card" style="padding: 2rem;">
+            <div class="card-header" style="margin-bottom: 2rem;">
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <span><i class="fas fa-balance-scale"></i> Fairness-vs-Profit Simulator</span>
+                    <div id="optimal-reasoning-box" class="glass-card ai-dialogue" style="display: none; padding: 0.8rem 1rem; border-left: 3px solid var(--accent); position: relative; margin-top: 0.5rem;">
+                        <span class="ai-badge" style="font-size: 0.6rem; color: var(--accent); font-weight: 700; display: block; margin-bottom: 0.3rem;">FAIRSIGHT OBSERVATION</span>
+                        <p id="optimal-reasoning-text" style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; margin: 0;"></p>
+                    </div>
+                </div>
+                <span class="glass-card" style="font-size: 0.7rem; padding: 0.3rem 0.8rem; color: var(--accent);">OPTIMAL POINT DETECTED</span>
+            </div>
+            
+            <div id="tradeoff-chart" style="height: 350px; width: 100%;"></div>
+            
+            <div class="simulator-controls" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                    <label style="font-weight: 600; font-size: 0.9rem;">Mitigation Intensity (Bias Reduction)</label>
+                    <span id="intensity-val" style="color: var(--primary); font-family: 'Outfit'; font-weight: 700;">40%</span>
+                </div>
+                <input type="range" id="intensity-slider" min="0" max="100" value="40" style="width: 100%; accent-color: var(--primary); cursor: pointer;" oninput="updateIntensity(this.value)">
+                
+                <div class="sim-prediction" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+                    <div class="glass-card" style="padding: 1rem; text-align: center; background: rgba(99, 102, 241, 0.05);">
+                        <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Est. Fairness Score</span>
+                        <span id="lab-fairness-score" style="display: block; font-size: 1.5rem; font-weight: 700; color: #10b981;">84.2</span>
+                    </div>
+                    <div class="glass-card" style="padding: 1rem; text-align: center; background: rgba(244, 63, 94, 0.05);">
+                        <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Accuracy Impact</span>
+                        <span id="lab-accuracy-impact" style="display: block; font-size: 1.5rem; font-weight: 700; color: #f43f5e;">-2.1%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Adversarial Arena & Compliance -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <!-- Red Team Arena -->
+            <div class="glass-card" style="padding: 1.5rem; flex-grow: 1;">
+                <div class="card-header">
+                    <span><i class="fas fa-shield-halved"></i> Adversarial Red-Team</span>
+                    <button class="btn btn-primary" style="font-size: 0.7rem; padding: 0.4rem 0.8rem;" onclick="runRedTeamTest()">
+                        <i class="fas fa-bolt"></i> Run Stress Test
+                    </button>
+                </div>
+                
+                <div id="red-team-results" style="margin-top: 1.5rem;">
+                    <div class="placeholder-text" style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 3rem;">
+                        Identify hidden "decision flips" using Gemini-powered persona attacks.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compliance Card -->
+            <div class="glass-card certification-card" style="padding: 1.5rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%); border: 1px solid rgba(99, 102, 241, 0.2);">
+                <div class="card-header">
+                    <span><i class="fas fa-certificate"></i> Compliance Center</span>
+                </div>
+                
+                <div id="compliance-status-list" style="margin-top: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; font-size: 0.85rem;">
+                        <span>GDPR / EU AI Act</span>
+                        <span class="badge badge-success" style="background: #10b98120; color: #10b981; padding: 2px 8px; border-radius: 10px;">AT RISK</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.85rem;">
+                        <span>India DPDP 2023</span>
+                        <span class="badge badge-warning" style="background: #f59e0b20; color: #f59e0b; padding: 2px 8px; border-radius: 10px;">REVISION</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn-outline" style="width: 100%; border-color: rgba(99,102,241,0.3); font-size: 0.8rem;" onclick="downloadCertificate()">
+                    <i class="fas fa-download"></i> Get Compliance Certificate (PDF)
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .mitigation-studio {
+        animation: fadeIn 0.4s ease-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .certification-card {
+        box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+    }
+    .ai-dialogue {
+        background: rgba(99, 102, 241, 0.05);
+        border: 1px solid rgba(99, 102, 241, 0.1) !important;
+        animation: slideIn 0.5s ease-out;
+    }
+    .ai-dialogue::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid rgba(99, 102, 241, 0.1);
+    }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-10px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+</style>

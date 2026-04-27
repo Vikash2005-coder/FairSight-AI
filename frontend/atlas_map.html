@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c23752db343248c8e729ceafca332a15 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed; 
+        top: 50%; left: 50%; 
+        transform: translate(-50%, -50%);
+        z-index: 1001;
+        background: rgba(20, 20, 25, 0.95);
+        color: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        border: 2px solid #ff4b2b;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        max-width: 500px;
+    ">
+        <h2 style="color: #ff4b2b; margin-bottom: 20px;">
+           <i class="fas fa-exclamation-triangle"></i> No Geo-Data Detected
+        </h2>
+        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 15px;">
+            The dataset <b>healthcare_bias.csv</b> does not contain any detected geographical columns.
+        </p>
+        <p style="font-size: 0.9rem; color: #ff8a75; background: rgba(255, 75, 43, 0.1); padding: 10px; border-radius: 8px;">
+            Search Keywords: 'State', 'Region', 'Pincode', 'City'
+        </p>
+        <p style="font-size: 0.85rem; color: #aaa; margin-top: 20px;">
+            India Bias Atlas requires regional identifiers (State name, Pincode, or City) to plot hotspots.
+        </p>
+    </div>
+    
+    
+    <div style="
+        position: fixed; 
+        bottom: 10px; right: 10px; 
+        z-index: 1000;
+        background: rgba(15, 15, 20, 0.8);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        padding: 8px 15px;
+        color: #10b981;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.8rem;
+        border-radius: 6px;
+        backdrop-filter: blur(4px);
+        pointer-events: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    ">
+        <i class="fas fa-satellite-dish"></i> <b>LIVE AI AUDIT:</b> 2026-04-27 19:10:14<br>
+        <span style="color: #888; font-size: 0.7rem;">India Bias Atlas | Session: 20260427_191014</span>
+    </div>
+    
+    
+            <div class="folium-map" id="map_c23752db343248c8e729ceafca332a15" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c23752db343248c8e729ceafca332a15 = L.map(
+                "map_c23752db343248c8e729ceafca332a15",
+                {
+                    center: [22.5937, 78.9629],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_c23752db343248c8e729ceafca332a15);
+
+            
+
+        
+    
+            var tile_layer_d51ec165bc13fb11d0a3d128360dc01a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_d51ec165bc13fb11d0a3d128360dc01a.addTo(map_c23752db343248c8e729ceafca332a15);
+        
+    
+            tile_layer_d51ec165bc13fb11d0a3d128360dc01a.addTo(map_c23752db343248c8e729ceafca332a15);
+        
+</script>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FairSight AI | Unbiased AI Decisions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <style>
+        /* Particle Background styles */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #161633 0%, #0a0a1a 100%);
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="bg-grid"></div>
+
+    <!-- ── Navigation ── -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-eye logo-icon"></i>
+                <span class="logo-text">FairSight <span class="accent">AI</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#demo">Live Demo</a>
+                <a href="/static/dashboard.html" class="btn btn-primary">Launch Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ── Hero Section ── -->
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h4 class="hero-subtitle">GOOGLE HACKATHON 2026</h4>
+                <h1 class="hero-title">Is Your AI <span class="gradient-text">Actually Fair?</span></h1>
+                <p class="hero-description">
+                    The ultimate AI auditing platform. Automatically detect bias in your datasets, text, and models. 
+                    Understand why it happens and fix it with Gemini-powered reasoning.
+                </p>
+                <div class="hero-btns">
+                    <a href="/static/dashboard.html" class="btn btn-large btn-gradient">Audit Your Model Now <i class="fas fa-arrow-right"></i></a>
+                    <a href="#demo" class="btn btn-large btn-outline">Watch Demo</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">5</span>
+                        <span class="stat-label">Gemini Agents</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">8+</span>
+                        <span class="stat-label">Fairness Metrics</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-card bias-radar-box">
+                    <div class="card-header">
+                        <span><i class="fas fa-bullseye"></i> <span id="radar-title">Lending Audit</span></span>
+                        <span id="radar-score" class="score-badge danger">42 / 100</span>
+                    </div>
+                    
+                    <div id="hero-radar-placeholder" class="radar-visual">
+                        <!-- 🛡️ Fairness Shield Core -->
+                        <div class="shield-center"></div>
+                        
+                        <div class="orbital-container">
+                            <div class="orbital-ring ring-1">
+                                <div class="orbital-node" style="top: 0; left: 50%; color: var(--accent);"></div>
+                            </div>
+                            <div class="orbital-ring ring-2">
+                                <div class="orbital-node" style="top: 50%; right: 0; color: #ec4899;"></div>
+                            </div>
+                            <div class="orbital-ring ring-3">
+                                <div class="orbital-node" style="bottom: 0; left: 50%; color: #f59e0b;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="radar-alert" class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle"></i> <span>High Risk: Gender bias detected in Lending data.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── Features Section ── -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Auditing <span class="accent">Features</span></h2>
+                <p>Designed for engineers, researchers, and compliance teams.</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-table"></i></div>
+                    <h3>Tabular Bias</h3>
+                    <p>Analyze CSV & Excel datasets for statistical disparities across gender, caste, age, and region.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-file-invoice"></i></div>
+                    <h3>Text & NLP</h3>
+                    <p>Inspect job descriptions, policies, and contracts for gendered language or cultural stereotypes.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Model Auditor</h3>
+                    <p>Audit trained ML models using SHAP explainability to find hidden bias drivers in features.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon"><i class="fas fa-link"></i></div>
+                    <h3>Intersectional</h3>
+                    <p>Detect how multiple biases (e.g. Female + Rural) combine to amplify discrimination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How It Works Section ── -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It <span class="accent">Works</span></h2>
+                <p>A rigorous, multi-agentic pipeline to ensure AI integrity at every layer.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="step-connector"></div>
+                
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Ingestion & Detection</h3>
+                    <p>FairSight automatically identifies protected attributes (Gender, Caste, Age) using semantic mapping, even if they aren't labeled clearly.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Multi-Agentic Audit</h3>
+                    <p>5 specialized Gemini Agents perform a statistical and intersectional audit, calculating 8+ fairness metrics to find hidden bias patterns.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>The India Bias Atlas</h3>
+                    <p>Our "Roots Agent" maps local disparities to regional socio-economic data across India, explaining the historical context behind the bias.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Prescriptive Repair</h3>
+                    <p>The Mitigation Lab generates implementation-ready strategies (like Reweighing) to systematically repair the bias in your models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Live Demo Showcase ── -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>See AI Agents <span class="accent">In Action</span></h2>
+                <p>One-click audit demonstrations. No upload required.</p>
+            </div>
+
+            <div class="demo-grid">
+                <!-- Banking Demo -->
+                <div class="feature-card glass-card demo-card" onclick="location.href='/static/dashboard.html?demo=loan'">
+                    <div class="demo-preview">
+                        <img src="/static/img/dashboard_preview.png" alt="Banking Audit Preview">
+                        <div class="demo-overlay">
+                            <span class="btn btn-primary">Start Banking Demo</span>
+                        </div>
+                    </div>
+                    <div class="demo-info">
+                        <h3>🏦 Banking & Loan Audit</h3>
+                        <p>Analyze how historical income gaps and geographical proxies influence automated credit scores.</p>
+                        <div class="badge badge-danger" style="font-size: 0.7rem; background: rgba(239, 68, 68, 0.1); color: #f87171; padding: 2px 8px; border-radius: 10px;">High Bias Detected</div>
+                    </div>
+                </div>
+
+                <!-- Hiring Demo -->
+                <div class="feature-card glass-card demo-card" onclick="location.href='/static/dashboard.html?demo=hiring'">
+                    <div class="demo-preview">
+                        <img src="/static/img/dashboard_preview.png" alt="Hiring Audit Preview">
+                        <div class="demo-overlay">
+                            <span class="btn btn-primary">Start Hiring Demo</span>
+                        </div>
+                    </div>
+                    <div class="demo-info">
+                        <h3>💼 Tech Recruitment Audit</h3>
+                        <p>Audit an AI-driven hiring pipeline for gender and caste disparities in shortlisting algorithms.</p>
+                        <div class="badge badge-success" style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.1); color: #34d399; padding: 2px 8px; border-radius: 10px;">Mitigation Verified</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Chat Preview ── -->
+    <section class="chat-preview">
+        <div class="container chat-container">
+            <div class="chat-visual">
+                <div class="chat-window glass-card">
+                    <div class="chat-header">
+                        <div class="dot active"></div>
+                        <span>Gemini Reasoning Assistant</span>
+                    </div>
+                    <div class="chat-body">
+                        <div class="msg bot">
+                            "I've detected a 34% gender disparity in loan approvals. The main driver is salary_history, which inherits historical pay gaps."
+                        </div>
+                        <div class="msg user">
+                            "How do I fix this?"
+                        </div>
+                        <div class="msg bot">
+                            "I suggest the 'Reweighing' technique. It will improve your fairness score by 22 points with < 1% accuracy loss."
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-text">
+                <h2>Conversational <span class="accent">AI Expert</span></h2>
+                <p>Don't just look at numbers. Chat with FairSight to understand the <strong>why</strong> behind the bias. Gemini helps you navigate complex regulations like the India DPDP Act.</p>
+                <a href="/static/dashboard.html" class="btn btn-primary">Try Contextual Chat</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="glass-card cta-card">
+                <h2>Ready to make your AI <span class="gradient-text">Fair for All?</span></h2>
+                <p>Join the future of ethical AI development. Start your audit today.</p>
+                <div class="cta-btns">
+                    <a href="/static/dashboard.html" class="btn btn-large btn-gradient">Open Auditor Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 FairSight AI | Built for Hack2Skill Google Hackathon</p>
+        </div>
+    </footer>
+
+    <!-- Particles.js Script -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Config
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
+                "color": {"value": "#ffffff"},
+                "shape": {"type": "circle"},
+                "opacity": {"value": 0.2},
+                "size": {"value": 3},
+                "line_linked": {"enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.1, "width": 1},
+                "move": {"enable": true, "speed": 2}
+            },
+            "interactivity": {
+                "events": {"onhover": {"enable": true, "mode": "repulse"}, "onclick": {"enable": true, "mode": "push"}}
+            }
+        });
+
+        // 🧬 Fairness Shield Controller (Colorful Edition)
+        const scenarios = [
+            {
+                title: "Lending Audit",
+                score: "42 / 100",
+                status: "danger",
+                msg: "High Risk: Gender bias detected in Lending data.",
+                coreColor: "#6366f1",
+                accentColor: "#ef4444"
+            },
+            {
+                title: "Hiring Pipeline",
+                score: "31 / 100",
+                status: "danger",
+                msg: "Critical: Age & Caste bias found in Engineering roles.",
+                coreColor: "#ec4899",
+                accentColor: "#991b1b"
+            },
+            {
+                title: "Healthcare Model",
+                score: "68 / 100",
+                status: "warning",
+                msg: "Warning: Regional data gap for Rural health records.",
+                coreColor: "#f59e0b",
+                accentColor: "#92400e"
+            },
+            {
+                title: "Ad Tech Audit",
+                score: "88 / 100",
+                status: "success",
+                msg: "Optimized: Demographic parity achieved in ad delivery.",
+                coreColor: "#10b981",
+                accentColor: "#064e3b"
+            }
+        ];
+
+        let currentIdx = 0;
+        const radarTitle = document.getElementById('radar-title');
+        const radarScore = document.getElementById('radar-score');
+        const radarAlert = document.getElementById('radar-alert');
+        const shieldCenter = document.querySelector('.shield-center');
+        const orbitalNodes = document.querySelectorAll('.orbital-node');
+
+        function updateShield() {
+            const s = scenarios[currentIdx];
+            
+            // Phase Out
+            radarTitle.parentElement.style.opacity = 0;
+            radarAlert.style.opacity = 0;
+            shieldCenter.style.filter = 'blur(20px) brightness(0.5)';
+            
+            setTimeout(() => {
+                // Update Text
+                radarTitle.innerText = s.title;
+                radarScore.innerText = s.score;
+                radarAlert.querySelector('span').innerText = s.msg;
+                
+                // Update Score Style
+                radarScore.className = `score-badge ${s.status}`;
+                
+                // Update Alert Style
+                radarAlert.className = `alert alert-${s.status === 'success' ? 'success' : s.status === 'danger' ? 'danger' : 'warning'}`;
+                const icon = radarAlert.querySelector('i');
+                icon.className = s.status === 'success' ? 'fas fa-check-circle' : 'fas fa-exclamation-triangle';
+
+                // Update Colorful Core
+                shieldCenter.style.background = `radial-gradient(circle, var(--accent) 0%, ${s.coreColor} 50%, transparent 100%)`;
+                shieldCenter.style.boxShadow = `0 0 50px ${s.coreColor}`;
+                
+                // Update Nodes
+                orbitalNodes.forEach(node => {
+                    node.style.color = s.coreColor;
+                });
+
+                // Phase In
+                radarTitle.parentElement.style.opacity = 1;
+                radarAlert.style.opacity = 1;
+                shieldCenter.style.filter = 'blur(8px) brightness(1.5)';
+                
+                currentIdx = (currentIdx + 1) % scenarios.length;
+            }, 600);
+        }
+
+        // Initialize Transitions
+        radarTitle.parentElement.style.transition = 'all 0.6s ease';
+        radarAlert.style.transition = 'all 0.6s ease';
+        shieldCenter.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
+        
+        setInterval(updateShield, 4000);
+        updateShield(); // Initial call
+    </script>
+</body>
+</html>

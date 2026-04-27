@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* ── Gemini Chat Sidebar ── */
+        .chat-container {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 380px;
+            height: 100vh;
+            background: var(--chat-bg, rgba(15, 15, 35, 0.98));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-left: 1px solid var(--chat-border, rgba(255, 255, 255, 0.1));
+            z-index: 3000;
+            display: flex;
+            flex-direction: column;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        background 0.35s ease,
+                        border-color 0.35s ease;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .chat-container.open { right: 0; }
+
+        .chat-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--chat-divider, rgba(255, 255, 255, 0.07));
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--chat-header-bg, rgba(255,255,255,0.03));
+            transition: background 0.35s ease;
+        }
+
+        .chat-header span {
+            font-weight: 600;
+            color: var(--text-main);
+            transition: color 0.35s;
+        }
+
+        #chat-close {
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: color 0.3s;
+        }
+        #chat-close:hover { color: var(--text-main); }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) transparent;
+        }
+
+        .message {
+            max-width: 85%;
+            padding: 0.8rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            transition: background 0.35s ease, color 0.35s ease;
+        }
+
+        .message.bot {
+            background: var(--chat-msg-bot-bg, rgba(255, 255, 255, 0.06));
+            color: var(--text-main);
+            align-self: flex-start;
+            border-bottom-left-radius: 0.2rem;
+            border: 1px solid var(--chat-border, rgba(255,255,255,0.08));
+        }
+
+        .message.user {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0.2rem;
+        }
+
+        .chat-input-area {
+            padding: 1.5rem;
+            border-top: 1px solid var(--chat-divider, rgba(255, 255, 255, 0.07));
+            display: flex;
+            gap: 0.8rem;
+            background: var(--chat-header-bg, rgba(255,255,255,0.03));
+            transition: background 0.35s ease;
+        }
+
+        .chat-input {
+            flex-grow: 1;
+            background: var(--chat-input-bg, rgba(255, 255, 255, 0.06));
+            border: 1px solid var(--chat-border, rgba(255, 255, 255, 0.1));
+            border-radius: 0.6rem;
+            padding: 0.8rem 1rem;
+            color: var(--text-main);
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.35s ease;
+        }
+        .chat-input::placeholder { color: var(--text-muted); }
+        .chat-input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(var(--primary-rgb, 99,102,241), 0.15); }
+
+        .chat-toggle {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            z-index: 2999;
+            box-shadow: 0 5px 20px rgba(99, 102, 241, 0.45);
+            transition: all 0.3s;
+            border: none;
+        }
+        .chat-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 28px rgba(99, 102, 241, 0.6);
+        }
+
+        /* ── Light Mint Theme Overrides ── */
+        body.light-theme .chat-container {
+            --chat-bg: rgba(240, 253, 249, 0.97);
+            --chat-border: rgba(16, 185, 129, 0.2);
+            --chat-divider: rgba(16, 185, 129, 0.12);
+            --chat-header-bg: rgba(255, 255, 255, 0.6);
+            --chat-msg-bot-bg: rgba(16, 185, 129, 0.06);
+            --chat-input-bg: rgba(255, 255, 255, 0.85);
+            box-shadow: -6px 0 30px rgba(16, 185, 129, 0.1);
+        }
+
+        body.light-theme .chat-input {
+            color: #1e293b;
+        }
+
+        body.light-theme .chat-toggle {
+            box-shadow: 0 5px 20px rgba(13, 148, 136, 0.4);
+        }
+        body.light-theme .chat-toggle:hover {
+            box-shadow: 0 8px 28px rgba(13, 148, 136, 0.6);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ── Chat UI ── -->
+    <button class="chat-toggle" id="chat-toggle" aria-label="Open FairSight Chat">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+                <i class="fas fa-robot accent"></i>
+                <span>FairSight Assistant</span>
+            </div>
+            <i class="fas fa-times" id="chat-close"></i>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot">
+                Hello! I'm Gemini, your FairSight AI companion. Ask me anything about your data's fairness metrics or how to mitigate detected biases.
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" class="chat-input" id="chat-input" placeholder="Type your question...">
+            <button class="btn btn-primary" style="padding: 0.8rem 1rem;" id="chat-send">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- The actual logic will be in js/chat.js -->
+</body>
+</html>

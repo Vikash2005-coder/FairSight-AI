@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | FairSight AI</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    <!-- Main Style -->
+    <link rel="stylesheet" href="/static/css/main.css?v=theme_v2">
+    <style>
+        body { display: flex; height: 100vh; overflow: hidden; }
+        
+        /* ── Dashboard Sidebar ── */
+        .sidebar {
+            width: 280px;
+            background: var(--sidebar-bg, rgba(255,255,255,0.03));
+            border-right: 1px solid var(--sidebar-border, rgba(255,255,255,0.05));
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1.5rem;
+            transition: background 0.35s ease, border-color 0.35s ease;
+        }
+
+        .sidebar-logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: 'Outfit';
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .nav-menu { list-style: none; flex-grow: 1; }
+        .nav-item { margin-bottom: 0.5rem; }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            border-radius: 0.8rem;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        .nav-link:hover, .nav-link.active {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--text-main);
+        }
+        .nav-link.active i { color: var(--primary); }
+
+        /* ── Main Dashboard Content ── */
+        .main-content {
+            flex-grow: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            background: var(--main-bg, radial-gradient(circle at top right, rgba(99,102,241,0.05) 0%, transparent 40%));
+            transition: background 0.35s ease;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .header-left h1 { font-size: 2.2rem; margin-bottom: 0.3rem; }
+        .header-left p { color: var(--text-muted); }
+        .header-right { display: flex; gap: 1rem; }
+
+        /* ── Top Level Metrics ── */
+        .metrics-summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .metric-card { padding: 1.5rem; text-align: left; }
+        .metric-card .label { color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        .metric-card .value { font-size: 1.8rem; font-weight: 700; font-family: 'Outfit'; margin-top: 0.5rem; display: block; }
+        .metric-card .trend { font-size: 0.8rem; margin-top: 0.4rem; display: block; }
+
+        /* ── Analysis Tabs ── */
+        .tabs { display: flex; gap: 2rem; border-bottom: 1px solid var(--tab-border, rgba(255,255,255,0.05)); margin-bottom: 2rem; transition: border-color 0.35s; }
+        .tab { padding: 1rem 0.5rem; cursor: pointer; color: var(--text-muted); position: relative; font-weight: 500; }
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; left: 0;
+            width: 100%; height: 2px;
+            background: var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+        }
+
+        /* ── View Sections ── */
+        .view-section { display: none; }
+        .view-section.active { display: block; animation: fadeIn 0.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ── Live Ops Monitoring Styles ── */
+        .pulse-card { border: 1px solid rgba(255, 255, 255, 0.05); transition: border 0.3s; }
+        .red-alert-active { 
+            border-color: #ef4444 !important; 
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2) !important;
+            animation: pulse-red 2s infinite;
+        }
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+            70% { box-shadow: 0 0 20px 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        .incident-item {
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 0.8rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid transparent;
+            transition: all 0.3s;
+        }
+        .incident-item.high { border-left-color: #ef4444; background: rgba(239, 68, 68, 0.05); }
+        .incident-item.investigated { border-left-color: #10b981; background: rgba(16, 185, 129, 0.05); }
+        .pulse-value { font-family: 'Outfit'; font-weight: 800; font-size: 2.5rem; line-height: 1; }
+
+        /* ── Grid Layout ── */
+        .dashboard-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.5rem; }
+        .chart-box { height: 400px; }
+        .findings-box { height: 400px; overflow-y: auto; }
+
+        /* ── Simulation Overlay ── */
+        .sim-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 10, 26, 0.95);
+            z-index: 2000;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* ── Light Theme — Soft Mint (Option B) ── */
+        body.light-theme {
+            --sidebar-bg: rgba(255,255,255,0.80);
+            --sidebar-border: rgba(16,185,129,0.15);
+            --tab-border: rgba(16,185,129,0.2);
+            --main-bg: radial-gradient(circle at top right, rgba(16,185,129,0.06) 0%, transparent 55%);
+            --primary: #0d9488;
+            --primary-glow: #0f766e;
+            --accent: #06b6d4;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            background-color: #f0fdf9;
+            color: #1e293b;
+        }
+        body.light-theme .glass-card {
+            background: rgba(255,255,255,0.92) !important;
+            border: 1px solid rgba(16,185,129,0.15) !important;
+            box-shadow: 0 4px 20px rgba(16,185,129,0.08) !important;
+        }
+        body.light-theme .glass-card:hover {
+            box-shadow: 0 10px 30px rgba(16,185,129,0.14) !important;
+            border-color: rgba(16,185,129,0.3) !important;
+        }
+        body.light-theme .nav-link { color: #475569; }
+        body.light-theme .nav-link:hover,
+        body.light-theme .nav-link.active {
+            background: rgba(16,185,129,0.1);
+            color: #0d9488;
+        }
+        body.light-theme .nav-link.active i { color: #0d9488; }
+        body.light-theme .metric-card .label { color: #475569; }
+        body.light-theme .header-left p { color: #475569; }
+        body.light-theme .tab { color: #475569; }
+        body.light-theme .tab.active { color: #0d9488; }
+        body.light-theme .tab.active::after {
+            background: #0d9488;
+            box-shadow: 0 0 10px rgba(13,148,136,0.5);
+        }
+        body.light-theme #theme-toggle-btn {
+            background: rgba(16,185,129,0.08);
+            border-color: rgba(16,185,129,0.25);
+            color: #0d9488;
+        }
+        body.light-theme #theme-toggle-btn:hover {
+            background: rgba(16,185,129,0.15);
+            border-color: #0d9488;
+        }
+        /* Mint gradient text override */
+        body.light-theme .gradient-text {
+            background: linear-gradient(135deg, #0d9488, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body.light-theme .accent { color: #06b6d4; }
+    </style>
+</head>
+<body>
+    
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <i class="fas fa-eye logo-icon"></i>
+            <span>FairSight <span class="accent">AI</span></span>
+        </div>
+        <nav class="nav-menu">
+            <li class="nav-item"><a href="#" class="nav-link active" onclick="switchView('audit', this)"><i class="fas fa-chart-line"></i> Audit Dashboard</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" onclick="switchView('mitigation', this)"><i class="fas fa-tools"></i> Mitigation Lab</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" onclick="switchView('audit', this); setTimeout(()=>document.querySelector('[data-tab=atlas]').click(), 100)"><i class="fas fa-map-marked-alt"></i> India Bias Atlas</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" id="nav-live-ops" onclick="switchView('live-ops', this)"><i class="fas fa-satellite-dish"></i> Live Ops Monitoring</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" onclick="openChat()"><i class="fas fa-comments"></i> Gemini Chat</a></li>
+        </nav>
+        <div class="sidebar-footer" style="display:flex; flex-direction:column; gap:0.8rem;">
+            <!-- Theme Toggle -->
+            <button id="theme-toggle-btn" onclick="toggleTheme()">
+                <span class="toggle-icon">🌙</span>
+                <span id="theme-toggle-label">Light Mode</span>
+            </button>
+            <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;">
+                <i class="fas fa-life-ring"></i> Support
+            </a>
+        </div>
+    </aside>
+
+    <!-- ── Main Content ── -->
+    <!-- ── Main Content ── -->
+    <main class="main-content">
+        <div id="view-container">
+            
+            <!-- ── View 1: Audit Dashboard (Default) ── -->
+            <div id="view-audit" class="view-section active">
+                <header class="dashboard-header">
+                    <div class="header-left">
+                        <h1>AI Bias <span class="accent">Auditor</span></h1>
+                        <p>Ensuring fairness in automated decisions.</p>
+                        <div id="ai-status-container" style="display: flex; align-items: center; gap: 0.8rem; margin-top: 0.5rem;">
+                            <span id="ai-status-badge" class="glass-card" style="font-size: 0.7rem; padding: 0.3rem 0.8rem; border-radius: 20px; color: var(--accent); border: 1px solid var(--accent); display: none;">
+                                <i class="fas fa-microchip"></i> <span id="ai-status-text">INITIALIZING...</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="header-right" style="align-items: center;">
+                        <div class="glass-card" style="padding: 0.5rem 1.5rem; display: flex; align-items: center; gap: 1rem; margin-right: 1rem;">
+                            <i class="fas fa-file-csv accent"></i>
+                            <span id="active-filename">No file selected</span>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; margin-right: 0.5rem;">
+                            <input type="text" id="url-input" class="glass-card" placeholder="Paste Kaggle or CSV link..." style="padding: 0.5rem 1rem; width: 220px; outline: none; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.1); color: #fff; background: rgba(0,0,0,0.2);">
+                            <button class="btn btn-primary" onclick="handleUrlSubmit()" style="padding: 0.5rem 1.5rem;">
+                                <i class="fas fa-cloud-download-alt"></i> Fetch
+                            </button>
+                        </div>
+                        <button class="btn btn-outline" onclick="document.getElementById('file-input').click()" style="padding: 0.5rem 1.5rem;">
+                            <i class="fas fa-upload"></i> Upload
+                        </button>
+                        <input type="file" id="file-input" style="display: none;" onchange="handleFileUpload(this)">
+                    </div>
+                </header>
+
+                <section class="metrics-summary">
+                    <div class="glass-card metric-card">
+                        <span class="label">Fairness Score</span>
+                        <span class="value" id="score-val">--</span>
+                        <span class="trend" id="score-status">Pending Upload</span>
+                    </div>
+                    <div class="glass-card metric-card">
+                        <span class="label">Disparity Ratio</span>
+                        <span class="value" id="disp-val">--</span>
+                        <span class="trend" id="disp-status">Industry Avg: 0.62</span>
+                    </div>
+                    <div class="glass-card metric-card">
+                        <span class="label">Biased Features</span>
+                        <span class="value" id="feat-val">--</span>
+                        <span class="trend" id="feat-status">Gemini Flagged</span>
+                    </div>
+                    <div class="glass-card metric-card">
+                        <span class="label">People Affected</span>
+                        <span class="value" id="impact-val">--</span>
+                        <span class="trend">Annualized Estimate</span>
+                    </div>
+                </section>
+
+                <div class="tabs">
+                    <div class="tab active" data-tab="overview">Statistical Overview</div>
+                    <div class="tab" data-tab="gemini">Gemini Reasoning</div>
+                    <div class="tab" data-tab="explanation">Feature Explainability</div>
+                    <div class="tab" data-tab="impact">Impact Story</div>
+                    <div class="tab" data-tab="atlas">India Bias Atlas</div>
+                </div>
+
+                <div id="tab-content">
+                    <div class="tab-pane active" id="pane-overview">
+                        <div class="dashboard-grid">
+                            <div class="glass-card chart-box" id="main-chart-container">
+                                <div class="card-header">
+                                    <span><i class="fas fa-chart-bar"></i> Disparity by Subgroup</span>
+                                    <i class="fas fa-expand-alt pointer"></i>
+                                </div>
+                                <div id="main-plotly-chart" style="height: 350px;"></div>
+                            </div>
+                            <div class="glass-card findings-box">
+                                <div class="card-header">
+                                    <span><i class="fas fa-clipboard-list"></i> Critical Audit Findings</span>
+                                </div>
+                                <div id="audit-findings-list" style="margin-top: 1.5rem;">
+                                    <div class="placeholder-text" style="color: var(--text-muted); text-align: center; margin-top: 5rem;">
+                                        <i class="fas fa-file-import" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
+                                        Upload a dataset to begin the AI audit process.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="pane-atlas" style="display: none;">
+                        <div class="glass-card" style="height: 600px; padding: 0; overflow: hidden;">
+                            <iframe id="atlas-frame" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="pane-gemini" style="display: none;">
+                        <div class="glass-card" id="gemini-report-container" style="min-height: 500px; padding: 2rem;">
+                            <div class="placeholder-text">Waiting for analysis...</div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="pane-explanation" style="display: none;">
+                        <div class="glass-card" id="explainability-container" style="min-height: 500px; padding: 2rem;">
+                            <div class="placeholder-text">Upload a dataset to generate Local Interpretable Model-Agnostic Explanations (LIME / SHAP).</div>
+                        </div>
+                    </div>
+
+                    <!-- Impact Story Tab -->
+                    <div class="tab-pane" id="pane-impact" style="display: none;">
+                        <div class="dashboard-grid" id="impact-story-container">
+                            <!-- Victim Profile Card -->
+                            <div class="glass-card" id="victim-card" style="padding: 2rem; position: relative; overflow: hidden;">
+                                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #ef4444, #f97316, #eab308);"></div>
+                                <div class="card-header" style="margin-bottom: 1.5rem;">
+                                    <span><i class="fas fa-user-slash" style="color: #ef4444;"></i> Synthetic Victim Profile</span>
+                                    <span class="badge" style="background: rgba(239,68,68,0.15); color: #ef4444; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.7rem;">AI GENERATED</span>
+                                </div>
+                                <div id="victim-profile-content" style="min-height: 300px;">
+                                    <div class="placeholder-text" style="text-align: center; margin-top: 5rem;">
+                                        <i class="fas fa-user-shield" style="font-size: 3rem; color: var(--primary); opacity: 0.4; margin-bottom: 1rem; display: block;"></i>
+                                        Upload a dataset to generate Impact Story.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Cost of Inaction Card -->
+                            <div class="glass-card" id="cost-card" style="padding: 2rem; position: relative; overflow: hidden;">
+                                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);"></div>
+                                <div class="card-header" style="margin-bottom: 1.5rem;">
+                                    <span><i class="fas fa-coins" style="color: #eab308;"></i> Cost of Inaction</span>
+                                    <span class="badge" style="background: rgba(234,179,8,0.15); color: #eab308; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.7rem;">FINANCIAL RISK</span>
+                                </div>
+                                <div id="cost-analysis-content" style="min-height: 300px;">
+                                    <div class="placeholder-text" style="text-align: center; margin-top: 5rem;">
+                                        <i class="fas fa-calculator" style="font-size: 3rem; color: var(--primary); opacity: 0.4; margin-bottom: 1rem; display: block;"></i>
+                                        Awaiting bias analysis to calculate financial exposure.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── View 2: Mitigation Lab ── -->
+            <div id="view-mitigation" class="view-section">
+                <!-- Content loaded dynamically via loadMitigationLab() -->
+                <div class="loader-placeholder" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 500px; color: var(--text-muted);">
+                    <i class="fas fa-circle-notch fa-spin" style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary);"></i>
+                    <p>Accessing AI Mitigation Simulation Environment...</p>
+                </div>
+            </div>
+
+            <!-- ── View 3: Live Ops Monitoring ── -->
+            <div id="view-live-ops" class="view-section">
+                <div style="margin-bottom: 2rem;">
+                    <h2 class="outfit" style="font-size: 1.8rem; margin-bottom: 0.5rem;"><i class="fas fa-satellite-dish accent"></i> Live Ops Center</h2>
+                    <p class="text-muted">Real-time fairness monitoring and proactive incident management.</p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="glass-card pulse-card" id="monitoring-pulse-container" style="padding: 2rem;">
+                        <div class="card-header" style="margin-bottom: 2rem;">
+                            <span><i class="fas fa-heartbeat"></i> Fairness Stability Pulse</span>
+                            <span id="pulse-status-badge" class="badge badge-success">Healthy</span>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 3rem; margin-bottom: 2rem;">
+                            <div>
+                                <span class="label text-muted" style="font-size: 0.8rem;">LIVE SCORE</span>
+                                <div id="live-score-value" class="pulse-value">0.95</div>
+                            </div>
+                            <div style="flex-grow: 1;">
+                                <div id="live-pulse-chart" style="height: 120px;"></div>
+                            </div>
+                        </div>
+
+                        <div class="metrics-summary" style="margin-bottom: 0;">
+                            <div class="glass-card" style="padding: 1rem; background: rgba(255,255,255,0.02);">
+                                <span class="label text-muted" style="font-size: 0.7rem;">TRAFFIC</span>
+                                <span class="value" style="font-size: 1.2rem;" id="live-traffic-val">1.2k/hr</span>
+                            </div>
+                            <div class="glass-card" style="padding: 1rem; background: rgba(255,255,255,0.02);">
+                                <span class="label text-muted" style="font-size: 0.7rem;">SKEW</span>
+                                <span class="value" style="font-size: 1.2rem;" id="live-skew-val">0.02%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card" style="padding: 0;">
+                        <div class="card-header" style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <span><i class="fas fa-exclamation-triangle"></i> Incident Guardian Feed</span>
+                        </div>
+                        <div id="incident-feed" style="padding: 1.5rem; height: 400px; overflow-y: auto;">
+                            <div class="placeholder-text" style="text-align: center; margin-top: 5rem;">
+                                <i class="fas fa-shield-alt" style="font-size: 3rem; color: var(--primary); opacity: 0.5; margin-bottom: 1rem; display: block;"></i>
+                                Pulse Monitoring Active. No critical incidents detected.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ── Floating Chat (Injected) ── -->
+    <div id="chat-wrapper"></div>
+
+    <!-- ── Simulation Overlay ── -->
+    <div class="sim-overlay" id="sim-overlay">
+        <div class="sim-content">
+            <div class="logo">
+                <i class="fas fa-eye logo-icon" style="font-size: 4rem;"></i>
+            </div>
+            <h2 id="sim-title" style="margin: 2rem 0;">Scanning Dataset...</h2>
+            <div class="progress-container" style="width: 400px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
+                <div id="sim-progress" style="width: 0%; height: 100%; background: var(--primary); box-shadow: 0 0 10px var(--primary); transition: width 0.3s;"></div>
+            </div>
+            <p id="sim-step" style="margin-top: 1.5rem; color: var(--text-muted);">Initializing FairSight Agents...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/charts.js?v=hackathon_final_v3"></script>
+    <script src="/static/js/simulation.js?v=hackathon_final_v3"></script>
+    <script src="/static/js/chat.js?v=hackathon_final_v3"></script>
+    <script src="/static/js/atlas.js?v=hackathon_final_v3"></script>
+    <script src="/static/js/monitoring.js?v=hackathon_final_v3"></script>
+    <script src="/static/js/app.js?v=hackathon_final_v3"></script>
+    <script>
+        // Inject Chat Component
+        fetch('/static/chat_component.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('chat-wrapper').innerHTML = html;
+                initChat(); 
+            });
+
+        // View Switching Logic
+        function switchView(viewId, el) {
+            console.log("Switching to view:", viewId);
+            
+            // Update Sidebar UI
+            if (el) {
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                el.classList.add('active');
+            }
+
+            // Toggle Sections
+            document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
+            const target = document.getElementById('view-' + viewId);
+            if (target) target.classList.add('active');
+            
+            if (viewId === 'mitigation') {
+                loadMitigationLab();
+            }
+            if (viewId === 'live-ops' && window.initMonitoring) {
+                window.initMonitoring();
+            }
+        }
+
+        async function loadMitigationLab() {
+            const container = document.getElementById('view-mitigation');
+            const isLoaded = container.querySelector('.mitigation-studio') !== null;
+            
+            if (!isLoaded) {
+                try {
+                    console.log("Fetching mitigation lab view...");
+                    const res = await fetch('/static/mitigation_lab_view.html?v=' + Date.now());
+                    if (!res.ok) throw new Error("HTTP " + res.status);
+                    const html = await res.text();
+                    container.innerHTML = html;
+                    
+                    // Load script if not already loaded
+                    if (!document.getElementById('mitigation-script')) {
+                        console.log("Loading mitigation lab script...");
+                        const script = document.createElement('script');
+                        script.id = 'mitigation-script';
+                        script.src = '/static/js/mitigation_lab.js?v=' + Date.now();
+                        script.onload = () => {
+                            if (window.initMitigationLab) window.initMitigationLab();
+                        };
+                        document.body.appendChild(script);
+                    } else {
+                        if (window.initMitigationLab) window.initMitigationLab();
+                    }
+                } catch (err) {
+                    console.error("Failed to load mitigation lab:", err);
+                    container.innerHTML = `<div class="placeholder-text" style="color: #f43f5e; margin-top: 15rem;">
+                        <i class="fas fa-exclamation-circle" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <p>Error loading Mitigation Lab: ${err.message}</p>
+                        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="loadMitigationLab()">
+                            <i class="fas fa-sync"></i> Retry
+                        </button>
+                    </div>`;
+                }
+            } else {
+                if (window.initMitigationLab) window.initMitigationLab();
+            }
+        }
+    </script>
+
+    <!-- ── Theme Toggle Logic ── -->
+    <script>
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-theme');
+            const label = document.getElementById('theme-toggle-label');
+            const icon = document.querySelector('#theme-toggle-btn .toggle-icon');
+            if (isLight) {
+                label.textContent = 'Dark Mode';
+                icon.textContent = '☀️';
+                localStorage.setItem('fairsight-theme', 'light');
+            } else {
+                label.textContent = 'Light Mode';
+                icon.textContent = '🌙';
+                localStorage.setItem('fairsight-theme', 'dark');
+            }
+        }
+
+        // Apply saved preference on load
+        (function() {
+            if (localStorage.getItem('fairsight-theme') === 'light') {
+                document.body.classList.add('light-theme');
+                const label = document.getElementById('theme-toggle-label');
+                const icon = document.querySelector('#theme-toggle-btn .toggle-icon');
+                if (label) label.textContent = 'Dark Mode';
+                if (icon) icon.textContent = '☀️';
+            }
+        })();
+    </script>
+</body>
+</html>
