@@ -25,14 +25,7 @@ fairlearn==0.10.0
 # Explainability
 shap==0.45.1
 
-# NLP / Text Bias Detection
-transformers==4.40.2
-torch==2.3.0
 
-# Visualization
-plotly==5.22.0
-matplotlib==3.8.4
-seaborn==0.13.2
 
 # Map Visualization
 folium==0.16.0
