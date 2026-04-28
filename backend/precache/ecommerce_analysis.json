@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "input_type": "tabular",
+  "filename": "ecommerce_bias.csv",
+  "protected_attribute": "region",
+  "target_column": "discount_offered",
+  "metrics": {
+    "summary": {
+      "privileged_group": "Urban",
+      "unprivileged_group": "Rural",
+      "privileged_rate": 0.35,
+      "unprivileged_rate": 0.12,
+      "group_counts": {"Urban": 1000, "Rural": 1000}
+    },
+    "metrics": {
+      "demographic_parity_difference": 0.23,
+      "disparate_impact_ratio": 0.34,
+      "statistical_parity_difference": 0.23,
+      "individual_fairness_proxy": 0.65
+    },
+    "overall_fairness_score": 25.0,
+    "status": "biased"
+  },
+  "benchmarks": {
+    "percentile": 5,
+    "regulatory_status": "High Risk",
+    "human_impact": {
+      "estimated_annual_impact": 500000,
+      "severity": "High"
+    }
+  },
+  "audit": {
+    "profile": {
+      "domain": "ecommerce",
+      "summary": "E-commerce discount allocation dataset identifying major regional disparities."
+    },
+    "bias_analysis": {
+      "overall_severity": "critical",
+      "overall_bias_score": 25,
+      "executive_summary": "The discount algorithm shows severe geographic bias, heavily favoring urban customers over rural customers.",
+      "biased_metrics": [
+        {
+          "metric_name": "Disparate Impact Ratio",
+          "severity": "critical",
+          "plain_explanation": "Rural customers are 65% less likely to receive premium discounts.",
+          "affected_groups": ["Rural"],
+          "real_world_impact": "Systemic price discrimination against less developed regions."
+        }
+      ]
+    },
+    "causal": {
+      "root_cause": "Algorithm optimizes for Customer Lifetime Value (CLV), which historically correlates with urban delivery routes and internet stability.",
+      "historical_context": "Data reflects historically poorer logistics in rural India.",
+      "proxy_features": [
+        "Delivery Pincode -> acts as a geographic wealth proxy.",
+        "Device Type -> correlates with urban affluence."
+      ]
+    },
+    "mitigation": {
+      "short_term_actions": [
+        "Implement a flat baseline discount regardless of zip code.",
+        "Remove device type from the discount allocation algorithm."
+      ],
+      "long_term_strategy": "Change the optimization objective from pure CLV to 'Equitable Market Penetration'."
+    },
+    "report": "## FAIRSIGHT AI — BIAS AUDIT REPORT\n\n### Executive Summary\nThe e-commerce model is critically biased (Score: 25/100)."
+  },
+  "overall_score": 25.0,
+  "status": "biased"
+}

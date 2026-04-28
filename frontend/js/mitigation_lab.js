@@ -28,16 +28,14 @@ function initMitigationLab() {
     const domain = profile.domain || res.domain || "auto";
     const overallScore = res.overall_score || res.overall_fairness_score || (audit.bias_analysis ? audit.bias_analysis.overall_bias_score : 50);
     
-    document.getElementById('lab-fairness-score').innerText = overallScore;
-    
-    // Load Tradeoff Data
-    fetchTradeoffData();
+    // Load Diagnostic Data (Poison Rows & Sensitivity)
+    fetchDiagnosticsData();
     
     // Load initial compliance status
     fetchComplianceReport();
 }
 
-async function fetchTradeoffData() {
+async function fetchDiagnosticsData() {
     const { file, analysisResult } = window.currentState;
     if (!file) return;
 
@@ -47,144 +45,119 @@ async function fetchTradeoffData() {
         formData.append('protected_attr', analysisResult.protected_attribute || '');
         formData.append('target_col', analysisResult.target_column || '');
 
-        const response = await fetch('/api/mitigate/tradeoff', {
-            method: 'POST',
-            body: formData
-        });
+        // 1. Fetch Sensitivity
+        fetch('/api/diagnostic/sensitivity', { method: 'POST', body: formData })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    renderSensitivityChart(data.sensitivities);
+                } else {
+                    document.getElementById('sensitivity-chart').innerHTML = `<div class="placeholder-text" style="color: #f43f5e;"><i class="fas fa-exclamation-triangle"></i> Analysis Failed: ${data.error}</div>`;
+                }
+            })
+            .catch(err => {
+                console.error("Sensitivity fetch failed:", err);
+                document.getElementById('sensitivity-chart').innerHTML = '<div class="placeholder-text" style="color: #f43f5e;">Network or server error.</div>';
+            });
 
-        const data = await response.json();
-        if (data.success) {
-            tradeoffCurveData = data.curve;
-            const optimalIndex = data.best_balance_index || 0;
-            const optimalLevel = data.curve[optimalIndex];
-            
-            // Render the Chart
-            renderTradeoffChart(data.curve, optimalIndex);
-            
-            // Populate Reasoning Dialogue
-            populateReasoning(data.curve, optimalIndex, data.reason);
+        // 2. Fetch Poison Rows
+        fetch('/api/diagnostic/poison_rows', { method: 'POST', body: formData })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    renderPoisonRows(data.poison_rows);
+                } else {
+                    document.getElementById('poison-rows-body').innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 2rem; color: #f43f5e;"><i class="fas fa-exclamation-triangle"></i> Error: ${data.error}</td></tr>`;
+                }
+            })
+            .catch(err => {
+                console.error("Poison rows fetch failed:", err);
+                document.getElementById('poison-rows-body').innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 2rem; color: #f43f5e;">Network or server error.</td></tr>';
+            });
 
-            // Set dynamic slider value
-            const slider = document.getElementById('intensity-slider');
-            if (slider) {
-                slider.value = optimalLevel.intensity * 100;
-                updateIntensity(slider.value);
-            }
-        }
     } catch (err) {
-        console.error("Tradeoff fetch failed:", err);
+        console.error("Diagnostic fetch failed:", err);
     }
 }
 
-function renderTradeoffChart(curve, optimalIndex) {
-    const x = curve.map(d => d.intensity * 100);
-    const fairness = curve.map(d => d.fairness_score);
-    const profit = curve.map(d => d.profit_index);
-    const optX = x[optimalIndex];
+function renderSensitivityChart(sensitivities) {
+    if (!sensitivities || sensitivities.length === 0) {
+        document.getElementById('sensitivity-chart').innerHTML = '<div class="placeholder-text">Insufficient numeric features for sensitivity analysis.</div>';
+        return;
+    }
+
+    // Sort to have highest at top
+    const sorted = [...sensitivities].reverse();
+    const x = sorted.map(d => d.sensitivity);
+    const y = sorted.map(d => d.feature.replace(/_/g, ' ').toUpperCase());
 
     const trace1 = {
         x: x,
-        y: fairness,
-        name: 'Fairness Score',
-        type: 'scatter',
-        mode: 'lines+markers',
-        line: { color: '#10b981', width: 3, shape: 'spline' },
-        marker: { size: 8 }
-    };
-
-    const trace2 = {
-        x: x,
-        y: profit,
-        name: 'Profit/Accuracy Index',
-        yaxis: 'y2',
-        type: 'scatter',
-        mode: 'lines+markers',
-        line: { color: '#f43f5e', width: 2, dash: 'dot' },
-        marker: { symbol: 'diamond' }
+        y: y,
+        type: 'bar',
+        orientation: 'h',
+        marker: {
+            color: x.map(val => val > 30 ? '#f43f5e' : (val > 10 ? '#f59e0b' : '#10b981')),
+            opacity: 0.8
+        }
     };
 
     const layout = {
         paper_bgcolor: 'rgba(0,0,0,0)',
         plot_bgcolor: 'rgba(0,0,0,0)',
-        font: { color: '#ffffff', family: 'Inter' },
-        margin: { t: 50, b: 40, l: 40, r: 40 },
-        showlegend: true,
-        legend: { orientation: 'h', y: -0.25 },
-        xaxis: { title: 'Mitigation Intensity (%)', gridcolor: 'rgba(255,255,255,0.05)' },
-        yaxis: { title: 'Fairness', gridcolor: 'rgba(255,255,255,0.05)', range: [0, 105] },
-        yaxis2: {
-            title: 'Profit',
-            overlaying: 'y',
-            side: 'right',
-            range: [80, 100]
-        },
-        shapes: [
-            {
-                type: 'line',
-                x0: optX,
-                y0: 0,
-                x1: optX,
-                y1: 1,
-                yref: 'paper',
-                line: {
-                    color: 'rgba(99, 102, 241, 0.4)',
-                    width: 2,
-                    dash: 'dash'
-                }
-            }
-        ],
-        annotations: [
-            {
-                x: optX,
-                y: 1,
-                yref: 'paper',
-                text: 'OPTIMAL POINT',
-                showarrow: false,
-                font: { size: 10, color: '#818cf8', weight: 'bold' },
-                bgcolor: 'rgba(15, 23, 42, 0.7)',
-                bordercolor: '#818cf8',
-                borderwidth: 1,
-                borderpad: 4,
-                opacity: 0.8
-            }
-        ]
+        font: { color: '#ffffff', family: 'Inter', size: 10 },
+        margin: { t: 20, b: 40, l: 100, r: 20 },
+        xaxis: { title: 'Bias Sensitivity (%)', gridcolor: 'rgba(255,255,255,0.05)', range: [0, 100] },
+        yaxis: { gridcolor: 'rgba(255,255,255,0.05)' },
+        annotations: sorted.map((d, i) => ({
+            x: d.sensitivity + 2,
+            y: i,
+            text: d.sensitivity + '%',
+            showarrow: false,
+            font: { color: '#ffffff', size: 10 },
+            xanchor: 'left'
+        }))
     };
 
-    Plotly.newPlot('tradeoff-chart', [trace1, trace2], layout, { displayModeBar: false, responsive: true });
+    // Clear the loading text before rendering the chart
+    document.getElementById('sensitivity-chart').innerHTML = '';
+
+    Plotly.newPlot('sensitivity-chart', [trace1], layout, { displayModeBar: false, responsive: true });
 }
 
-function populateReasoning(curve, index, backendReason = null) {
-    const point = curve[index];
-    const initialProfit = curve[0].profit_index;
-    const profitLoss = (initialProfit - point.profit_index).toFixed(1);
-    
-    let reasoning = backendReason || `System identifies <strong>${point.intensity * 100}% Intensity</strong> as optimal. It achieves a high Fairness Score of <strong>${point.fairness_score}</strong> while limiting accuracy degradation to just <strong>-${profitLoss}%</strong>. Further mitigation exhibits Diminishing Marginal Returns.`;
-    
-    const box = document.getElementById('optimal-reasoning-box');
-    const text = document.getElementById('optimal-reasoning-text');
-    
-    if (box && text) {
-        text.innerHTML = reasoning;
-        box.style.display = 'block';
+function renderPoisonRows(rows) {
+    const tbody = document.getElementById('poison-rows-body');
+    if (!rows || rows.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-muted);">No contradictory rows found. Data aligns well with merit.</td></tr>';
+        return;
     }
-}
 
-function updateIntensity(value) {
-    document.getElementById('intensity-val').innerText = value + "%";
-    
-    if (!tradeoffCurveData) return;
-    
-    // Find closest index
-    const index = Math.min(Math.floor(value / 20), 5);
-    const point = tradeoffCurveData[index];
-    
-    const fairEl = document.getElementById('lab-fairness-score');
-    const accEl = document.getElementById('lab-accuracy-impact');
-    
-    fairEl.innerText = point.fairness_score;
-    const impact = (point.profit_index - tradeoffCurveData[0].profit_index).toFixed(1);
-    accEl.innerText = (impact > 0 ? "+" : "") + impact + "%";
-    accEl.style.color = impact < -3 ? "#f43f5e" : "#f59e0b";
+    tbody.innerHTML = '';
+    rows.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
+        
+        let featString = '';
+        for (const [k, v] of Object.entries(row.features)) {
+            featString += `<span class="badge" style="background: rgba(255,255,255,0.05); font-size: 0.7rem; margin-right: 4px;">${k}: ${v}</span>`;
+        }
+
+        const isVictim = row.reason.includes('Victim');
+        const reasonColor = isVictim ? '#f43f5e' : '#10b981';
+
+        tr.innerHTML = `
+            <td style="padding: 0.8rem; font-weight: 600;">${row.group}</td>
+            <td style="padding: 0.8rem;">
+                <span style="color: ${row.outcome === '0' || row.outcome === '0.0' ? '#f43f5e' : '#10b981'}">
+                    ${row.outcome === '0' || row.outcome === '0.0' ? 'Negative (0)' : 'Positive (1)'}
+                </span>
+            </td>
+            <td style="padding: 0.8rem; font-family: monospace;">${row.merit}</td>
+            <td style="padding: 0.8rem; font-size: 0.75rem; color: ${reasonColor};">${row.reason}</td>
+            <td style="padding: 0.8rem;">${featString}</td>
+        `;
+        tbody.appendChild(tr);
+    });
 }
 
 async function runRedTeamTest() {
@@ -194,9 +167,13 @@ async function runRedTeamTest() {
     resultsContainer.innerHTML = '<div class="placeholder-text"><i class="fas fa-spinner fa-spin"></i> Gemini is simulating persona attacks...</div>';
 
     try {
-        // Find a 'good' sample from the analysis summary or metadata if possible
-        // For MVP, we pass the first row profile mentioned in audit or a generic high-quality row
-        const sampleRow = analysisResult.metrics.privileged_sample || { "age": 32, "education": "Master's", "experience": 8, "income": 85000 };
+        // Find a 'good' sample dynamically from the poison rows if available
+        let sampleRow = { "age": 32, "education": "Master's", "experience": 8, "income": 85000 };
+        if (window.currentState.poisonRows && window.currentState.poisonRows.length > 0) {
+            sampleRow = window.currentState.poisonRows[0].features;
+        } else if (analysisResult.metrics && analysisResult.metrics.privileged_sample) {
+            sampleRow = analysisResult.metrics.privileged_sample;
+        }
         
         const response = await fetch('/api/redteam', {
             method: 'POST',
@@ -226,6 +203,11 @@ function renderRedTeamCards(data) {
         </div>
     `;
 
+    if (!data.adversarial_twins || !Array.isArray(data.adversarial_twins)) {
+        container.innerHTML += `<div class="placeholder-text" style="color: #f59e0b;">Gemini returned an unexpected response format. Please try running the Stress Test again.</div>`;
+        return;
+    }
+
     data.adversarial_twins.forEach(twin => {
         const card = document.createElement('div');
         card.className = 'glass-card';
@@ -235,14 +217,14 @@ function renderRedTeamCards(data) {
         
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: start;">
-                <span style="font-weight: 700; font-size: 0.9rem;">${twin.name}</span>
+                <span style="font-weight: 700; font-size: 0.9rem;">${twin.name || 'Adversarial Profile'}</span>
                 <span class="badge" style="font-size: 0.7rem; background: ${twin.predicted_outcome === 'REJECTED' ? '#f43f5e20' : '#10b98120'}; color: ${twin.predicted_outcome === 'REJECTED' ? '#f43f5e' : '#10b981'}; padding: 2px 8px; border-radius: 4px;">
-                    ${twin.predicted_outcome}
+                    ${twin.predicted_outcome || 'UNKNOWN'}
                 </span>
             </div>
-            <p style="font-size: 0.75rem; margin: 0.5rem 0; color: var(--text-muted); line-height: 1.4;">${twin.risk_reasoning}</p>
+            <p style="font-size: 0.75rem; margin: 0.5rem 0; color: var(--text-muted); line-height: 1.4;">${twin.risk_reasoning || 'No reasoning provided.'}</p>
             <div style="font-size: 0.7rem; color: var(--accent); opacity: 0.8;">
-                <i class="fas fa-microchip"></i> Changes: ${twin.changes.join(', ')}
+                <i class="fas fa-microchip"></i> Changes: ${twin.changes ? twin.changes.join(', ') : 'None'}
             </div>
         `;
         container.appendChild(card);
@@ -251,13 +233,19 @@ function renderRedTeamCards(data) {
 
 async function fetchComplianceReport() {
     const { analysisResult } = window.currentState;
+    
+    // Safely extract domain (handling both CSV and PKL structures)
+    const audit = analysisResult.audit || analysisResult;
+    const profile = audit.profile || analysisResult.profile || {};
+    const domain = profile.domain || "auto";
+
     try {
         const response = await fetch('/api/compliance', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                metrics: analysisResult.metrics,
-                domain: analysisResult.profile.domain
+                metrics: analysisResult.metrics || audit.metrics,
+                domain: domain
             })
         });
 
@@ -363,7 +351,6 @@ function showLabError(msg) {
 }
 
 // Global Exports
-window.updateIntensity = updateIntensity;
 window.runRedTeamTest = runRedTeamTest;
 window.downloadCertificate = downloadCertificate;
 window.initMitigationLab = initMitigationLab;

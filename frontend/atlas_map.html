@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c23752db343248c8e729ceafca332a15 {
+                #map_64dcc9d5f243e5d008990f2829c002af {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -37,36 +37,6 @@
         
 </head>
 <body>
-    
-    
-    <div style="
-        position: fixed; 
-        top: 50%; left: 50%; 
-        transform: translate(-50%, -50%);
-        z-index: 1001;
-        background: rgba(20, 20, 25, 0.95);
-        color: #fff;
-        padding: 40px;
-        border-radius: 20px;
-        border: 2px solid #ff4b2b;
-        text-align: center;
-        font-family: 'Inter', sans-serif;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-        max-width: 500px;
-    ">
-        <h2 style="color: #ff4b2b; margin-bottom: 20px;">
-           <i class="fas fa-exclamation-triangle"></i> No Geo-Data Detected
-        </h2>
-        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 15px;">
-            The dataset <b>healthcare_bias.csv</b> does not contain any detected geographical columns.
-        </p>
-        <p style="font-size: 0.9rem; color: #ff8a75; background: rgba(255, 75, 43, 0.1); padding: 10px; border-radius: 8px;">
-            Search Keywords: 'State', 'Region', 'Pincode', 'City'
-        </p>
-        <p style="font-size: 0.85rem; color: #aaa; margin-top: 20px;">
-            India Bias Atlas requires regional identifiers (State name, Pincode, or City) to plot hotspots.
-        </p>
-    </div>
     
     
     <div style="
@@ -84,19 +54,19 @@
         pointer-events: none;
         box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     ">
-        <i class="fas fa-satellite-dish"></i> <b>LIVE AI AUDIT:</b> 2026-04-27 19:10:14<br>
-        <span style="color: #888; font-size: 0.7rem;">India Bias Atlas | Session: 20260427_191014</span>
+        <i class="fas fa-satellite-dish"></i> <b>LIVE AI AUDIT:</b> 2026-04-28 06:37:25<br>
+        <span style="color: #888; font-size: 0.7rem;">India Bias Atlas | Session: 20260428_063725</span>
     </div>
     
     
-            <div class="folium-map" id="map_c23752db343248c8e729ceafca332a15" ></div>
+            <div class="folium-map" id="map_64dcc9d5f243e5d008990f2829c002af" ></div>
         
 </body>
 <script>
     
     
-            var map_c23752db343248c8e729ceafca332a15 = L.map(
-                "map_c23752db343248c8e729ceafca332a15",
+            var map_64dcc9d5f243e5d008990f2829c002af = L.map(
+                "map_64dcc9d5f243e5d008990f2829c002af",
                 {
                     center: [22.5937, 78.9629],
                     crs: L.CRS.EPSG3857,
@@ -105,22 +75,127 @@
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_c23752db343248c8e729ceafca332a15);
+            L.control.scale().addTo(map_64dcc9d5f243e5d008990f2829c002af);
 
             
 
         
     
-            var tile_layer_d51ec165bc13fb11d0a3d128360dc01a = L.tileLayer(
+            var tile_layer_c8563ae4aedc650c551d74e784b16cc3 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
             );
         
     
-            tile_layer_d51ec165bc13fb11d0a3d128360dc01a.addTo(map_c23752db343248c8e729ceafca332a15);
+            tile_layer_c8563ae4aedc650c551d74e784b16cc3.addTo(map_64dcc9d5f243e5d008990f2829c002af);
         
     
-            tile_layer_d51ec165bc13fb11d0a3d128360dc01a.addTo(map_c23752db343248c8e729ceafca332a15);
+            var circle_marker_9df09c03da44769095ab9816cdaf8a36 = L.circleMarker(
+                [12.9716, 77.5946],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_64dcc9d5f243e5d008990f2829c002af);
+        
+    
+        var popup_5aba271350989d555c45eeda301f9831 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd29b520b8bdf10c5415952bd471dfce = $(`<div id="html_fd29b520b8bdf10c5415952bd471dfce" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Inter, sans-serif; min-width: 200px;'>                 <b style='color: #10b981; font-size: 1.1rem;'>FAIR BIAS</b><br>                 <span style='font-weight: 700;'>Location: BANGALORE</span><br>                 <hr style='margin: 8px 0; border: 0; border-top: 1px solid #333;'>                 <b>Local Fairness:</b> 98.2%<br>                 <b>Sample Size:</b> 39 applicants<br>                 <p style='font-size: 0.8rem; color: #888; margin-top: 8px;'>                     Extractive fairness analysis.                 </p>             </div>         </div>`)[0];
+                popup_5aba271350989d555c45eeda301f9831.setContent(html_fd29b520b8bdf10c5415952bd471dfce);
+            
+        
+
+        circle_marker_9df09c03da44769095ab9816cdaf8a36.bindPopup(popup_5aba271350989d555c45eeda301f9831)
+        ;
+
+        
+    
+    
+            var circle_marker_ea3c98ae38d5025999b112be4f793576 = L.circleMarker(
+                [13.0827, 80.2707],
+                {"bubblingMouseEvents": true, "color": "#f59e0b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f59e0b", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 3}
+            ).addTo(map_64dcc9d5f243e5d008990f2829c002af);
+        
+    
+        var popup_aeb66c6e77cdf6daed006900fa07d254 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3113689fac6cfb10c3c7be7afc71c0ab = $(`<div id="html_3113689fac6cfb10c3c7be7afc71c0ab" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Inter, sans-serif; min-width: 200px;'>                 <b style='color: #f59e0b; font-size: 1.1rem;'>CAUTION BIAS</b><br>                 <span style='font-weight: 700;'>Location: CHENNAI</span><br>                 <hr style='margin: 8px 0; border: 0; border-top: 1px solid #333;'>                 <b>Local Fairness:</b> 77.9%<br>                 <b>Sample Size:</b> 22 applicants<br>                 <p style='font-size: 0.8rem; color: #888; margin-top: 8px;'>                     Extractive fairness analysis.                 </p>             </div>         </div>`)[0];
+                popup_aeb66c6e77cdf6daed006900fa07d254.setContent(html_3113689fac6cfb10c3c7be7afc71c0ab);
+            
+        
+
+        circle_marker_ea3c98ae38d5025999b112be4f793576.bindPopup(popup_aeb66c6e77cdf6daed006900fa07d254)
+        ;
+
+        
+    
+    
+            var circle_marker_bf2ba34744a42e1f5cebff049cf64297 = L.circleMarker(
+                [28.7041, 77.1025],
+                {"bubblingMouseEvents": true, "color": "#f59e0b", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f59e0b", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22, "stroke": true, "weight": 3}
+            ).addTo(map_64dcc9d5f243e5d008990f2829c002af);
+        
+    
+        var popup_2465f9b8d34fbd8ff9775cdccef9ccc1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_878e6a2b2e2cbb3870618dffd5af4c8a = $(`<div id="html_878e6a2b2e2cbb3870618dffd5af4c8a" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Inter, sans-serif; min-width: 200px;'>                 <b style='color: #f59e0b; font-size: 1.1rem;'>CAUTION BIAS</b><br>                 <span style='font-weight: 700;'>Location: DELHI</span><br>                 <hr style='margin: 8px 0; border: 0; border-top: 1px solid #333;'>                 <b>Local Fairness:</b> 75.2%<br>                 <b>Sample Size:</b> 44 applicants<br>                 <p style='font-size: 0.8rem; color: #888; margin-top: 8px;'>                     Extractive fairness analysis.                 </p>             </div>         </div>`)[0];
+                popup_2465f9b8d34fbd8ff9775cdccef9ccc1.setContent(html_878e6a2b2e2cbb3870618dffd5af4c8a);
+            
+        
+
+        circle_marker_bf2ba34744a42e1f5cebff049cf64297.bindPopup(popup_2465f9b8d34fbd8ff9775cdccef9ccc1)
+        ;
+
+        
+    
+    
+            var circle_marker_a41190108e660f39106e52b5d5e61cec = L.circleMarker(
+                [17.385, 78.4867],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_64dcc9d5f243e5d008990f2829c002af);
+        
+    
+        var popup_167dd1b22507d6c3e8611cd45f0319c8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3dd4e84039c7369ee6fb613eb1799d6d = $(`<div id="html_3dd4e84039c7369ee6fb613eb1799d6d" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Inter, sans-serif; min-width: 200px;'>                 <b style='color: #10b981; font-size: 1.1rem;'>FAIR BIAS</b><br>                 <span style='font-weight: 700;'>Location: HYDERABAD</span><br>                 <hr style='margin: 8px 0; border: 0; border-top: 1px solid #333;'>                 <b>Local Fairness:</b> 85.4%<br>                 <b>Sample Size:</b> 18 applicants<br>                 <p style='font-size: 0.8rem; color: #888; margin-top: 8px;'>                     Extractive fairness analysis.                 </p>             </div>         </div>`)[0];
+                popup_167dd1b22507d6c3e8611cd45f0319c8.setContent(html_3dd4e84039c7369ee6fb613eb1799d6d);
+            
+        
+
+        circle_marker_a41190108e660f39106e52b5d5e61cec.bindPopup(popup_167dd1b22507d6c3e8611cd45f0319c8)
+        ;
+
+        
+    
+    
+            var circle_marker_bc5da9127fab700b9dcb225a45709b04 = L.circleMarker(
+                [19.076, 72.8777],
+                {"bubblingMouseEvents": true, "color": "#10b981", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#10b981", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14, "stroke": true, "weight": 3}
+            ).addTo(map_64dcc9d5f243e5d008990f2829c002af);
+        
+    
+        var popup_3f6c97648a588b6503f74802c0a011fb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4fd003dc53ffbc62153eb405c7a0096a = $(`<div id="html_4fd003dc53ffbc62153eb405c7a0096a" style="width: 100.0%; height: 100.0%;">             <div style='font-family: Inter, sans-serif; min-width: 200px;'>                 <b style='color: #10b981; font-size: 1.1rem;'>FAIR BIAS</b><br>                 <span style='font-weight: 700;'>Location: MUMBAI</span><br>                 <hr style='margin: 8px 0; border: 0; border-top: 1px solid #333;'>                 <b>Local Fairness:</b> 85.2%<br>                 <b>Sample Size:</b> 40 applicants<br>                 <p style='font-size: 0.8rem; color: #888; margin-top: 8px;'>                     Extractive fairness analysis.                 </p>             </div>         </div>`)[0];
+                popup_3f6c97648a588b6503f74802c0a011fb.setContent(html_4fd003dc53ffbc62153eb405c7a0096a);
+            
+        
+
+        circle_marker_bc5da9127fab700b9dcb225a45709b04.bindPopup(popup_3f6c97648a588b6503f74802c0a011fb)
+        ;
+
+        
+    
+    
+            tile_layer_c8563ae4aedc650c551d74e784b16cc3.addTo(map_64dcc9d5f243e5d008990f2829c002af);
         
 </script>
 </html>

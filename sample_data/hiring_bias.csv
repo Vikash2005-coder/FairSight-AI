@@ -1,501 +1,201 @@
 candidate_id,gender,age,region,education,years_experience,skills_score,salary_history,hired
-C1000,Male,22,Mumbai,BTech,5,74,1002103,1
-C1001,Male,25,Delhi,MTech,7,47,714390,1
-C1002,Male,24,Delhi,MTech,6,71,696912,1
-C1003,Female,37,Delhi,BTech,3,69,618370,0
-C1004,Male,52,Mumbai,MSc,8,73,976352,1
-C1005,Female,22,Bangalore,BTech,1,72,751468,0
-C1006,Female,28,Mumbai,BSc,3,47,836342,0
-C1007,Female,26,Chennai,BSc,1,68,815566,0
-C1008,Female,56,Delhi,BTech,2,48,826968,0
-C1009,Male,30,Hyderabad,BTech,4,63,900289,0
-C1010,Female,40,Rural UP,BTech,5,66,595676,0
-C1011,Male,27,Delhi,MTech,3,65,890587,1
-C1012,Male,22,Rural Bihar,MSc,9,69,465299,1
-C1013,Female,22,Delhi,BTech,6,66,561747,0
-C1014,Female,36,Hyderabad,BTech,1,57,882978,0
-C1015,Male,41,Rural Maharashtra,BTech,10,83,801828,1
-C1016,Female,34,Bangalore,MSc,2,64,510775,0
-C1017,Female,34,Delhi,MTech,4,66,419833,1
-C1018,Female,34,Mumbai,BTech,8,73,794973,0
-C1019,Female,22,Bangalore,MBA,2,53,782276,0
-C1020,Female,23,Bangalore,BTech,5,83,616706,1
-C1021,Female,34,Delhi,BTech,2,84,662884,1
-C1022,Female,29,Rural Bihar,MSc,7,63,783436,1
-C1023,Male,27,Delhi,MSc,6,96,846190,0
-C1024,Male,38,Hyderabad,MBA,5,55,1076400,0
-C1025,Female,25,Rural UP,MTech,9,70,874264,0
-C1026,Female,22,Mumbai,MTech,0,69,568315,0
-C1027,Male,32,Mumbai,BSc,2,64,1112076,1
-C1028,Female,49,Chennai,MBA,10,70,728500,1
-C1029,Male,24,Mumbai,BTech,2,94,733150,1
-C1030,Male,37,Bangalore,MSc,8,75,1130270,1
-C1031,Male,44,Hyderabad,BTech,4,98,796111,1
-C1032,Male,22,Chennai,MBA,1,68,706867,0
-C1033,Female,48,Mumbai,BTech,4,70,762134,0
-C1034,Male,25,Delhi,MSc,11,76,778300,1
-C1035,Female,31,Mumbai,BSc,3,64,812129,0
-C1036,Female,24,Mumbai,BSc,7,43,455826,0
-C1037,Female,39,Delhi,BSc,3,73,657992,0
-C1038,Male,28,Mumbai,MSc,7,65,677381,1
-C1039,Male,38,Bangalore,MBA,7,80,660170,1
-C1040,Male,27,Mumbai,BTech,7,79,1071576,0
-C1041,Female,31,Mumbai,BTech,8,62,547066,1
-C1042,Female,22,Rural UP,BTech,9,65,655251,1
-C1043,Male,29,Chennai,MBA,6,71,510878,0
-C1044,Male,30,Rural Bihar,BTech,7,77,810870,1
-C1045,Male,33,Chennai,MTech,4,84,509430,1
-C1046,Male,38,Mumbai,MSc,0,41,872495,1
-C1047,Female,37,Rural Maharashtra,MSc,7,92,770839,0
-C1048,Male,29,Rural Maharashtra,MSc,4,74,580530,0
-C1049,Female,29,Delhi,MTech,4,69,698539,0
-C1050,Female,42,Rural UP,BSc,5,65,393743,0
-C1051,Female,34,Bangalore,BTech,5,100,674837,0
-C1052,Female,38,Delhi,BTech,5,92,799963,1
-C1053,Male,27,Chennai,BTech,7,67,840026,0
-C1054,Male,37,Rural UP,BTech,5,69,959281,0
-C1055,Male,22,Bangalore,MBA,4,68,579749,1
-C1056,Female,46,Mumbai,BTech,4,57,564319,0
-C1057,Male,28,Chennai,BTech,6,88,970270,1
-C1058,Male,25,Delhi,MBA,1,60,361573,0
-C1059,Male,22,Delhi,BTech,9,33,637898,1
-C1060,Male,22,Bangalore,BTech,3,73,982112,1
-C1061,Male,35,Delhi,MTech,3,93,722386,1
-C1062,Female,22,Rural Bihar,MBA,7,64,616887,1
-C1063,Male,24,Bangalore,BTech,0,80,878050,0
-C1064,Female,24,Chennai,MSc,3,100,921616,1
-C1065,Male,23,Delhi,MTech,3,65,495141,1
-C1066,Male,52,Mumbai,BTech,0,60,952050,0
-C1067,Male,36,Delhi,BTech,5,71,897608,1
-C1068,Male,25,Mumbai,BTech,6,78,1006984,0
-C1069,Male,32,Rural Maharashtra,MTech,2,36,1010318,0
-C1070,Male,28,Delhi,MSc,7,56,857388,1
-C1071,Male,34,Hyderabad,MBA,7,71,702520,1
-C1072,Male,42,Rural Maharashtra,BTech,6,89,711072,0
-C1073,Female,25,Chennai,MBA,0,74,482424,0
-C1074,Female,22,Rural UP,BTech,0,72,1089545,0
-C1075,Female,30,Delhi,MBA,5,76,697040,0
-C1076,Male,31,Rural UP,MTech,5,100,904790,1
-C1077,Female,28,Mumbai,BTech,7,35,618299,1
-C1078,Female,22,Delhi,BTech,4,69,439660,1
-C1079,Female,28,Chennai,BTech,1,77,524945,0
-C1080,Male,24,Hyderabad,BTech,5,68,831007,1
-C1081,Female,22,Delhi,MTech,0,51,462885,1
-C1082,Female,28,Bangalore,MBA,6,64,644587,0
-C1083,Male,23,Bangalore,BTech,5,68,900095,1
-C1084,Male,36,Rural Maharashtra,BSc,2,94,598582,0
-C1085,Male,22,Mumbai,BTech,0,96,551699,1
-C1086,Female,36,Delhi,MTech,0,43,566632,0
-C1087,Male,29,Mumbai,BTech,11,80,675429,0
-C1088,Female,22,Bangalore,BTech,5,45,746505,0
-C1089,Male,35,Mumbai,BTech,9,93,599248,1
-C1090,Male,33,Mumbai,BTech,0,64,839711,1
-C1091,Male,34,Bangalore,MBA,6,43,1216262,0
-C1092,Female,34,Mumbai,MTech,0,44,817888,1
-C1093,Female,31,Delhi,MBA,0,63,737956,0
-C1094,Male,22,Mumbai,MSc,8,50,754750,1
-C1095,Female,30,Chennai,MBA,3,79,405645,0
-C1096,Female,36,Mumbai,MBA,5,76,621023,0
-C1097,Male,29,Rural Maharashtra,BTech,0,77,591503,0
-C1098,Male,33,Hyderabad,BTech,0,83,856606,1
-C1099,Female,34,Mumbai,BSc,7,70,856600,0
-C1100,Male,37,Rural Bihar,BSc,5,44,448280,1
-C1101,Male,36,Bangalore,BTech,0,51,585884,0
-C1102,Female,28,Rural Maharashtra,MSc,2,100,547120,0
-C1103,Male,42,Mumbai,BTech,6,60,700806,0
-C1104,Female,27,Hyderabad,MBA,1,75,594245,0
-C1105,Female,24,Chennai,BTech,3,78,745133,0
-C1106,Male,22,Bangalore,MBA,1,57,798344,1
-C1107,Female,22,Delhi,MTech,8,75,873115,0
-C1108,Male,31,Chennai,BSc,5,76,943001,1
-C1109,Female,36,Hyderabad,BTech,3,57,542915,0
-C1110,Female,28,Bangalore,MBA,5,70,670752,0
-C1111,Female,22,Mumbai,BSc,6,70,854273,0
-C1112,Male,31,Mumbai,BTech,6,64,834927,0
-C1113,Male,37,Rural Maharashtra,MSc,6,62,773792,0
-C1114,Female,22,Rural Bihar,MTech,3,51,626850,1
-C1115,Male,37,Chennai,MBA,4,52,777081,1
-C1116,Male,37,Bangalore,BTech,4,71,754119,1
-C1117,Female,27,Mumbai,BSc,7,80,731428,0
-C1118,Male,39,Delhi,BTech,6,75,648520,1
-C1119,Male,27,Chennai,BTech,3,84,744620,1
-C1120,Male,49,Bangalore,MBA,3,75,895774,1
-C1121,Male,25,Rural Bihar,BTech,12,69,904977,1
-C1122,Male,22,Bangalore,BTech,5,67,653624,1
-C1123,Female,22,Bangalore,BTech,5,58,953164,0
-C1124,Female,25,Rural Maharashtra,BTech,8,71,811823,0
-C1125,Male,40,Hyderabad,BTech,1,62,923737,1
-C1126,Female,22,Rural Bihar,MSc,7,53,748541,1
-C1127,Male,31,Delhi,BSc,7,83,427133,1
-C1128,Female,22,Hyderabad,MTech,11,45,562065,1
-C1129,Female,31,Chennai,MBA,6,59,709103,0
-C1130,Male,28,Delhi,BTech,8,52,863844,1
-C1131,Female,29,Bangalore,BSc,0,65,312394,0
-C1132,Male,35,Hyderabad,BTech,0,82,1044500,1
-C1133,Female,29,Rural Maharashtra,BTech,4,61,663935,0
-C1134,Male,28,Rural UP,BTech,1,61,801858,0
-C1135,Male,33,Delhi,MTech,2,76,612306,1
-C1136,Female,32,Delhi,BSc,3,78,505585,0
-C1137,Female,46,Delhi,BTech,5,76,479427,0
-C1138,Male,23,Chennai,MSc,5,85,749523,1
-C1139,Female,41,Delhi,BTech,8,78,774320,0
-C1140,Female,30,Mumbai,BTech,1,50,386426,0
-C1141,Male,42,Bangalore,BTech,5,59,1017932,1
-C1142,Male,30,Delhi,BTech,8,52,493440,1
-C1143,Female,22,Hyderabad,BSc,4,75,625020,1
-C1144,Male,23,Bangalore,BSc,2,41,879367,1
-C1145,Male,36,Mumbai,BTech,2,78,1169325,1
-C1146,Female,41,Delhi,BTech,4,77,678831,0
-C1147,Male,33,Bangalore,MBA,8,65,744935,1
-C1148,Female,36,Delhi,MBA,3,73,527749,1
-C1149,Female,22,Rural Maharashtra,BTech,8,94,403940,1
-C1150,Female,32,Mumbai,MBA,4,48,342250,0
-C1151,Male,38,Mumbai,MBA,0,78,579844,1
-C1152,Male,23,Rural Maharashtra,BTech,5,85,821708,1
-C1153,Male,46,Chennai,MSc,7,99,747900,1
-C1154,Female,22,Delhi,BTech,6,93,605688,0
-C1155,Female,22,Bangalore,BTech,5,81,668330,0
-C1156,Male,25,Rural Maharashtra,BSc,6,53,622050,0
-C1157,Female,28,Bangalore,BTech,11,53,793157,0
-C1158,Female,26,Rural UP,BTech,6,63,847273,1
-C1159,Male,34,Delhi,BTech,1,89,810107,0
-C1160,Male,49,Hyderabad,BTech,4,32,812791,1
-C1161,Male,22,Mumbai,MSc,6,70,439518,1
-C1162,Male,32,Bangalore,MBA,2,55,883438,0
-C1163,Male,29,Chennai,MSc,3,63,726555,1
-C1164,Female,30,Rural Bihar,BSc,2,46,805639,0
-C1165,Male,48,Rural UP,MTech,3,52,1041561,0
-C1166,Female,29,Delhi,BTech,4,82,525383,1
-C1167,Male,22,Bangalore,MSc,2,69,407968,1
-C1168,Male,22,Bangalore,MBA,4,35,711010,0
-C1169,Female,22,Rural Bihar,BSc,8,53,393741,0
-C1170,Male,29,Chennai,MBA,7,74,959899,1
-C1171,Male,31,Hyderabad,MTech,4,71,847392,1
-C1172,Male,23,Bangalore,BTech,8,80,1031562,1
-C1173,Female,26,Hyderabad,BTech,6,89,450575,1
-C1174,Female,35,Delhi,BTech,8,91,951080,0
-C1175,Male,34,Bangalore,MSc,3,50,452454,0
-C1176,Female,26,Mumbai,BSc,4,49,805732,0
-C1177,Female,32,Bangalore,BSc,8,67,801730,0
-C1178,Male,32,Rural UP,BTech,5,68,782821,1
-C1179,Male,34,Rural Maharashtra,MBA,11,86,420164,1
-C1180,Female,32,Hyderabad,BTech,7,66,652781,0
-C1181,Male,22,Delhi,BSc,5,48,943967,1
-C1182,Male,32,Mumbai,BSc,9,48,578738,0
-C1183,Female,23,Bangalore,MTech,6,75,377388,1
-C1184,Female,39,Mumbai,MTech,3,100,607453,0
-C1185,Female,24,Chennai,MBA,3,82,654844,1
-C1186,Male,38,Hyderabad,BSc,3,30,960187,1
-C1187,Male,22,Bangalore,MTech,5,78,1172361,0
-C1188,Male,39,Bangalore,MTech,4,51,869728,1
-C1189,Male,22,Rural Maharashtra,BTech,0,72,1006592,0
-C1190,Male,28,Delhi,BTech,9,73,724309,0
-C1191,Female,28,Mumbai,MBA,6,61,713971,1
-C1192,Male,22,Bangalore,MSc,2,57,615433,0
-C1193,Male,42,Delhi,BTech,5,53,447433,0
-C1194,Male,31,Delhi,MSc,5,68,679197,0
-C1195,Male,22,Chennai,BTech,1,100,815998,1
-C1196,Male,26,Bangalore,BSc,3,85,1332636,1
-C1197,Male,31,Mumbai,MTech,1,69,710323,1
-C1198,Female,24,Delhi,BSc,5,60,646343,1
-C1199,Male,34,Bangalore,BSc,0,71,727905,1
-C1200,Female,29,Rural UP,MTech,2,55,655114,0
-C1201,Female,34,Rural Bihar,BTech,0,73,715461,0
-C1202,Female,36,Delhi,BTech,4,84,763643,0
-C1203,Male,26,Rural Bihar,BTech,3,62,859596,1
-C1204,Male,24,Rural UP,BSc,5,77,801162,1
-C1205,Female,29,Mumbai,BSc,1,66,661366,0
-C1206,Female,23,Rural Maharashtra,BSc,6,97,713528,0
-C1207,Male,22,Bangalore,MTech,3,84,909163,0
-C1208,Male,25,Bangalore,MTech,3,81,1051411,0
-C1209,Male,39,Rural Bihar,MBA,6,58,1038934,1
-C1210,Male,26,Rural Maharashtra,BTech,6,90,1002509,1
-C1211,Male,31,Bangalore,MBA,7,80,557582,0
-C1212,Female,22,Delhi,MTech,5,72,836498,1
-C1213,Male,29,Mumbai,MBA,4,76,712955,0
-C1214,Female,37,Bangalore,BSc,3,75,550093,1
-C1215,Male,30,Delhi,BTech,0,81,1010022,1
-C1216,Female,33,Chennai,BSc,7,81,549509,0
-C1217,Female,26,Delhi,BTech,6,87,699485,0
-C1218,Female,35,Delhi,BTech,13,92,598269,1
-C1219,Female,31,Chennai,MTech,1,81,497658,0
-C1220,Male,33,Chennai,MBA,5,100,821408,1
-C1221,Male,28,Mumbai,BTech,4,38,890406,1
-C1222,Male,28,Mumbai,BTech,5,86,684493,1
-C1223,Female,51,Bangalore,BTech,2,74,672981,0
-C1224,Male,26,Bangalore,MTech,3,82,763704,1
-C1225,Female,42,Rural Bihar,BSc,5,60,539840,0
-C1226,Male,22,Delhi,BSc,4,77,766338,1
-C1227,Female,39,Mumbai,MBA,5,81,718572,1
-C1228,Female,30,Mumbai,BTech,2,44,550126,1
-C1229,Male,26,Delhi,BTech,7,89,894195,1
-C1230,Female,22,Hyderabad,MTech,1,77,736145,0
-C1231,Male,24,Chennai,MBA,2,92,749349,1
-C1232,Female,22,Mumbai,MBA,3,48,854983,1
-C1233,Female,24,Chennai,BTech,10,63,648460,1
-C1234,Male,29,Mumbai,BTech,6,53,727637,0
-C1235,Male,27,Rural Bihar,BTech,5,83,492066,1
-C1236,Male,31,Delhi,BSc,1,66,1045544,1
-C1237,Male,23,Bangalore,BTech,5,77,992284,1
-C1238,Male,28,Delhi,MSc,12,74,979892,1
-C1239,Male,39,Mumbai,MTech,0,73,853177,0
-C1240,Male,27,Hyderabad,BTech,5,68,565481,0
-C1241,Female,33,Bangalore,BTech,6,59,695437,0
-C1242,Female,39,Hyderabad,MTech,3,87,622469,0
-C1243,Female,38,Rural UP,BTech,10,66,812121,1
-C1244,Male,39,Bangalore,BTech,3,61,971323,1
-C1245,Female,35,Hyderabad,MBA,6,76,530203,0
-C1246,Male,22,Mumbai,BTech,0,71,773046,1
-C1247,Male,34,Delhi,BSc,4,71,767727,1
-C1248,Male,36,Rural UP,MTech,3,65,926672,0
-C1249,Female,28,Chennai,BTech,2,75,657306,1
-C1250,Female,24,Chennai,BTech,5,82,747749,0
-C1251,Male,40,Hyderabad,BTech,0,69,867047,1
-C1252,Female,24,Bangalore,MBA,5,57,840596,1
-C1253,Female,23,Bangalore,BSc,4,84,618893,0
-C1254,Male,29,Bangalore,MBA,10,77,636719,1
-C1255,Female,30,Hyderabad,BTech,5,65,584149,1
-C1256,Female,22,Delhi,BTech,5,48,423694,0
-C1257,Male,27,Chennai,MTech,4,75,994188,1
-C1258,Male,40,Bangalore,MBA,7,93,647718,1
-C1259,Male,28,Mumbai,BTech,0,71,494936,1
-C1260,Male,28,Delhi,MTech,0,68,803003,1
-C1261,Female,29,Bangalore,BSc,5,93,617017,1
-C1262,Male,37,Delhi,BTech,2,84,529710,1
-C1263,Male,35,Bangalore,BTech,2,58,1134296,1
-C1264,Male,34,Mumbai,BTech,5,60,680438,0
-C1265,Female,22,Mumbai,BSc,1,93,464117,1
-C1266,Female,27,Rural UP,MBA,0,53,630445,0
-C1267,Male,34,Chennai,BTech,7,60,1237529,1
-C1268,Male,28,Bangalore,BTech,1,76,874218,1
-C1269,Male,32,Chennai,BTech,5,70,909741,0
-C1270,Female,30,Rural Bihar,BSc,6,68,452094,0
-C1271,Female,36,Mumbai,MTech,4,93,757432,1
-C1272,Female,24,Rural Maharashtra,MBA,1,67,512839,0
-C1273,Male,26,Bangalore,BTech,0,45,849502,0
-C1274,Female,39,Bangalore,MTech,3,90,451847,0
-C1275,Male,25,Delhi,BTech,5,67,491950,1
-C1276,Male,23,Bangalore,BSc,7,91,718917,1
-C1277,Female,22,Mumbai,BTech,3,76,657827,1
-C1278,Female,26,Chennai,BSc,7,55,725315,1
-C1279,Male,38,Mumbai,BTech,7,31,653697,1
-C1280,Male,39,Rural Maharashtra,MTech,7,54,560343,1
-C1281,Male,34,Rural UP,BSc,9,44,680314,1
-C1282,Female,33,Chennai,MSc,3,46,786041,1
-C1283,Male,36,Delhi,BTech,8,84,963214,1
-C1284,Female,26,Rural Maharashtra,BTech,7,50,455557,0
-C1285,Female,37,Delhi,BTech,6,61,539150,1
-C1286,Female,29,Bangalore,MBA,6,72,872421,0
-C1287,Male,30,Rural Maharashtra,MTech,2,65,576571,0
-C1288,Female,24,Chennai,MTech,7,71,551078,1
-C1289,Female,22,Bangalore,MBA,2,67,540600,1
-C1290,Female,26,Bangalore,MSc,4,90,844046,0
-C1291,Female,34,Mumbai,BTech,3,44,438156,0
-C1292,Male,42,Hyderabad,MTech,3,53,467751,0
-C1293,Male,24,Bangalore,MBA,5,75,783323,1
-C1294,Female,41,Bangalore,BTech,8,87,822242,0
-C1295,Female,37,Rural Maharashtra,MSc,4,74,928948,0
-C1296,Male,30,Bangalore,MTech,4,68,899497,1
-C1297,Female,33,Mumbai,BTech,2,67,707912,0
-C1298,Male,43,Mumbai,MTech,3,93,1058073,1
-C1299,Male,22,Rural Maharashtra,MBA,2,56,1141002,0
-C1300,Female,33,Rural Maharashtra,MSc,6,48,689911,0
-C1301,Male,35,Mumbai,BTech,5,81,456441,1
-C1302,Female,38,Delhi,MBA,6,82,489158,0
-C1303,Female,22,Mumbai,BSc,3,43,542776,0
-C1304,Female,32,Delhi,MBA,3,59,575253,0
-C1305,Female,22,Chennai,BTech,1,53,672335,0
-C1306,Male,38,Hyderabad,BTech,3,52,527325,0
-C1307,Male,30,Bangalore,MTech,0,70,883534,0
-C1308,Female,26,Chennai,BTech,9,55,743703,1
-C1309,Male,35,Mumbai,MBA,5,96,743796,1
-C1310,Male,30,Chennai,BTech,0,67,681414,0
-C1311,Female,24,Delhi,MTech,9,35,834091,1
-C1312,Male,38,Chennai,MTech,4,73,616623,1
-C1313,Female,23,Bangalore,BTech,4,72,300000,1
-C1314,Female,29,Delhi,MBA,2,53,793470,0
-C1315,Female,31,Delhi,BTech,4,91,710731,0
-C1316,Male,28,Rural Maharashtra,MSc,2,65,988139,1
-C1317,Female,30,Mumbai,BTech,4,90,479229,1
-C1318,Male,28,Delhi,MBA,3,89,993601,1
-C1319,Female,46,Hyderabad,MTech,9,76,779185,0
-C1320,Male,38,Hyderabad,BTech,9,72,776425,1
-C1321,Female,31,Chennai,BSc,10,86,640846,0
-C1322,Male,24,Bangalore,BTech,1,82,768651,1
-C1323,Female,30,Bangalore,BSc,8,78,807963,1
-C1324,Female,22,Bangalore,BTech,8,54,770994,0
-C1325,Female,34,Hyderabad,BSc,2,91,580547,1
-C1326,Male,27,Delhi,BTech,6,51,1032933,0
-C1327,Female,27,Rural Maharashtra,BTech,2,71,846469,0
-C1328,Female,29,Mumbai,BTech,3,88,557998,0
-C1329,Male,35,Mumbai,BSc,9,79,1014282,1
-C1330,Female,43,Rural Bihar,BSc,10,96,575288,0
-C1331,Female,25,Rural UP,BTech,0,72,839427,0
-C1332,Female,29,Chennai,MBA,3,78,629699,0
-C1333,Female,22,Chennai,BTech,6,54,458215,0
-C1334,Male,37,Mumbai,BTech,6,77,1066173,1
-C1335,Female,33,Delhi,MTech,1,65,384624,0
-C1336,Female,22,Mumbai,BTech,8,57,631563,0
-C1337,Female,32,Bangalore,BSc,4,73,509128,0
-C1338,Female,32,Delhi,BSc,5,67,576520,0
-C1339,Male,32,Bangalore,BTech,3,59,454020,1
-C1340,Male,22,Hyderabad,BTech,3,54,647762,1
-C1341,Female,25,Mumbai,BTech,3,74,800514,1
-C1342,Male,22,Delhi,BSc,4,73,587396,1
-C1343,Male,30,Delhi,BTech,0,64,562827,0
-C1344,Female,39,Rural Maharashtra,BTech,7,88,678438,0
-C1345,Female,26,Delhi,MTech,3,85,611207,1
-C1346,Male,26,Mumbai,MSc,6,73,548978,1
-C1347,Male,51,Delhi,BTech,2,76,541694,1
-C1348,Male,33,Bangalore,MSc,3,71,889017,0
-C1349,Male,22,Mumbai,MTech,6,77,903999,1
-C1350,Male,27,Bangalore,BTech,6,74,875043,1
-C1351,Male,35,Bangalore,BTech,7,69,668760,0
-C1352,Male,42,Mumbai,MTech,4,99,519799,1
-C1353,Male,27,Bangalore,BTech,12,73,804256,1
-C1354,Male,30,Delhi,BSc,3,46,739700,1
-C1355,Male,22,Bangalore,BSc,9,60,865002,1
-C1356,Female,35,Bangalore,BTech,5,93,678606,1
-C1357,Female,22,Chennai,MSc,7,48,463749,0
-C1358,Female,32,Bangalore,BTech,6,84,826293,1
-C1359,Male,22,Bangalore,BTech,3,52,580919,0
-C1360,Male,22,Delhi,MBA,5,82,963201,1
-C1361,Female,31,Mumbai,BTech,6,53,375988,0
-C1362,Female,27,Chennai,BTech,6,62,575188,0
-C1363,Male,22,Hyderabad,MTech,4,42,956068,1
-C1364,Male,30,Rural UP,BTech,1,82,1050291,0
-C1365,Male,36,Bangalore,BTech,6,77,835443,1
-C1366,Male,31,Hyderabad,BTech,2,76,1216153,0
-C1367,Female,34,Rural Bihar,BTech,4,76,585362,1
-C1368,Female,22,Chennai,BTech,4,42,824699,0
-C1369,Male,33,Bangalore,BSc,1,60,786344,1
-C1370,Female,25,Rural Maharashtra,BSc,1,58,300000,1
-C1371,Female,28,Chennai,MTech,4,62,467839,0
-C1372,Female,43,Mumbai,MTech,6,74,507250,1
-C1373,Male,33,Delhi,MTech,6,76,487729,1
-C1374,Male,22,Chennai,MBA,0,67,664123,0
-C1375,Male,27,Delhi,BTech,5,85,802848,0
-C1376,Female,32,Rural UP,MSc,4,90,890431,0
-C1377,Female,25,Delhi,MBA,4,74,680907,0
-C1378,Male,35,Bangalore,BSc,4,100,300000,1
-C1379,Male,22,Bangalore,BTech,9,59,1061602,0
-C1380,Female,40,Bangalore,MSc,3,71,600833,1
-C1381,Female,38,Mumbai,MBA,2,54,300000,1
-C1382,Male,41,Rural UP,BTech,3,57,755050,1
-C1383,Male,32,Rural Maharashtra,MSc,3,62,681219,1
-C1384,Female,27,Chennai,BTech,4,59,820753,1
-C1385,Female,25,Delhi,BTech,1,84,616353,0
-C1386,Male,39,Rural Maharashtra,BTech,4,79,690250,0
-C1387,Male,25,Bangalore,BSc,4,60,413566,1
-C1388,Male,32,Rural Maharashtra,BSc,1,67,766066,1
-C1389,Female,22,Mumbai,BTech,9,57,742131,1
-C1390,Female,27,Bangalore,MTech,6,81,468072,0
-C1391,Male,37,Mumbai,MBA,9,52,724659,0
-C1392,Male,34,Delhi,BSc,8,65,434803,1
-C1393,Male,44,Delhi,BSc,7,78,1093916,1
-C1394,Female,35,Bangalore,BSc,2,63,802734,0
-C1395,Female,43,Delhi,MTech,7,58,775541,0
-C1396,Female,23,Mumbai,BTech,7,86,709371,0
-C1397,Male,22,Delhi,BTech,4,65,815175,1
-C1398,Male,25,Chennai,MSc,2,94,1190228,1
-C1399,Female,30,Bangalore,MSc,1,65,492381,0
-C1400,Female,30,Chennai,MBA,5,68,697424,0
-C1401,Female,22,Mumbai,MBA,8,51,332919,1
-C1402,Male,23,Delhi,MBA,5,64,855344,1
-C1403,Male,23,Rural Maharashtra,MSc,6,100,819827,1
-C1404,Female,22,Mumbai,BTech,3,69,701057,0
-C1405,Female,30,Rural Maharashtra,BTech,2,45,853776,0
-C1406,Male,22,Delhi,MBA,5,85,963945,1
-C1407,Female,38,Mumbai,BTech,3,43,827421,1
-C1408,Male,50,Delhi,BTech,3,87,1255680,0
-C1409,Male,22,Delhi,MBA,2,53,967265,0
-C1410,Female,23,Chennai,MTech,9,78,505080,0
-C1411,Male,36,Bangalore,BTech,7,85,1044742,1
-C1412,Female,22,Rural UP,BTech,1,73,495474,1
-C1413,Male,32,Delhi,BTech,0,59,614443,0
-C1414,Male,42,Delhi,MBA,1,72,902172,1
-C1415,Male,25,Bangalore,BTech,1,64,631921,1
-C1416,Female,37,Delhi,BTech,5,72,884080,0
-C1417,Male,23,Bangalore,BTech,4,52,648735,0
-C1418,Female,39,Mumbai,MTech,5,86,727094,0
-C1419,Male,37,Rural Maharashtra,MSc,6,57,779724,1
-C1420,Female,31,Delhi,BSc,6,61,794462,0
-C1421,Male,22,Mumbai,MTech,4,82,741318,1
-C1422,Female,32,Bangalore,BSc,8,89,690923,1
-C1423,Male,34,Rural Bihar,MTech,0,77,1020585,1
-C1424,Male,41,Delhi,BTech,6,61,846995,1
-C1425,Male,28,Bangalore,BTech,5,32,324713,0
-C1426,Male,24,Mumbai,MTech,5,85,835397,1
-C1427,Male,30,Mumbai,BTech,11,78,702401,1
-C1428,Male,22,Bangalore,MSc,5,74,826204,1
-C1429,Male,22,Mumbai,MBA,1,96,300000,1
-C1430,Male,30,Hyderabad,BTech,6,49,686774,1
-C1431,Male,38,Rural UP,BTech,2,50,900542,0
-C1432,Male,22,Rural Bihar,BTech,0,61,1015580,0
-C1433,Female,42,Rural Maharashtra,BSc,5,64,614969,0
-C1434,Male,31,Mumbai,MBA,5,54,743263,1
-C1435,Male,22,Bangalore,MTech,1,73,1313981,1
-C1436,Male,39,Delhi,BTech,3,79,1155731,1
-C1437,Male,36,Mumbai,BTech,10,47,430518,1
-C1438,Male,37,Mumbai,MTech,2,56,787631,1
-C1439,Male,46,Rural UP,BTech,7,72,1050617,1
-C1440,Female,31,Mumbai,BTech,7,60,533128,0
-C1441,Male,22,Chennai,BTech,0,71,656198,0
-C1442,Male,40,Hyderabad,MSc,8,68,999883,1
-C1443,Female,36,Rural Bihar,MBA,6,64,610631,1
-C1444,Male,30,Chennai,BTech,8,81,957162,1
-C1445,Female,22,Chennai,MSc,8,59,780659,0
-C1446,Male,33,Hyderabad,MTech,2,70,507815,0
-C1447,Female,22,Bangalore,MTech,2,60,673942,1
-C1448,Female,22,Mumbai,MTech,1,65,581538,0
-C1449,Male,25,Rural Maharashtra,BSc,3,76,866297,1
-C1450,Male,47,Delhi,BTech,5,84,676962,0
-C1451,Female,32,Rural Maharashtra,MSc,7,63,721914,0
-C1452,Female,34,Mumbai,BTech,3,66,952268,1
-C1453,Female,38,Delhi,BTech,5,97,514928,0
-C1454,Female,25,Rural Maharashtra,MBA,5,55,886712,1
-C1455,Male,34,Rural UP,BTech,5,72,522914,1
-C1456,Female,37,Bangalore,BTech,2,70,612675,0
-C1457,Male,31,Delhi,MTech,5,85,572452,0
-C1458,Male,31,Chennai,MTech,3,90,723613,1
-C1459,Male,26,Delhi,BTech,5,94,979317,0
-C1460,Male,28,Mumbai,BTech,6,48,718272,1
-C1461,Male,35,Mumbai,MBA,4,81,806780,1
-C1462,Male,41,Mumbai,BTech,7,68,709241,1
-C1463,Female,38,Delhi,BSc,4,92,654332,0
-C1464,Female,31,Rural Bihar,BSc,0,74,563718,0
-C1465,Male,25,Rural Maharashtra,BTech,1,58,847077,1
-C1466,Male,37,Rural UP,MTech,4,59,737602,1
-C1467,Male,22,Hyderabad,BTech,2,74,897000,1
-C1468,Male,28,Rural Maharashtra,BTech,5,93,813727,1
-C1469,Male,22,Bangalore,MTech,6,56,697518,1
-C1470,Female,36,Mumbai,MTech,8,66,534271,1
-C1471,Female,29,Rural Bihar,BTech,6,67,722168,1
-C1472,Female,40,Bangalore,MBA,3,64,601719,0
-C1473,Male,36,Bangalore,BTech,0,89,859520,0
-C1474,Male,27,Bangalore,BTech,3,87,1134780,0
-C1475,Male,41,Delhi,BSc,4,82,578009,1
-C1476,Female,25,Mumbai,BTech,0,61,612697,0
-C1477,Female,29,Mumbai,MSc,6,57,820554,0
-C1478,Male,26,Rural UP,BTech,3,89,669438,1
-C1479,Female,28,Rural UP,BTech,4,44,777999,0
-C1480,Male,32,Delhi,MTech,4,80,749409,1
-C1481,Male,33,Delhi,BSc,8,61,831929,1
-C1482,Female,27,Mumbai,MTech,8,61,974158,0
-C1483,Male,40,Hyderabad,MTech,3,56,776697,1
-C1484,Female,22,Rural UP,MTech,0,54,795060,0
-C1485,Male,28,Mumbai,MSc,7,52,836302,1
-C1486,Female,42,Hyderabad,MSc,6,42,797735,0
-C1487,Male,31,Bangalore,BSc,0,92,1032916,1
-C1488,Female,30,Rural Maharashtra,BTech,4,51,614740,0
-C1489,Male,44,Bangalore,BTech,6,41,882106,1
-C1490,Female,32,Delhi,BTech,5,64,540409,1
-C1491,Male,40,Bangalore,MBA,5,71,545101,1
-C1492,Female,28,Delhi,BTech,12,48,670789,1
-C1493,Male,34,Chennai,MTech,6,44,910157,0
-C1494,Male,39,Mumbai,MTech,2,78,753539,0
-C1495,Male,27,Mumbai,MSc,12,75,780006,1
-C1496,Male,24,Delhi,BSc,3,71,665161,1
-C1497,Male,28,Mumbai,MTech,10,97,552943,1
-C1498,Male,31,Rural Bihar,MSc,4,74,1003218,0
-C1499,Male,37,Delhi,BSc,2,52,974725,1
+C1000,Female,30,Chennai,MBA,5,68,697424,0
+C1001,Female,22,Mumbai,MBA,8,51,332919,1
+C1002,Male,23,Delhi,MBA,5,64,855344,1
+C1003,Male,23,Rural Maharashtra,MSc,6,100,819827,1
+C1004,Female,22,Mumbai,BTech,3,69,701057,0
+C1005,Female,30,Rural Maharashtra,BTech,2,45,853776,0
+C1006,Male,22,Delhi,MBA,5,85,963945,1
+C1007,Female,38,Mumbai,BTech,3,43,827421,1
+C1008,Male,50,Delhi,BTech,3,87,1255680,0
+C1009,Male,22,Delhi,MBA,2,53,967265,0
+C1010,Female,23,Chennai,MTech,9,78,505080,0
+C1011,Male,36,Bangalore,BTech,7,85,1044742,1
+C1012,Female,22,Rural UP,BTech,1,73,495474,1
+C1013,Male,32,Delhi,BTech,0,59,614443,0
+C1014,Male,42,Delhi,MBA,1,72,902172,1
+C1015,Male,25,Bangalore,BTech,1,64,631921,1
+C1016,Female,37,Delhi,BTech,5,72,884080,0
+C1017,Male,23,Bangalore,BTech,4,52,648735,0
+C1018,Female,39,Mumbai,MTech,5,86,727094,0
+C1019,Male,37,Rural Maharashtra,MSc,6,57,779724,1
+C1020,Female,31,Delhi,BSc,6,61,794462,0
+C1021,Male,22,Mumbai,MTech,4,82,741318,1
+C1022,Female,32,Bangalore,BSc,8,89,690923,1
+C1023,Male,34,Rural Bihar,MTech,0,77,1020585,1
+C1024,Male,41,Delhi,BTech,6,61,846995,1
+C1025,Male,28,Bangalore,BTech,5,32,324713,0
+C1026,Male,24,Mumbai,MTech,5,85,835397,1
+C1027,Male,30,Mumbai,BTech,11,78,702401,1
+C1028,Male,22,Bangalore,MSc,5,74,826204,1
+C1029,Male,22,Mumbai,MBA,1,96,300000,1
+C1030,Male,30,Hyderabad,BTech,6,49,686774,1
+C1031,Male,38,Rural UP,BTech,2,50,900542,0
+C1032,Male,22,Rural Bihar,BTech,0,61,1015580,0
+C1033,Female,42,Rural Maharashtra,BSc,5,64,614969,0
+C1034,Male,31,Mumbai,MBA,5,54,743263,1
+C1035,Male,22,Bangalore,MTech,1,73,1313981,1
+C1036,Male,39,Delhi,BTech,3,79,1155731,1
+C1037,Male,36,Mumbai,BTech,10,47,430518,1
+C1038,Male,37,Mumbai,MTech,2,56,787631,1
+C1039,Male,46,Rural UP,BTech,7,72,1050617,1
+C1040,Female,31,Mumbai,BTech,7,60,533128,0
+C1041,Male,22,Chennai,BTech,0,71,656198,0
+C1042,Male,40,Hyderabad,MSc,8,68,999883,1
+C1043,Female,36,Rural Bihar,MBA,6,64,610631,1
+C1044,Male,30,Chennai,BTech,8,81,957162,1
+C1045,Female,22,Chennai,MSc,8,59,780659,0
+C1046,Male,33,Hyderabad,MTech,2,70,507815,0
+C1047,Female,22,Bangalore,MTech,2,60,673942,1
+C1048,Female,22,Mumbai,MTech,1,65,581538,0
+C1049,Male,25,Rural Maharashtra,BSc,3,76,866297,1
+C1050,Male,47,Delhi,BTech,5,84,676962,0
+C1051,Female,32,Rural Maharashtra,MSc,7,63,721914,0
+C1052,Female,34,Mumbai,BTech,3,66,952268,1
+C1053,Female,38,Delhi,BTech,5,97,514928,0
+C1054,Female,25,Rural Maharashtra,MBA,5,55,886712,1
+C1055,Male,34,Rural UP,BTech,5,72,522914,1
+C1056,Female,37,Bangalore,BTech,2,70,612675,0
+C1057,Male,31,Delhi,MTech,5,85,572452,0
+C1058,Male,31,Chennai,MTech,3,90,723613,1
+C1059,Male,26,Delhi,BTech,5,94,979317,0
+C1060,Male,28,Mumbai,BTech,6,48,718272,1
+C1061,Male,35,Mumbai,MBA,4,81,806780,1
+C1062,Male,41,Mumbai,BTech,7,68,709241,1
+C1063,Female,38,Delhi,BSc,4,92,654332,0
+C1064,Female,31,Rural Bihar,BSc,0,74,563718,0
+C1065,Male,25,Rural Maharashtra,BTech,1,58,847077,1
+C1066,Male,37,Rural UP,MTech,4,59,737602,1
+C1067,Male,22,Hyderabad,BTech,2,74,897000,1
+C1068,Male,28,Rural Maharashtra,BTech,5,93,813727,1
+C1069,Male,22,Bangalore,MTech,6,56,697518,1
+C1070,Female,36,Mumbai,MTech,8,66,534271,1
+C1071,Female,29,Rural Bihar,BTech,6,67,722168,1
+C1072,Female,40,Bangalore,MBA,3,64,601719,0
+C1073,Male,36,Bangalore,BTech,0,89,859520,0
+C1074,Male,27,Bangalore,BTech,3,87,1134780,0
+C1075,Male,41,Delhi,BSc,4,82,578009,1
+C1076,Female,25,Mumbai,BTech,0,61,612697,0
+C1077,Female,29,Mumbai,MSc,6,57,820554,0
+C1078,Male,26,Rural UP,BTech,3,89,669438,1
+C1079,Female,28,Rural UP,BTech,4,44,777999,0
+C1080,Male,32,Delhi,MTech,4,80,749409,1
+C1081,Male,33,Delhi,BSc,8,61,831929,1
+C1082,Female,27,Mumbai,MTech,8,61,974158,0
+C1083,Male,40,Hyderabad,MTech,3,56,776697,1
+C1084,Female,22,Rural UP,MTech,0,54,795060,0
+C1085,Male,28,Mumbai,MSc,7,52,836302,1
+C1086,Female,42,Hyderabad,MSc,6,42,797735,0
+C1087,Male,31,Bangalore,BSc,0,92,1032916,1
+C1088,Female,30,Rural Maharashtra,BTech,4,51,614740,0
+C1089,Male,44,Bangalore,BTech,6,41,882106,1
+C1090,Female,32,Delhi,BTech,5,64,540409,1
+C1091,Male,40,Bangalore,MBA,5,71,545101,1
+C1092,Female,28,Delhi,BTech,12,48,670789,1
+C1093,Male,34,Chennai,MTech,6,44,910157,0
+C1094,Male,39,Mumbai,MTech,2,78,753539,0
+C1095,Male,27,Mumbai,MSc,12,75,780006,1
+C1096,Male,24,Delhi,BSc,3,71,665161,1
+C1097,Male,28,Mumbai,MTech,10,97,552943,1
+C1098,Male,31,Rural Bihar,MSc,4,74,1003218,0
+C1099,Male,37,Delhi,BSc,2,52,974725,1
+C1100,Male,23,Rural Maharashtra,MTech,1,55,806924,1
+C1101,Female,22,Rural UP,MTech,5,54,573795,0
+C1102,Female,32,Mumbai,BTech,7,81,840889,0
+C1103,Male,25,Bangalore,MBA,4,66,565346,0
+C1104,Male,27,Hyderabad,MTech,3,64,809934,0
+C1105,Female,25,Mumbai,MTech,4,81,626510,0
+C1106,Female,31,Bangalore,MSc,6,56,456130,0
+C1107,Male,36,Hyderabad,MBA,4,60,603918,0
+C1108,Female,39,Delhi,BSc,3,59,476524,0
+C1109,Male,41,Hyderabad,BTech,4,65,545715,1
+C1110,Male,30,Rural UP,BTech,3,95,1000004,1
+C1111,Male,24,Mumbai,MBA,4,71,830809,1
+C1112,Male,32,Chennai,BSc,6,68,1020988,0
+C1113,Female,25,Mumbai,BSc,2,69,300000,0
+C1114,Male,31,Mumbai,MSc,8,42,822464,1
+C1115,Male,29,Mumbai,BTech,4,92,680527,1
+C1116,Female,22,Rural UP,MTech,4,55,817100,0
+C1117,Male,22,Mumbai,BSc,4,84,458376,1
+C1118,Female,27,Chennai,MSc,7,70,748015,0
+C1119,Male,27,Delhi,BTech,2,46,641242,1
+C1120,Male,22,Bangalore,BTech,5,67,886013,1
+C1121,Female,31,Rural UP,BTech,4,70,600365,0
+C1122,Female,45,Delhi,BTech,11,100,649349,0
+C1123,Male,22,Rural Bihar,MBA,8,60,720736,1
+C1124,Male,29,Hyderabad,MTech,9,86,690638,1
+C1125,Male,24,Mumbai,MBA,0,78,814376,0
+C1126,Male,38,Chennai,MBA,5,58,752457,0
+C1127,Male,22,Rural Bihar,MSc,2,51,422493,0
+C1128,Female,37,Mumbai,BTech,2,46,455743,0
+C1129,Male,22,Bangalore,MSc,1,38,857930,1
+C1130,Female,36,Mumbai,MBA,9,72,548122,0
+C1131,Male,35,Rural Maharashtra,MTech,3,64,686697,0
+C1132,Male,26,Bangalore,BTech,2,94,656303,1
+C1133,Female,22,Rural Bihar,BSc,1,56,907401,0
+C1134,Female,41,Bangalore,BTech,1,44,505752,0
+C1135,Female,36,Bangalore,MTech,7,86,833763,0
+C1136,Male,33,Bangalore,MTech,9,82,439222,1
+C1137,Male,37,Mumbai,BTech,0,68,803491,1
+C1138,Male,22,Rural UP,BSc,4,60,863581,0
+C1139,Male,34,Chennai,BSc,10,84,1143681,1
+C1140,Female,29,Bangalore,MTech,2,76,529439,1
+C1141,Male,33,Rural Maharashtra,MTech,2,68,977754,0
+C1142,Female,26,Bangalore,MSc,3,86,716642,0
+C1143,Male,32,Chennai,BTech,5,67,952666,0
+C1144,Female,40,Mumbai,MBA,8,61,644249,0
+C1145,Male,26,Mumbai,MTech,7,69,522080,1
+C1146,Male,29,Delhi,BTech,5,86,1053089,1
+C1147,Male,37,Chennai,BTech,8,73,774773,1
+C1148,Male,37,Bangalore,MTech,6,74,484264,1
+C1149,Male,39,Mumbai,BSc,1,75,701652,1
+C1150,Female,30,Rural Maharashtra,BTech,3,86,375780,0
+C1151,Female,41,Chennai,BTech,2,64,718825,0
+C1152,Female,22,Mumbai,BSc,6,98,859890,0
+C1153,Male,37,Hyderabad,BSc,7,49,839897,1
+C1154,Female,34,Mumbai,BTech,2,82,654077,0
+C1155,Male,27,Rural UP,BTech,1,80,894372,0
+C1156,Female,25,Delhi,MSc,0,54,484847,1
+C1157,Female,22,Bangalore,BSc,5,58,647930,0
+C1158,Female,22,Bangalore,BTech,3,90,597914,1
+C1159,Male,34,Rural UP,BSc,9,51,1194562,0
+C1160,Female,37,Delhi,BSc,4,86,852779,0
+C1161,Male,36,Hyderabad,MSc,9,49,455531,1
+C1162,Female,31,Hyderabad,BTech,4,68,617011,0
+C1163,Male,35,Hyderabad,BTech,9,48,855659,1
+C1164,Female,43,Mumbai,BTech,0,66,727224,0
+C1165,Female,23,Rural UP,MTech,3,74,572917,1
+C1166,Male,26,Mumbai,BTech,8,70,820845,0
+C1167,Female,27,Bangalore,BTech,7,72,857381,1
+C1168,Female,23,Bangalore,MBA,6,67,555831,0
+C1169,Female,30,Delhi,BSc,7,73,939701,0
+C1170,Male,24,Hyderabad,BTech,2,51,804490,0
+C1171,Male,38,Mumbai,BTech,1,100,752081,1
+C1172,Female,43,Bangalore,BSc,3,49,723993,0
+C1173,Male,22,Bangalore,BSc,3,99,510613,1
+C1174,Male,29,Delhi,MTech,5,96,721853,1
+C1175,Male,51,Bangalore,MSc,6,67,1243108,1
+C1176,Male,23,Chennai,MTech,4,59,937512,0
+C1177,Female,22,Delhi,MTech,1,84,504528,0
+C1178,Male,22,Hyderabad,BSc,7,85,1112780,0
+C1179,Male,23,Hyderabad,MBA,2,58,669557,1
+C1180,Male,22,Mumbai,MBA,1,65,854167,1
+C1181,Male,25,Chennai,BTech,8,60,720312,0
+C1182,Male,29,Rural UP,MSc,9,77,909531,0
+C1183,Male,25,Rural Bihar,BTech,5,52,1174620,1
+C1184,Female,30,Rural UP,MBA,4,39,1002425,0
+C1185,Male,29,Hyderabad,MTech,6,55,826941,1
+C1186,Male,30,Mumbai,MBA,6,81,675120,0
+C1187,Male,31,Delhi,MTech,4,57,916936,1
+C1188,Female,32,Bangalore,BSc,2,79,448578,0
+C1189,Male,22,Rural Maharashtra,MTech,4,54,899362,0
+C1190,Male,40,Rural UP,MTech,5,70,927106,1
+C1191,Male,27,Delhi,BSc,3,87,779735,1
+C1192,Male,29,Bangalore,BTech,9,56,695881,1
+C1193,Male,26,Delhi,MTech,2,39,780159,1
+C1194,Male,42,Bangalore,MBA,4,69,732732,0
+C1195,Male,39,Hyderabad,BTech,3,76,731684,1
+C1196,Male,29,Mumbai,BTech,1,80,760230,0
+C1197,Female,32,Rural Bihar,BTech,3,72,664287,1
+C1198,Male,23,Hyderabad,MTech,0,67,623620,0
+C1199,Male,34,Bangalore,BTech,5,75,809445,1

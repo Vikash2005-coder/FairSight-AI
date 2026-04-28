@@ -243,21 +243,40 @@ async def mitigate(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.post("/api/mitigate/tradeoff")
-async def mitigate_tradeoff(
+@app.post("/api/diagnostic/poison_rows")
+async def diagnostic_poison_rows(
     file: UploadFile = File(...),
     protected_attr: str = Form(""),
     target_col: str = Form("")
 ):
     """
-    Generate data for the Fairness-vs-Profit tradeoff curve.
+    Identifies specific rows driving the bias (Surgical Data Auditing).
     """
     try:
         import sys
         sys.path.append(os.path.dirname(__file__))
-        from mitigator import get_tradeoff_data
+        from diagnostic_engine import find_poison_rows
         content = await file.read()
-        result = get_tradeoff_data(content, protected_attr, target_col)
+        result = find_poison_rows(content, file.filename, protected_attr, target_col)
+        return JSONResponse(content=result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/diagnostic/sensitivity")
+async def diagnostic_sensitivity(
+    file: UploadFile = File(...),
+    protected_attr: str = Form(""),
+    target_col: str = Form("")
+):
+    """
+    Calculates the bias sensitivity of each feature (Master Lever).
+    """
+    try:
+        import sys
+        sys.path.append(os.path.dirname(__file__))
+        from diagnostic_engine import calculate_feature_sensitivity
+        content = await file.read()
+        result = calculate_feature_sensitivity(content, file.filename, protected_attr, target_col)
         return JSONResponse(content=result)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

@@ -1,0 +1,61 @@
+{
+  "success": true,
+  "input_type": "tabular",
+  "filename": "education_bias.csv",
+  "protected_attribute": "demographic",
+  "target_column": "admitted",
+  "metrics": {
+    "summary": {
+      "privileged_group": "Group A",
+      "unprivileged_group": "Group B",
+      "privileged_rate": 0.85,
+      "unprivileged_rate": 0.82,
+      "group_counts": {"Group A": 500, "Group B": 500}
+    },
+    "metrics": {
+      "demographic_parity_difference": 0.03,
+      "disparate_impact_ratio": 0.96,
+      "statistical_parity_difference": 0.03,
+      "individual_fairness_proxy": 0.95
+    },
+    "overall_fairness_score": 97.0,
+    "status": "fair"
+  },
+  "benchmarks": {
+    "percentile": 95,
+    "regulatory_status": "Highly Compliant",
+    "human_impact": {
+      "estimated_annual_impact": 0,
+      "severity": "Low"
+    }
+  },
+  "audit": {
+    "profile": {
+      "domain": "education",
+      "summary": "University admissions dataset showing healthy parity across demographic groups."
+    },
+    "bias_analysis": {
+      "overall_severity": "low",
+      "overall_bias_score": 97,
+      "executive_summary": "The admissions model demonstrates excellent algorithmic fairness. No systemic bias detected.",
+      "biased_metrics": []
+    },
+    "causal": {
+      "root_cause": "N/A - Model is inherently fair.",
+      "historical_context": "The institution has likely employed standard anonymized testing which limits demographic proxies.",
+      "proxy_features": [
+        "None detected."
+      ]
+    },
+    "mitigation": {
+      "short_term_actions": [
+        "Continue monitoring incoming cohorts for distributional shifts.",
+        "Ensure new features like 'extracurriculars' do not accidentally introduce wealth proxies."
+      ],
+      "long_term_strategy": "Maintain current baseline and periodically audit against intersectional groups."
+    },
+    "report": "## FAIRSIGHT AI — BIAS AUDIT REPORT\n\n### Executive Summary\nThe education admissions model is highly fair (Score: 97/100). No immediate action required."
+  },
+  "overall_score": 97.0,
+  "status": "fair"
+}

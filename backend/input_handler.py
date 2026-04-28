@@ -244,9 +244,19 @@ async def _handle_model(content: bytes, filename: str, domain: str, protected_at
         print(f"[InputHandler] Model type: {type(model).__name__}")
 
         from model_auditor import audit_model
-        result = await audit_model(model, domain, protected_attr)
+        result = await audit_model(model, domain, protected_attr, filename=filename)
         result["input_type"] = "model"
         result["filename"] = filename
+        
+        # Generate Dynamic Map for Models
+        try:
+            from map_generator import generate_dynamic_map
+            map_file = generate_dynamic_map(result.get("geo_analysis", {}), filename)
+            result["map_url"] = f"/static/{map_file}"
+        except Exception as map_err:
+            print(f"[InputHandler] Map generation error (Model): {str(map_err)}")
+            result["map_url"] = "/static/atlas_map.html"
+            
         return result
 
     except Exception as e:

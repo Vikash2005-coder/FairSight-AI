@@ -16,9 +16,10 @@ import asyncio
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from utils.metrics import compute_fairness_metrics
+from utils.benchmarks_db import get_benchmark_comparison
 from agents.orchestrator import run_full_audit
 
-async def audit_model(model, domain: str = "auto", protected_attr: str = "", test_df: pd.DataFrame = None) -> dict:
+async def audit_model(model, domain: str = "auto", protected_attr: str = "", test_df: pd.DataFrame = None, filename: str = "") -> dict:
     """
     Audits a trained ML model for bias.
     1. Runs model on test data.
@@ -29,13 +30,18 @@ async def audit_model(model, domain: str = "auto", protected_attr: str = "", tes
     
     # 1. Use sample data if no test data provided
     if test_df is None:
-        from generate_samples import generate_hiring_dataset
-        # Default to hiring if auto/unknown
-        if domain == "lending":
+        if 'india' in filename.lower():
+            import sys
+            sys.path.append(os.path.dirname(__file__))
+            from generate_india_model import generate_india_dataset
+            test_df = generate_india_dataset(200)
+            target_col = "loan_approved"
+        elif 'loan' in filename.lower() or domain == "lending":
             from generate_samples import generate_loan_dataset
             test_df = generate_loan_dataset(200)
             target_col = "loan_approved"
         else:
+            from generate_samples import generate_hiring_dataset
             test_df = generate_hiring_dataset(200)
             target_col = "hired"
     else:
@@ -91,7 +97,48 @@ async def audit_model(model, domain: str = "auto", protected_attr: str = "", tes
     except Exception as e:
         shap_summary = {"error": f"SHAP analysis failed: {str(e)}"}
 
-    # 6. Run Gemini Multi-Agent Audit
+    # 6. Geographical Analysis
+    geo_analysis = {"has_geo": False, "regions": []}
+    detected_cols = [c for c in test_df.columns if any(k in str(c).lower() for k in ["region", "state", "city", "location", "pincode"])]
+    
+    if detected_cols:
+        geo_col = detected_cols[0]
+        for c in detected_cols:
+            if any(k in str(c).lower() for k in ["state", "city"]):
+                geo_col = c
+                break
+        
+        for region_name, group_df in test_df.groupby(geo_col):
+            if pd.isna(region_name) or str(region_name).strip() == "": continue
+            try:
+                reg_metrics = compute_fairness_metrics(group_df, protected_attr, 'model_prediction')
+                geo_analysis["regions"].append({
+                    "name": str(region_name),
+                    "fairness_score": reg_metrics["overall_fairness_score"],
+                    "status": reg_metrics["status"],
+                    "sample_size": len(group_df),
+                    "lat": None,
+                    "lon": None
+                })
+            except Exception:
+                # Simple fallback
+                rate = group_df['model_prediction'].mean()
+                geo_analysis["regions"].append({
+                    "name": str(region_name),
+                    "fairness_score": round(rate * 100, 1),
+                    "status": "fair" if rate > 0.6 else "caution" if rate > 0.3 else "biased",
+                    "sample_size": len(group_df),
+                    "is_fallback": True,
+                    "lat": None,
+                    "lon": None
+                })
+        
+        if geo_analysis["regions"]:
+            geo_analysis["has_geo"] = True
+            geo_analysis["column"] = geo_col
+        geo_analysis["all_columns"] = list(test_df.columns)
+
+    # 7. Run Gemini Multi-Agent Audit
     input_data_info = {
         "model_type": type(model).__name__,
         "protected_attribute": protected_attr,
@@ -102,11 +149,19 @@ async def audit_model(model, domain: str = "auto", protected_attr: str = "", tes
     
     audit_result = await run_full_audit(input_data_info, metrics_result)
 
+    # 8. Generate Benchmarks for Human Impact
+    benchmarks = get_benchmark_comparison(domain, metrics_result["overall_fairness_score"], len(test_df))
+
     return {
         "success": True,
         "model_type": type(model).__name__,
+        "protected_attribute": protected_attr,
+        "target_column": target_col,
         "metrics": metrics_result,
         "shap_summary": shap_summary,
+        "geo_analysis": geo_analysis,
         "audit": audit_result,
-        "overall_score": metrics_result["overall_fairness_score"]
+        "benchmarks": benchmarks,
+        "overall_score": metrics_result["overall_fairness_score"],
+        "status": metrics_result.get("status", "UNKNOWN")
     }

@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "input_type": "tabular",
+  "filename": "hiring_bias.csv",
+  "protected_attribute": "gender",
+  "target_column": "hired",
+  "metrics": {
+    "summary": {
+      "privileged_group": "Male",
+      "unprivileged_group": "Female",
+      "privileged_rate": 0.42,
+      "unprivileged_rate": 0.28,
+      "group_counts": {"Male": 250, "Female": 250}
+    },
+    "metrics": {
+      "demographic_parity_difference": 0.14,
+      "disparate_impact_ratio": 0.66,
+      "statistical_parity_difference": 0.14,
+      "individual_fairness_proxy": 0.85
+    },
+    "overall_fairness_score": 42.5,
+    "status": "biased"
+  },
+  "benchmarks": {
+    "percentile": 12,
+    "regulatory_status": "Non-compliant (Violates 80% Rule)",
+    "human_impact": {
+      "estimated_annual_impact": 1240,
+      "severity": "High"
+    }
+  },
+  "audit": {
+    "profile": {
+      "domain": "hiring",
+      "summary": "Gender-biased tech recruitment dataset mapping experience to hiring outcomes."
+    },
+    "bias_analysis": {
+      "overall_severity": "critical",
+      "overall_bias_score": 42,
+      "executive_summary": "The audit reveals a systemic 14% hiring gap against women. This is primary driven by historical bias in features like 'Years at previous job' which disproportionately penalizes career breaks common in the female applicant pool.",
+      "biased_metrics": [
+        {
+          "metric_name": "Disparate Impact Ratio",
+          "severity": "critical",
+          "plain_explanation": "Female applicants are only 66% as likely as male applicants to be hired, violating the industry-standard 80% rule.",
+          "affected_groups": ["Female"],
+          "real_world_impact": "This results in approximately 120 fewer women hired per year than if the system were fair."
+        }
+      ]
+    },
+    "causal": {
+      "root_cause": "Historical preference for candidates with uninterrupted career paths.",
+      "historical_context": "Tech industry hiring patterns often penalize career gaps, which disproportionately affects women due to maternity leave and caregiving responsibilities.",
+      "proxy_features": [
+        "Gap in CV -> strong proxy for gender/maternity leave.",
+        "Years at previous job -> penalizes shorter tenures associated with career breaks."
+      ]
+    },
+    "mitigation": {
+      "short_term_actions": [
+        "Remove 'Gap in CV' as a negative weight in candidate scoring algorithms.",
+        "Apply Reweighing technique to training data to balance the historical disadvantage."
+      ],
+      "long_term_strategy": "Implement blind resume screening policies and standardize skill-based assessments instead of relying on tenure patterns."
+    },
+    "geo_analysis": {
+    "has_geo": true,
+    "column": "state",
+    "regions": [
+      {"name": "Maharashtra", "fairness_score": 42.0, "status": "biased", "sample_size": 120},
+      {"name": "Karnataka", "fairness_score": 38.5, "status": "biased", "sample_size": 110},
+      {"name": "Tamil Nadu", "fairness_score": 45.2, "status": "biased", "sample_size": 95},
+      {"name": "Delhi", "fairness_score": 41.8, "status": "biased", "sample_size": 105},
+      {"name": "Telangana", "fairness_score": 40.5, "status": "biased", "sample_size": 70}
+    ]
+    }
+  },
+  "overall_score": 42.5,
+  "status": "biased"
+}

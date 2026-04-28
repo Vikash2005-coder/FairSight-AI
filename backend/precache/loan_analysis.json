@@ -1,0 +1,69 @@
+{
+  "success": true,
+  "input_type": "tabular",
+  "filename": "loan_bias.csv",
+  "protected_attribute": "income_group",
+  "target_column": "loan_approved",
+  "metrics": {
+    "summary": {
+      "privileged_group": "Tier 1 Metro",
+      "unprivileged_group": "Rural/Tier 3",
+      "privileged_rate": 0.68,
+      "unprivileged_rate": 0.41,
+      "group_counts": {"Tier 1 Metro": 300, "Rural/Tier 3": 300}
+    },
+    "metrics": {
+      "demographic_parity_difference": 0.27,
+      "disparate_impact_ratio": 0.60,
+      "statistical_parity_difference": 0.27,
+      "individual_fairness_proxy": 0.78
+    },
+    "overall_fairness_score": 38.0,
+    "status": "biased"
+  },
+  "benchmarks": {
+    "percentile": 8,
+    "regulatory_status": "Critical Risk — RBI Fair Lending Violation",
+    "human_impact": {
+      "estimated_annual_impact": 4500000,
+      "severity": "Critical"
+    }
+  },
+  "audit": {
+    "profile": {
+      "domain": "lending",
+      "summary": "Loan approval dataset showing significant regional and income-based disparities."
+    },
+    "bias_analysis": {
+      "overall_severity": "high",
+      "overall_bias_score": 38,
+      "executive_summary": "The model demonstrates a 'Geographic Redlining' effect. Applicants from Rural/Tier 3 regions are 40% less likely to receive approval regardless of individual creditworthiness.",
+      "biased_metrics": [
+        {
+          "metric_name": "Demographic Parity Difference",
+          "severity": "high",
+          "plain_explanation": "There is a 27% difference in approval rates between urban and rural applicants.",
+          "affected_groups": ["Rural", "Tier 3 Cities"],
+          "real_world_impact": "Prevents equitable credit access for agricultural and decentralized sectors."
+        }
+      ]
+    },
+    "causal": {
+      "root_cause": "Historical credit scoring models trained on urban-weighted financial data.",
+      "historical_context": "Deeply ingrained regional disparities in banking infrastructure mean rural residents have artificially lower credit footprints.",
+      "proxy_features": [
+        "Pincode -> strongly correlates with socioeconomic development and state/region."
+      ]
+    },
+    "mitigation": {
+      "short_term_actions": [
+        "Drop 'pincode' from model training or group into broader non-discriminatory zones.",
+        "Implement Threshold Optimization to balance approval thresholds between urban and rural."
+      ],
+      "long_term_strategy": "Gather alternative credit data (utility bills, farm yields) specifically for rural/tier-3 applicants to build fairer risk profiles."
+    },
+    "report": "## FAIRSIGHT AI — BIAS AUDIT REPORT\n\n### Executive Summary\nThe loan approval model shows HIGH RISK of geographic redlining. Rural applicants are significantly disadvantaged by location-based proxy features.\n\n### Overall Fairness Score: 38/100 — CRITICAL BIAS\n\n### Key Findings\n- Rural approval rate is 40% lower than urban counterpart.\n- Pincode is serving as a direct geographic proxy.\n- Compliance risk with India's RBI Fair Practice Code."
+  },
+  "overall_score": 38.0,
+  "status": "biased"
+}

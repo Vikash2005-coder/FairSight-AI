@@ -695,3 +695,37 @@ h1, h2, h3, h4, .logo-text {
     .process-steps, .demo-grid { grid-template-columns: 1fr; }
     .step-connector { display: none; }
 }
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    margin: 4px 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.6);
+}
+
+/* Light Theme Scrollbar */
+body.light-theme ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+body.light-theme ::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.25);
+}
+
+body.light-theme ::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.5);
+}

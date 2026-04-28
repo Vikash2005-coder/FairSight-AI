@@ -1,8 +1,8 @@
 <div class="mitigation-studio">
     <header class="dashboard-header">
         <div class="header-left">
-            <h1>Mitigation <span class="accent">Lab</span></h1>
-            <p>Simulate, Stress-Test, and Certified Fairness.</p>
+            <h1>Diagnostic <span class="accent">Lab</span></h1>
+            <p>Deep Structural Bias Identification & Root-Cause Analysis.</p>
         </div>
         <div class="header-right">
             <button class="btn btn-outline" onclick="switchView('audit')">
@@ -13,39 +13,44 @@
 
     <div class="mitigation-grid" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.5rem;">
         
-        <!-- 1. Tradeoff Workspace -->
-        <div class="glass-card" style="padding: 2rem;">
-            <div class="card-header" style="margin-bottom: 2rem;">
-                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                    <span><i class="fas fa-balance-scale"></i> Fairness-vs-Profit Simulator</span>
-                    <div id="optimal-reasoning-box" class="glass-card ai-dialogue" style="display: none; padding: 0.8rem 1rem; border-left: 3px solid var(--accent); position: relative; margin-top: 0.5rem;">
-                        <span class="ai-badge" style="font-size: 0.6rem; color: var(--accent); font-weight: 700; display: block; margin-bottom: 0.3rem;">FAIRSIGHT OBSERVATION</span>
-                        <p id="optimal-reasoning-text" style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; margin: 0;"></p>
-                    </div>
-                </div>
-                <span class="glass-card" style="font-size: 0.7rem; padding: 0.3rem 0.8rem; color: var(--accent);">OPTIMAL POINT DETECTED</span>
-            </div>
+        <!-- 1. Deep Diagnostics Workspace -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
             
-            <div id="tradeoff-chart" style="height: 350px; width: 100%;"></div>
-            
-            <div class="simulator-controls" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
-                    <label style="font-weight: 600; font-size: 0.9rem;">Mitigation Intensity (Bias Reduction)</label>
-                    <span id="intensity-val" style="color: var(--primary); font-family: 'Outfit'; font-weight: 700;">40%</span>
+            <!-- Sensitivity Heatmap -->
+            <div class="glass-card" style="padding: 1.5rem;">
+                <div class="card-header" style="margin-bottom: 1rem;">
+                    <span><i class="fas fa-fire-flame-curved"></i> Bias Sensitivity Heatmap</span>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Identifying the Master Lever</span>
                 </div>
-                <input type="range" id="intensity-slider" min="0" max="100" value="40" style="width: 100%; accent-color: var(--primary); cursor: pointer;" oninput="updateIntensity(this.value)">
-                
-                <div class="sim-prediction" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
-                    <div class="glass-card" style="padding: 1rem; text-align: center; background: rgba(99, 102, 241, 0.05);">
-                        <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Est. Fairness Score</span>
-                        <span id="lab-fairness-score" style="display: block; font-size: 1.5rem; font-weight: 700; color: #10b981;">84.2</span>
-                    </div>
-                    <div class="glass-card" style="padding: 1rem; text-align: center; background: rgba(244, 63, 94, 0.05);">
-                        <span style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Accuracy Impact</span>
-                        <span id="lab-accuracy-impact" style="display: block; font-size: 1.5rem; font-weight: 700; color: #f43f5e;">-2.1%</span>
-                    </div>
+                <div id="sensitivity-chart" style="height: 250px; width: 100%;">
+                    <div class="placeholder-text"><i class="fas fa-spinner fa-spin"></i> Calculating Feature Sensitivities...</div>
                 </div>
             </div>
+
+            <!-- Poison Rows Data Table -->
+            <div class="glass-card" style="padding: 1.5rem; flex-grow: 1;">
+                <div class="card-header" style="margin-bottom: 1rem;">
+                    <span><i class="fas fa-microscope"></i> Surgical Data Auditing</span>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">Top Historical Bias Drivers (Poison Rows)</span>
+                </div>
+                <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                    <table class="data-table" style="width: 100%; border-collapse: collapse; font-size: 0.8rem;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); text-align: left;">
+                                <th style="padding: 0.8rem; font-weight: 600;">Group</th>
+                                <th style="padding: 0.8rem; font-weight: 600;">Outcome</th>
+                                <th style="padding: 0.8rem; font-weight: 600;">Merit Score</th>
+                                <th style="padding: 0.8rem; font-weight: 600;">Contradiction</th>
+                                <th style="padding: 0.8rem; font-weight: 600;">Key Features</th>
+                            </tr>
+                        </thead>
+                        <tbody id="poison-rows-body">
+                            <tr><td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-muted);"><i class="fas fa-spinner fa-spin"></i> Scanning for Poison Rows...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
 
         <!-- 2. Adversarial Arena & Compliance -->
